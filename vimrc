@@ -13,6 +13,13 @@ Plugin 'VundleVim/Vundle.vim'
 " nerdtree
 Plugin 'scrooloose/nerdtree'
 
+" open nerdtree explorer if no args are passwd to vim
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" close vim if only window left is nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " gitgutter
 Plugin 'airblade/vim-gitgutter'
 
