@@ -1,0 +1,27 @@
+#! /bin/bash
+
+FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc)
+
+backup() {
+  backup_dir=~/dotfiles.backup.`date +%F`
+
+  mkdir -p $backup_dir
+	
+  for file in ${FILES[@]}; do
+    path_to_file=~/.$file
+    cp $path_to_file $backup_dir/$file
+  done
+
+  echo Copied existing dotfiles to $backup_dir
+}
+
+setup() {
+  for file in ${FILES[@]}; do
+    path_to_file=~/.$file
+    rm $path_to_file
+    ln -sv ~/dotfiles/$file $path_to_file 
+  done
+}
+
+backup
+setup
