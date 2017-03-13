@@ -1,7 +1,9 @@
 syntax on                      " enable syntax highlighting
 set number                     " enable line number
 set nocompatible               " be iMproved, required
-filetype off                   " required
+set tabstop=2                  " (ts) width (in spaces) that a <tab> is displayed as
+set expandtab                  " (et) expand tabs to spaces (use :retab to redo entire file)
+set shiftwidth=2               " (sw) width (in spaces) used in each step of autoindent (aswell as << and >>)
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -23,14 +25,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " gitgutter
 Plugin 'airblade/vim-gitgutter'
 
-" solarized color scheme
-Plugin 'altercation/vim-colors-solarized'
-
 " sorround
 Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()              " required
 filetype plugin indent on      " required
-
 
