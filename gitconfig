@@ -1,8 +1,9 @@
 [user]
-	  name = Arunvel Sriram
-	    email = arunvelsriram@gmail.com
+  name = Arunvel Sriram
+  email = arunvelsriram@gmail.com
 [core]
-	  editor = vim
+  editor = vim
+  whitespace = trailing-space,space-before-tab
 [color]
 	  ui = auto
 [alias]
@@ -20,4 +21,6 @@
 	ds = diff --staged
 	sts = stash
 	stsp = stash pop
-	stsa = stash apply
+  stsa = stash apply
+[apply]
+  whitespace = fix
