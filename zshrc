@@ -89,6 +89,9 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/9.4"
+export PATH=$PATH:$POSTGRES_PATH/bin
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export NVM_DIR="/Users/arunvelsriram/.nvm"
@@ -98,3 +101,5 @@ eval "$(direnv hook zsh)"
 
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
+
+. $HOME/.asdf/asdf.sh
