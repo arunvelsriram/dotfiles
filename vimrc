@@ -28,6 +28,9 @@ Plugin 'airblade/vim-gitgutter'
 " sorround
 Plugin 'tpope/vim-surround'
 
+" Terraform support
+Plugin 'hashivim/vim-terraform'
+
 " All of your Plugins must be added before the following line
 call vundle#end()              " required
 filetype plugin indent on      " required
