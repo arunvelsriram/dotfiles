@@ -51,7 +51,7 @@ ZSH_THEME="blox"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(history z colored-man-pages zsh-syntax-highlighting zsh-autosuggestions hacker-quotes)
+plugins=(history z colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,4 +102,16 @@ eval "$(direnv hook zsh)"
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
 
+
+# asdf package manager
 . $HOME/.asdf/asdf.sh
+
+
+# zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "oldratlee/hacker-quotes"
+
+zplug load
