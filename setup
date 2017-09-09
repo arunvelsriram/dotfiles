@@ -1,27 +1,31 @@
-#! /bin/bash
+#!/bin/bash
 
-FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc)
+FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh)
+BACKUP_DIR=~/dotfiles.backup.`date +%-H-%M-%S-%F`
+
+create_directories() {
+  mkdir -p $BACKUP_DIR
+  mkdir -p $BACKUP_DIR/oh-my-zsh/custom
+}
 
 backup() {
-  backup_dir=~/dotfiles.backup.`date +%F`
-
-  mkdir -p $backup_dir
-	
   for file in ${FILES[@]}; do
-    path_to_file=~/.$file
-    cp $path_to_file $backup_dir/$file
+    full_path=~/.$file
+    cp $full_path $BACKUP_DIR/$file
   done
 
-  echo Copied existing dotfiles to $backup_dir
+  echo Copied existing files to $BACKUP_DIR
+  echo
 }
 
 setup() {
   for file in ${FILES[@]}; do
-    path_to_file=~/.$file
-    rm $path_to_file
-    ln -sv ~/dotfiles/$file $path_to_file 
+    full_path=~/.$file
+    rm $full_path
+    ln -sv ~/dotfiles/$file $full_path
   done
 }
 
+create_directories
 backup
 setup
