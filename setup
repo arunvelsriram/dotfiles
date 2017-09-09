@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh)
+DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh oh-my-zsh/custom/themes)
 BACKUP_DIR=~/dotfiles.backup.`date +%-H-%M-%S-%F`
 
 create_directories() {
@@ -9,9 +9,14 @@ create_directories() {
 }
 
 backup() {
-  for file in ${FILES[@]}; do
-    full_path=~/.$file
-    cp $full_path $BACKUP_DIR/$file
+  for dir_or_file in ${DIRS_AND_FILES[@]}; do
+    full_path=~/.$dir_or_file
+    if [[ -f $full_path ]]; then
+      cp $full_path $BACKUP_DIR/$dir_or_file
+    elif [[ -d $full_path ]]; then
+      mkdir -p $full_path
+      cp -R $full_path/ $BACKUP_DIR/$dir_or_file
+    fi
   done
 
   echo Copied existing files to $BACKUP_DIR
@@ -19,10 +24,11 @@ backup() {
 }
 
 setup() {
-  for file in ${FILES[@]}; do
-    full_path=~/.$file
-    rm $full_path
-    ln -sv ~/dotfiles/$file $full_path
+  for dir_or_file in ${DIRS_AND_FILES[@]}; do
+    full_path=~/.$dir_or_file
+    [ -f $full_path ] && rm $full_path
+    [ -d $full_path ] && rm -rf $full_path
+    ln -sv ~/dotfiles/$dir_or_file $full_path
   done
 }
 
