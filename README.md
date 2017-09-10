@@ -9,6 +9,6 @@ Review the code and remove things that are not necessary to you before setting t
 A backup of the existing dotfiles will be placed inside `dotfiles.backup.{date}` during the setup. Use this to restore your old dotfiles in case you mess up.
 
 ## TODO ##
-* Include oh-my-zsh custom configs and plugins
-* Support scripts for installing necessary softwares
+- [x] Include oh-my-zsh custom configs, themes and plugins (plugins are managed by zplug)
+- [ ] Support scripts for installing necessary softwares
 
