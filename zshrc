@@ -89,7 +89,7 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
-export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/9.4"
+export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest"
 export PATH=$PATH:$POSTGRES_PATH/bin
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -112,7 +112,6 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "oldratlee/hacker-quotes"
 zplug "zsh-users/zsh-autosuggestions"
 
 zplug load
