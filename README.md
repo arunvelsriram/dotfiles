@@ -1,6 +1,14 @@
 # dotfiles
 Repo to hold my Mac OS X configurations. Helps to setup my Mac easily in case of failure or replacement.
 
+## Setup
+
+```
+xcode-select --install
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+./setup
+```
+
 ## Warning ##
 Use at your own risk!
 
