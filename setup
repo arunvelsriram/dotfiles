@@ -34,9 +34,16 @@ setup_dotfiles() {
   done
 }
 
-install_brew
-brew_packages
+vim_plugins() {
+  [ -d ~/.vim/bundle/Vundle.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+}
 
 create_directories
 backup_existing_dotfiles
 setup_dotfiles
+
+install_brew
+brew_packages
+
+vim_plugins
