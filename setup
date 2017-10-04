@@ -46,6 +46,7 @@ install_packages() {
   brew install ansible
   brew install direnv
   brew install nmap
+  brew install asdf
 
   # Homebrew-Cask
   brew tap caskroom/cask
