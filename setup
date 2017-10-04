@@ -27,11 +27,6 @@ install_brew() {
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 }
 
-install_zsh() {
-  brew install zsh
-  brew install zsh-completions
-}
-
 zsh_plugins() {
   brew install zplug
   brew install fzf
@@ -69,7 +64,6 @@ create_directories
 backup
 
 install_brew
-install_zsh
 zsh_plugins
 install_packages
 
