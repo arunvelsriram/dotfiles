@@ -104,8 +104,7 @@ eval "$(direnv hook zsh)"
 
 
 # asdf package manager
-. $HOME/.asdf/asdf.sh
-
+source /usr/local/opt/asdf/asdf.sh
 
 # zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
