@@ -39,11 +39,11 @@ vim_plugins() {
   vim +PluginInstall +qall
 }
 
+install_brew
+brew_packages
+
 create_directories
 backup_existing_dotfiles
 setup_dotfiles
-
-install_brew
-brew_packages
 
 vim_plugins
