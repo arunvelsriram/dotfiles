@@ -6,3 +6,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 . $HOME/.asdf/completions/asdf.bash
 PATH="$PATH:/Users/arunvelsriram/.mos/bin"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
