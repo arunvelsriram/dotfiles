@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/arunvelsriram/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -94,17 +94,16 @@ export PATH=$PATH:$POSTGRES_PATH/bin
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export NVM_DIR="/Users/arunvelsriram/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # direnv hook
 eval "$(direnv hook zsh)"
 
 # added by travis gem
-[ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
-
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # asdf package manager
-source /usr/local/opt/asdf/asdf.sh
+[ -f /usr/local/opt/asdf/asdf.sh ] && source /usr/local/opt/asdf/asdf.sh
 
 # zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
@@ -115,4 +114,5 @@ zplug "zsh-users/zsh-autosuggestions"
 
 zplug load
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
