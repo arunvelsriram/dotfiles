@@ -47,6 +47,7 @@ install_packages() {
   brew install direnv
   brew install nmap
   brew install asdf
+  brew install httpie
 
   # Homebrew-Cask
   brew tap caskroom/cask
@@ -63,6 +64,7 @@ install_packages() {
   brew cask install vagrant
   brew cask install vagrant-manager
   brew cask install rowanj-gitx
+  brew cask install vlc
 }
 
 create_directories
