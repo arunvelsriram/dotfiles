@@ -1,14 +1,16 @@
 #!/bin/bash
 
+source brew.sh
+
 DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc tool-versions oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh oh-my-zsh/custom/themes)
-BACKUP_DIR=~/dotfiles.backup.`date +%-H-%M-%S-%F`
+BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
   mkdir -p $BACKUP_DIR
   mkdir -p $BACKUP_DIR/oh-my-zsh/custom
 }
 
-backup() {
+backup_existing_dotfiles() {
   for dir_or_file in ${DIRS_AND_FILES[@]}; do
     full_path=~/.$dir_or_file
     if [[ -f $full_path ]]; then
@@ -23,16 +25,6 @@ backup() {
   echo
 }
 
-install_brew() {
- type brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-}
-
-zsh_plugins() {
-  brew install zplug
-  brew install fzf
-  /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
-}
-
 setup_dotfiles() {
   for dir_or_file in ${DIRS_AND_FILES[@]}; do
     full_path=~/.$dir_or_file
@@ -42,36 +34,9 @@ setup_dotfiles() {
   done
 }
 
-install_packages() {
-  brew install ansible
-  brew install direnv
-  brew install nmap
-  brew install asdf
-  brew install httpie
-
-  # Homebrew-Cask
-  brew tap caskroom/cask
-  brew cask install firefox-beta
-  brew cask install iterm2
-  brew cask install visual-studio-code
-  brew cask install google-chrome
-  brew cask install ngrok
-  brew cask install docker
-  brew cask install flux
-  brew cask install keeweb
-  brew cask install openoffice
-  brew cask install sublime-text
-  brew cask install vagrant
-  brew cask install vagrant-manager
-  brew cask install rowanj-gitx
-  brew cask install vlc
-}
+install_brew
+brew_packages
 
 create_directories
-backup
-
-install_brew
-zsh_plugins
-install_packages
-
+backup_existing_dotfiles
 setup_dotfiles
