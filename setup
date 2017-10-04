@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh oh-my-zsh/custom/themes)
+DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc tool-versions oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh oh-my-zsh/custom/themes)
 BACKUP_DIR=~/dotfiles.backup.`date +%-H-%M-%S-%F`
 
 create_directories() {
