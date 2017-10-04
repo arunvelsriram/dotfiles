@@ -23,6 +23,10 @@ backup() {
   echo
 }
 
+xcode_cli_tools() {
+  xcode-select --install
+}
+
 install_brew() {
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 }
@@ -72,6 +76,7 @@ install_packages() {
 create_directories
 backup
 
+xcode_cli_tools
 install_brew
 install_zsh
 install_oh_my_zsh
