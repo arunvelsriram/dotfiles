@@ -2,7 +2,7 @@
 
 source brew.sh
 
-DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc tool-versions oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh oh-my-zsh/custom/themes)
+DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc tool-versions oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
