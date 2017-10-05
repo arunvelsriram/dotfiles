@@ -47,3 +47,5 @@ backup_existing_dotfiles
 setup_dotfiles
 
 vim_plugins
+
+echo "Done. Open new shell to see the changes."

@@ -5,12 +5,12 @@ install_brew() {
 }
 
 brew_packages() {
+  brew install antigen
   brew install ansible
   brew install direnv
   brew install nmap
   brew install asdf
   brew install httpie
-  brew install zplug
   brew install fzf
   /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
 
