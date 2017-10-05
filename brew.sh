@@ -28,6 +28,7 @@ brew_packages() {
   brew cask install dropbox
   brew cask install slack
   brew cask install spectacle
+  brew cask install caffeine
   brew cask install openoffice
   brew cask install sublime-text
   brew cask install vagrant
