@@ -7,7 +7,7 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="blox"
+#ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +51,7 @@ ZSH_THEME="blox"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(history z colored-man-pages)
+# plugins=(history z colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,14 +105,21 @@ eval "$(direnv hook zsh)"
 # asdf package manager
 [ -f /usr/local/opt/asdf/asdf.sh ] && source /usr/local/opt/asdf/asdf.sh
 
-# zplug
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+# antigen
+source /usr/local/share/antigen/antigen.zsh
 
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "zsh-users/zsh-autosuggestions"
+antigen use oh-my-zsh
 
-zplug load
+antigen bundle z
+antigen bundle history
+antigen bundle colored-man-pages
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+antigen theme yardnsm/blox-zsh-theme
+
+antigen apply
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
