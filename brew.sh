@@ -8,6 +8,7 @@ brew_packages() {
   brew install antigen
   brew install ansible
   brew install direnv
+  brew install tig
   brew install nmap
   brew install asdf
   brew install httpie
