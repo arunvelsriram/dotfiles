@@ -48,4 +48,5 @@ setup_dotfiles
 
 vim_plugins
 
+echo
 echo "Done. Open new shell to see the changes."

@@ -24,6 +24,7 @@ brew_packages() {
   brew cask install docker
   brew cask install flux
   brew cask install keeweb
+  brew cask install spectacle
   brew cask install openoffice
   brew cask install sublime-text
   brew cask install vagrant
