@@ -46,6 +46,11 @@ iterm_preferences() {
   defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForFile_selection -int 0
 }
 
+spectacle_shortcuts() {
+  rm ~/Library/Application\ Support/Spectacle/Shortcuts.json
+  ln -sv ~/dotfiles/spectacle/Shortcuts.json ~/Library/Application\ Support/Spectacle/Shortcuts.json
+}
+
 install_brew
 brew_packages
 
@@ -55,6 +60,7 @@ setup_dotfiles
 
 vim_plugins
 iterm_preferences
+spectacle_shortcuts
 
 echo
 echo "Done. Restart iTerm to see the changes."
