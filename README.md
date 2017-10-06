@@ -23,3 +23,4 @@ A backup of the existing dotfiles will be placed inside `dotfiles.backup.{date}`
 - [x] Include iTerm configuration
 - [ ] Include Sublime Text preferences
 - [ ] Include VS Code preferences
+- [ ] Possible refactoring in iterm, spectacle setup
