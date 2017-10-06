@@ -39,6 +39,13 @@ vim_plugins() {
   vim +PluginInstall +qall
 }
 
+iterm_preferences() {
+  defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+  defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm"
+  defaults write com.googlecode.iterm2.plist NSNavLastRootDirectory -string "/iterm"
+  defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForFile_selection -int 0
+}
+
 install_brew
 brew_packages
 
@@ -47,6 +54,7 @@ backup_existing_dotfiles
 setup_dotfiles
 
 vim_plugins
+iterm_preferences
 
 echo
-echo "Done. Open new shell to see the changes."
+echo "Done. Restart iTerm to see the changes."
