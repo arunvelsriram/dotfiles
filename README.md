@@ -19,5 +19,7 @@ A backup of the existing dotfiles will be placed inside `dotfiles.backup.{date}`
 ## TODO ##
 - [x] Include oh-my-zsh custom configs, themes and plugins (plugins are managed by zplug)
 - [x] Support scripts for installing necessary softwares
-- [ ] Include spectacle configuration
-- [ ] Include iTerm configuration
+- [x] Include spectacle configuration
+- [x] Include iTerm configuration
+- [ ] Include Sublime Text preferences
+- [ ] Include VS Code preferences
