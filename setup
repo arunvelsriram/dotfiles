@@ -34,11 +34,6 @@ setup_dotfiles() {
   done
 }
 
-iterm_preferences() {
-  rm ~/Library/Preferences/com.googlecode.iterm2.plist
-  ln -sv ~/dotfiles/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
-}
-
 vim_plugins() {
   [ -d ~/.vim/bundle/Vundle.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   vim +PluginInstall +qall
@@ -52,7 +47,6 @@ backup_existing_dotfiles
 setup_dotfiles
 
 vim_plugins
-iterm_preferences
 
 echo
-echo "Done. Please restart iTerm to see the changes"
+echo "Done. Open new shell to see the changes."
