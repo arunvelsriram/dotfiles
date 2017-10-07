@@ -59,6 +59,10 @@ spectacle_shortcuts() {
   ln -sv ~/dotfiles/spectacle/Shortcuts.json ~/Library/Application\ Support/Spectacle/Shortcuts.json
 }
 
+install_rvm() {
+  curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
+}
+
 install_brew
 brew_packages
 
@@ -67,9 +71,15 @@ backup_existing_dotfiles
 setup_dotfiles
 
 vim_plugins
+
+# font installation should happen before iterm prefs
 install_powerline_fonts
 iterm_preferences
+
 spectacle_shortcuts
+
+# rvm is not available through brew
+install_rvm
 
 echo
 echo "Done. Restart iTerm to see the changes."
