@@ -18,7 +18,7 @@ brew_packages() {
   /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
 
   brew install nvm
-  mkdir ~/.nvm
+  mkdir -p ~/.nvm
 
   # Homebrew-Cask
   brew tap caskroom/cask
