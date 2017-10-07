@@ -15,6 +15,9 @@ Plugin 'VundleVim/Vundle.vim'
 " nerdtree
 Plugin 'scrooloose/nerdtree'
 
+" solarized theme
+Plugin 'altercation/vim-colors-solarized'
+
 " open nerdtree explorer if no args are passwd to vim
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -24,9 +27,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " gitgutter
 Plugin 'airblade/vim-gitgutter'
-
-" sorround
-Plugin 'tpope/vim-surround'
 
 " Terraform support
 Plugin 'hashivim/vim-terraform'
