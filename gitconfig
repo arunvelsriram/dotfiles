@@ -1,6 +1,17 @@
+# Intentionally not added email to get a warning message when making
+# the first commit so that I will get reminded of setting email in the
+# git repo locally (without affecting global git config). This prevents
+# committing with wrong email addresses to a certain extent.
+
 [user]
   name = Arunvel Sriram
-  email = arunvelsriram@gmail.com
+
+# Set the git config email to client given email when the git repo is
+# inside ~/TW-Client/ directory
+
+[includeIf "gitdir:~/TW-Client/"]
+  path = .gitconfig-tw-client
+
 [core]
   editor = vim
   whitespace = trailing-space,space-before-tab
