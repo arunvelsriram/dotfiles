@@ -13,7 +13,6 @@ brew_packages() {
   brew install asdf
   brew install httpie
   brew install graphviz
-  brew install pip
 
   brew install fzf
   /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
