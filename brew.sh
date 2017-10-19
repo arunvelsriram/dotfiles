@@ -13,6 +13,7 @@ brew_packages() {
   brew install asdf
   brew install httpie
   brew install graphviz
+  brew install pip
 
   brew install fzf
   /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
@@ -40,4 +41,5 @@ brew_packages() {
   brew cask install vagrant-manager
   brew cask install rowanj-gitx
   brew cask install vlc
+  brew cask install clipy
 }
