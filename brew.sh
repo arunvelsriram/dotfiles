@@ -41,4 +41,5 @@ brew_packages() {
   brew cask install rowanj-gitx
   brew cask install vlc
   brew cask install clipy
+  brew cask install google-cloud-sdk
 }

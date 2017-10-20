@@ -117,3 +117,8 @@ antigen apply
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# google-cloud-sdk
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
