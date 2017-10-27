@@ -35,7 +35,6 @@ brew_packages() {
   brew cask install spectacle
   brew cask install caffeine
   brew cask install openoffice
-  brew cask install sublime-text
   brew cask install vagrant
   brew cask install vagrant-manager
   brew cask install rowanj-gitx
