@@ -93,6 +93,10 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
+# Golang
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin
+
 # direnv hook
 eval "$(direnv hook zsh)"
 
