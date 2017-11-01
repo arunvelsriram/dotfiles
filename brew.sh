@@ -6,6 +6,7 @@ install_brew() {
 
 brew_packages() {
   brew install antigen
+  brew install neovim
   brew install ansible
   brew install direnv
   brew install tig
