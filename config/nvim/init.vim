@@ -27,8 +27,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " gitgutter
 Plugin 'airblade/vim-gitgutter'
 
-" Terraform support
-Plugin 'hashivim/vim-terraform'
+" Lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()              " required
