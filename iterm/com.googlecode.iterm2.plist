@@ -2530,7 +2530,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 496 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>623 562 918 452 0 0 1680 1027 </string>
+	<string>623 541 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 80 1680 947 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -2733,7 +2733,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>4.4131840894670047</real>
+			<real>10.837012214467006</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -3303,7 +3303,7 @@
 			<key>Thin Strokes</key>
 			<integer>1</integer>
 			<key>Transparency</key>
-			<real>0.072329076776649751</real>
+			<real>0.028321303934010153</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
