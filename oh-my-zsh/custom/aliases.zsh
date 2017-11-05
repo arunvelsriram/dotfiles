@@ -1,5 +1,24 @@
 # Git
 alias g='git'
+alias gst='git status'
+alias gpl='git pull'
+alias gplr='git pull --rebase'
+alias gps='git push'
+alias gco='git checkout'
+alias gbr='git branch'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gci='git commit'
+alias gcim='git commit -m'
+alias gad='git add'
+alias gadp='git add -p'
+alias gsts='git stash'
+alias gstsp='git stash pop'
+alias gstsa='git stash apply'
+alias glg='git log'
+alias glgp='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --date=short'
+
+# Tig
 alias t='tig'
 
 # Vagrant
