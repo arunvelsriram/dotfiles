@@ -17,21 +17,5 @@
   whitespace = trailing-space,space-before-tab
 [color]
 	  ui = auto
-[alias]
-	st = status
-	lg = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short
-	pl = pull
-	plr = pull --rebase
-	ps = push
-	co = checkout
-	br = branch
-	d = diff
-	ci = commit
-	a = add
-	ap = add -p
-	ds = diff --staged
-	sts = stash
-	stsp = stash pop
-  stsa = stash apply
 [apply]
   whitespace = fix
