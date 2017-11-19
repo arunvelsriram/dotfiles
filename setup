@@ -2,7 +2,7 @@
 
 source brew.sh
 
-DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc tool-versions config/nvim/init.vim oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh oh-my-zsh/custom/clients.zsh)
+DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc vimrc gvimrc tool-versions oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw_digital.zsh oh-my-zsh/custom/clients.zsh)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
@@ -35,9 +35,9 @@ setup_dotfiles() {
   done
 }
 
-setup_nvim() {
-  [ -d ~/.config/nvim/bundle/Vundle.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-  nvim +PluginInstall +qall
+setup_vim() {
+  [ -d ~/.vim/bundle/Vundle.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
 }
 
 install_powerline_fonts() {
@@ -71,7 +71,7 @@ create_directories
 backup_existing_dotfiles
 setup_dotfiles
 
-setup_nvim
+setup_vim
 
 # font installation should happen before iterm prefs
 install_powerline_fonts
