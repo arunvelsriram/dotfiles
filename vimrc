@@ -5,6 +5,7 @@ set nocompatible               " be iMproved, required
 set tabstop=2                  " (ts) width (in spaces) that a <tab> is displayed as
 set expandtab                  " (et) expand tabs to spaces (use :retab to redo entire file)
 set shiftwidth=2               " (sw) width (in spaces) used in each step of autoindent (aswell as << and >>)
+set relativenumber             " enable relative line numbers
 let NERDTreeShowHidden=1       " show hidden files and folder in nerdtree explorer
 
 " set the runtime path to include Vundle and initialize
