@@ -17,6 +17,9 @@ brew_packages() {
   brew install tmux
   brew install golang
   brew install glide
+  brew install jq
+  brew install aria2
+  brew install ag
 
   brew install fzf
   /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
@@ -45,4 +48,8 @@ brew_packages() {
   brew cask install vlc
   brew cask install clipy
   brew cask install google-cloud-sdk
+  brew cask install kindle
+  brew cask install postman
+  brew cask install etcher
+  brew cask install minikube
 }
