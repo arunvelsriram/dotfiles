@@ -97,6 +97,9 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
 
+# Java
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
 # direnv hook
 eval "$(direnv hook zsh)"
 
