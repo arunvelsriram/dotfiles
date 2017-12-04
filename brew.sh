@@ -6,7 +6,7 @@ install_brew() {
 
 brew_packages() {
   brew install antigen
-  brew install macvim
+  brew install neovim
   brew install ansible
   brew install direnv
   brew install tig
@@ -52,4 +52,8 @@ brew_packages() {
   brew cask install postman
   brew cask install etcher
   brew cask install minikube
+  brew cask install vimr
+
+  brew tap caskroom/fonts
+  brew cask install font-fira-code
 }
