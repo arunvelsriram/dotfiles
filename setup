@@ -85,16 +85,13 @@ create_directories
 backup_existing_dotfiles
 setup_dotfiles
 
-setup_neovim
-
-# font installation should happen before iterm prefs
-install_powerline_fonts
 iterm_preferences
-
 spectacle_shortcuts
 
 # rvm is not available through brew
 install_rvm
+
+setup_neovim
 
 echo
 echo "Done. Restart iTerm to see the changes."
