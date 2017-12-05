@@ -118,7 +118,7 @@ antigen bundle colored-man-pages
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
-antigen theme amuse
+antigen theme steeef
 
 antigen apply
 
