@@ -32,3 +32,6 @@ alias vdy='vagrant destroy'
 # Edit Configs
 alias zshconfig='nvim ~/.zshrc'
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
+
+# highlight
+alias cat='highlight -O ansi --force'
