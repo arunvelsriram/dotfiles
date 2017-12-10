@@ -53,6 +53,7 @@ brew_packages() {
   brew cask install etcher
   brew cask install minikube
   brew cask install vimr
+  brew cask install alfred
 
   brew tap caskroom/fonts
   brew cask install font-fira-code
