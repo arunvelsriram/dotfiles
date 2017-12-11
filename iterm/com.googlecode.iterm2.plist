@@ -2485,6 +2485,8 @@
 	<integer>1048840</integer>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSFontPanelSizeSliderParams</key>
+	<string>2 0 100</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -2526,13 +2528,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1014 184 445 77 0 0 1680 1027 </string>
+	<string>762 165 712 77 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 496 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>539 554 796 473 0 0 1680 1027 </string>
+	<string>539 555 796 473 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 82 1674 945 0 0 1680 1027 </string>
+	<string>0 103 1680 925 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 422 1066 605 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -3394,13 +3396,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-05T12:34:17Z</date>
+	<date>2017-12-09T18:21:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>TabStyle</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
