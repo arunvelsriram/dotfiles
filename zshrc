@@ -87,9 +87,6 @@ source $ZSH/oh-my-zsh.sh
 export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest"
 export PATH=$PATH:$POSTGRES_PATH/bin
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
@@ -125,6 +122,3 @@ antigen apply
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-# added by travis gem
-[ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
