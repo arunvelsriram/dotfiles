@@ -21,7 +21,7 @@ A backup of the existing dotfiles will be placed inside `dotfiles.backup.{date}`
 - [x] Support scripts for installing necessary softwares
 - [x] Include spectacle configuration
 - [x] Include iTerm configuration
-- [ ] Fix nvm, fzf brew errors
+- [ ] Fix fzf brew errors
 - [ ] Make setup fail if a commands exits with a non-zero status
 - [ ] Include VS Code preferences
 - [ ] Possible refactoring in iterm, spectacle setup
