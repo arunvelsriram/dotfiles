@@ -74,10 +74,6 @@ spectacle_shortcuts() {
   ln -sv ~/dotfiles/spectacle/Shortcuts.json ~/Library/Application\ Support/Spectacle/Shortcuts.json
 }
 
-install_rvm() {
-  curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
-}
-
 install_brew
 brew_packages
 
@@ -87,9 +83,6 @@ setup_dotfiles
 
 iterm_preferences
 spectacle_shortcuts
-
-# rvm is not available through brew
-install_rvm
 
 setup_neovim
 

@@ -20,6 +20,7 @@ brew_packages() {
   brew install jq
   brew install aria2
   brew install ag
+  brew install rbenv
 
   brew install fzf
   /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
