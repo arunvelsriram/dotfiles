@@ -87,9 +87,6 @@ source $ZSH/oh-my-zsh.sh
 export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest"
 export PATH=$PATH:$POSTGRES_PATH/bin
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 # Golang
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin

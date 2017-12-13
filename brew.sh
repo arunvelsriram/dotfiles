@@ -21,12 +21,10 @@ brew_packages() {
   brew install aria2
   brew install ag
   brew install rbenv
+  brew install node@8
 
   brew install fzf
   /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
-
-  brew install nvm
-  mkdir -p ~/.nvm
 
   # Homebrew-Cask
   brew tap caskroom/cask
