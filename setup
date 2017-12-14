@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source brew.sh
-
 DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc tool-versions oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw.zsh)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
@@ -66,7 +64,20 @@ spectacle_shortcuts() {
   ln -sv ~/dotfiles/spectacle/Shortcuts.json ~/Library/Application\ Support/Spectacle/Shortcuts.json
 }
 
-install_brew
+pre_brew_packages() {
+  type brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
+
+post_brew_packages() {
+  /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
+}
+
+brew_packages() {
+  pre_brew_packages
+  brew bundle
+  post_brew_packages
+}
+
 brew_packages
 
 create_directories
