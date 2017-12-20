@@ -97,6 +97,10 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 # direnv hook
 eval "$(direnv hook zsh)"
 
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 # asdf package manager
 [ -f /usr/local/opt/asdf/asdf.sh ] && source /usr/local/opt/asdf/asdf.sh
 
