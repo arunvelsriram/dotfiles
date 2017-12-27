@@ -35,3 +35,11 @@ alias nvimconfig='nvim ~/.config/nvim/init.vim'
 
 # highlight
 alias cat='highlight -O ansi --force'
+
+# kubectl
+alias k='kubectl'
+alias kl='kubectl logs'
+alias klf='kubectl logs -f'
+
+alias kd='kubectl describe'
+alias kdj='kubectl describe job'
