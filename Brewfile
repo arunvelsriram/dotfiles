@@ -19,6 +19,7 @@ brew "ag"
 brew "rbenv"
 brew "node@8"
 brew "fzf"
+brew "kubectx"
 
 cask "firefox"
 cask "iterm2"
@@ -46,4 +47,4 @@ cask "minikube"
 cask "vimr"
 cask "alfred"
 cask "font-fira-code"
-
+cask "adobe-acrobat-reader"
