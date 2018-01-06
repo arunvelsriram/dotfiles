@@ -114,9 +114,8 @@ antigen bundle history
 antigen bundle colored-man-pages
 
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
 
-antigen theme awesomepanda
+antigen theme robbyrussell
 
 antigen apply
 
