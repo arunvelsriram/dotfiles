@@ -122,3 +122,6 @@ antigen apply
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# kube-ps1
+source ~/.kube-ps1/kube-ps1.sh
+PROMPT=$PROMPT'$(kube_ps1) '

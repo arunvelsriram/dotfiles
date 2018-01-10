@@ -78,7 +78,13 @@ brew_packages() {
   post_brew_packages
 }
 
+install_kube_ps1() {
+  rm -rf ~/.kube-ps1
+  git clone https://github.com/jonmosco/kube-ps1.git ~/.kube-ps1
+}
+
 brew_packages
+install_kube_ps1
 
 create_directories
 backup_existing_dotfiles
