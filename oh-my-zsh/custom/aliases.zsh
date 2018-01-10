@@ -1,3 +1,6 @@
+# Vim
+alias vimr='vimr -s'
+
 # Git
 alias g='git'
 alias gst='git status'
@@ -43,3 +46,9 @@ alias klf='kubectl logs -f'
 
 alias kd='kubectl describe'
 alias kdj='kubectl describe job'
+
+# kubectx
+alias kx='kubectx'
+
+# kubens
+alias kns='kubens'
