@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc tool-versions oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw.zsh)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
@@ -80,7 +82,7 @@ brew_packages() {
 
 install_kube_ps1() {
   rm -rf ~/.kube-ps1
-  git clone https://github.com/jonmosco/kube-ps1.git ~/.kube-ps1
+  git clone --depth=1 https://github.com/jonmosco/kube-ps1.git ~/.kube-ps1
 }
 
 brew_packages
