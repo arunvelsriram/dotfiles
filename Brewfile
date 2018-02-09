@@ -23,6 +23,8 @@ brew "kubectx"
 brew "stern"
 brew "kubectl"
 brew "highlight"
+brew "fd"
+brew "rg"
 
 cask "firefox"
 cask "iterm2"
