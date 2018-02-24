@@ -94,6 +94,9 @@ export PATH=$PATH:$GOPATH/bin
 # Java
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
+# Android
+export ANDROID_HOME="/usr/local/share/android-sdk"
+
 # direnv hook
 eval "$(direnv hook zsh)"
 
