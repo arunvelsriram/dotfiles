@@ -131,3 +131,5 @@ export KUBE_PS1_PREFIX='['
 export KUBE_PS1_SUFFIX=']'
 source ~/.kube-ps1/kube-ps1.sh
 PROMPT=$PROMPT'$(kube_ps1) '
+
+[ -f ~/.kube-fzf/kube-fzf.sh ] && source ~/.kube-fzf/kube-fzf.sh
