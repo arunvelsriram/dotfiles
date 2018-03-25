@@ -134,3 +134,6 @@ PROMPT=$PROMPT'$(kube_ps1) '
 
 # kube-fzf
 [ -f ~/.kube-fzf/kube-fzf.sh ] && source ~/.kube-fzf/kube-fzf.sh
+
+export PATH="/usr/local/opt/asdf/installs/nodejs/8.10.0/.npm/bin:$PATH"
+
