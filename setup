@@ -96,7 +96,14 @@ install_cargo_packages() {
 }
 
 install_fubectl() {
-  git clone https://github.com/kubermatic/fubectl.git ~/.fubectl
+  fubectl_path=~/.fubectl
+  if [ -d $fubectl_path ]; then
+    pushd $fubectl_path
+    git pull
+    popd
+  else
+    git clone https://github.com/kubermatic/fubectl.git $fubectl_path
+  fi
 }
 
 brew_packages
