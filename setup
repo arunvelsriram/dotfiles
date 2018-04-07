@@ -88,7 +88,15 @@ brew_packages() {
 }
 
 install_cargo() {
-  curl -sSf https://static.rust-lang.org/rustup.sh | sh
+  type cargo || curl -sSf https://static.rust-lang.org/rustup.sh | sh
+}
+
+install_cargo_packages() {
+ type click || cargo install click
+}
+
+install_fubectl() {
+  git clone https://github.com/kubermatic/fubectl.git ~/.fubectl
 }
 
 brew_packages
@@ -101,7 +109,9 @@ iterm_preferences
 spectacle_shortcuts
 
 install_cargo
+install_cargo_packages
+install_fubectl
 setup_neovim
 
 echo
-echo "Done. Restart iTerm to see the changes."
+echo "Done. Restart terminal to see the changes."
