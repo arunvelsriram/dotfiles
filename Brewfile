@@ -32,6 +32,7 @@ brew "consul"
 brew "pgcli"
 brew "cmake"
 brew "python3"
+brew "htop"
 
 cask "firefox"
 cask "iterm2"
