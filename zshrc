@@ -126,12 +126,6 @@ antigen apply
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# kube-ps1
-export KUBE_PS1_PREFIX='['
-export KUBE_PS1_SUFFIX=']'
-source ~/.kube-ps1/kube-ps1.sh
-PROMPT=$PROMPT'$(kube_ps1) '
-
 # kube-fzf
 [ -f ~/.kube-fzf/kube-fzf.sh ] && source ~/.kube-fzf/kube-fzf.sh
 

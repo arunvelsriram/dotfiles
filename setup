@@ -52,6 +52,11 @@ setup_neovim() {
 
   # neovim plugin installation
   nvim +PlugInstall +qall
+
+  # youcompleteme
+  pushd $nvim_dir/plugged/youcompleteme
+  ./install.py --clang-completer --go-completer --js-completer
+  popd
 }
 
 iterm_preferences() {
@@ -62,6 +67,8 @@ iterm_preferences() {
 }
 
 spectacle_shortcuts() {
+  open /Applications/Spectacle.app
+  sleep 5
   rm ~/Library/Application\ Support/Spectacle/Shortcuts.json
   ln -sv ~/dotfiles/spectacle/Shortcuts.json ~/Library/Application\ Support/Spectacle/Shortcuts.json
 }
@@ -80,13 +87,11 @@ brew_packages() {
   post_brew_packages
 }
 
-install_kube_ps1() {
-  rm -rf ~/.kube-ps1
-  git clone --depth=1 https://github.com/jonmosco/kube-ps1.git ~/.kube-ps1
+install_cargo() {
+  curl -sSf https://static.rust-lang.org/rustup.sh | sh
 }
 
 brew_packages
-install_kube_ps1
 
 create_directories
 backup_existing_dotfiles
@@ -95,6 +100,7 @@ setup_dotfiles
 iterm_preferences
 spectacle_shortcuts
 
+install_cargo
 setup_neovim
 
 echo
