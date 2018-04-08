@@ -132,5 +132,3 @@ antigen apply
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 
-# fubectl
-[ -f ~/.fubectl/fubectl.source ] && source ~/.fubectl/fubectl.source
