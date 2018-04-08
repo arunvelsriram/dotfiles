@@ -47,7 +47,7 @@ setup_neovim() {
     git pull --rebase
     popd
   else
-    git clone https://github.com/aswinkarthik93/neovim-dotfiles.git $nvim_dir
+    git clone https://github.com/arunvelsriram/neovim-dotfiles.git $nvim_dir
   fi
 
   # neovim plugin installation
@@ -95,14 +95,14 @@ install_cargo_packages() {
  type click || cargo install click
 }
 
-install_fubectl() {
-  fubectl_path=~/.fubectl
-  if [ -d $fubectl_path ]; then
-    pushd $fubectl_path
+install_kube_fzf() {
+  kube_fzf_path=~/.kube-fzf
+  if [ -d $kube_fzf_path ]; then
+    pushd $kube_fzf_path
     git pull
     popd
   else
-    git clone https://github.com/kubermatic/fubectl.git $fubectl_path
+    git clone https://github.com/arunvelsriram/kube-fzf $kube_fzf_path
   fi
 }
 
@@ -117,7 +117,7 @@ spectacle_shortcuts
 
 install_cargo
 install_cargo_packages
-install_fubectl
+install_kube_fzf
 setup_neovim
 
 echo
