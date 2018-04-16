@@ -33,6 +33,7 @@ brew "pgcli"
 brew "cmake"
 brew "python3"
 brew "htop"
+brew "awscli"
 
 cask "firefox"
 cask "iterm2"
