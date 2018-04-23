@@ -138,3 +138,5 @@ export KUBE_PS1_SUFFIX=']'
 source ~/.kube-ps1/kube-ps1.sh
 PROMPT=$PROMPT'$(kube_ps1) '
 
+# lazy-connect
+[ -f ~/.lazy-connect/lazy-connect.sh ] && source ~/.lazy-connect/lazy-connect.sh
