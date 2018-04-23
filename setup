@@ -2,12 +2,13 @@
 
 set -e
 
-DIRS_AND_FILES=(bashrc bash_profile profile zshrc gitconfig gemrc tool-versions oh-my-zsh/custom/aliases.zsh oh-my-zsh/custom/tw.zsh)
+DIRS_AND_FILES=(bashrc bash_profile profile gitconfig gemrc tool-versions bash_it/custom/themes)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
   mkdir -p $BACKUP_DIR
   mkdir -p $BACKUP_DIR/oh-my-zsh/custom
+  mkdir -p $BACKUP_DIR/bash_it/custom
 }
 
 backup_existing_dotfiles() {
