@@ -35,6 +35,19 @@ setup_dotfiles() {
   done
 }
 
+clone_or_pull() {
+  git_repo_url=$1
+  local_path=$2
+
+  if [ -d $local_path ]; then
+    pushd $local_path
+    git pull --rebase
+    popd
+  else
+    git clone $git_repo_url $local_path
+  fi
+}
+
 setup_neovim() {
   # vim-plug installation
   vim_plug_url="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
@@ -43,13 +56,7 @@ setup_neovim() {
 
   # neovim config
   nvim_dir=~/.config/nvim
-  if [[ -d $nvim_dir ]]; then
-    pushd $nvim_dir
-    git pull --rebase
-    popd
-  else
-    git clone https://github.com/arunvelsriram/neovim-dotfiles.git $nvim_dir
-  fi
+  clone_or_pull https://github.com/arunvelsriram/neovim-dotfiles.git $nvim_dir
 
   # neovim plugin installation
   nvim +PlugInstall +qall
@@ -97,21 +104,18 @@ install_cargo_packages() {
 }
 
 install_kube_fzf() {
-  kube_fzf_path=~/.kube-fzf
-  if [ -d $kube_fzf_path ]; then
-    pushd $kube_fzf_path
-    git pull
-    popd
-  else
-    git clone https://github.com/arunvelsriram/kube-fzf $kube_fzf_path
-  fi
+  clone_or_pull https://github.com/arunvelsriram/kube-fzf ~/.kube-fzf
 }
 
 install_kube_ps1() {
-  rm -rf ~/.kube-ps1
-  git clone https://github.com/jonmosco/kube-ps1.git ~/.kube-ps1
+  clone_or_pull https://github.com/jonmosco/kube-ps1.git ~/.kube-ps1
 }
 
+setup_bash_it() {
+  clone_or_pull https://github.com/Bash-it/bash-it.git ~/.bash_it
+}
+
+setup_bash_it
 brew_packages
 
 create_directories
