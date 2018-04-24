@@ -1,9 +1,6 @@
 # asdf
 source /usr/local/opt/asdf/asdf.sh
 
-# fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 # Postgres
 export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest"
 export PATH=$PATH:$POSTGRES_PATH/bin
@@ -17,13 +14,6 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
 # Android
 export ANDROID_HOME="/usr/local/share/android-sdk"
-
-# direnv hook
-eval "$(direnv hook bash)"
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 # kube-fzf
 [ -f ~/.kube-fzf/kube-fzf.sh ] && source ~/.kube-fzf/kube-fzf.sh
