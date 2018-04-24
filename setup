@@ -116,6 +116,10 @@ setup_bash_it() {
   clone_or_pull https://github.com/Bash-it/bash-it.git ~/.bash_it
 }
 
+install_lazy_connect() {
+  clone_or_pull https://github.com/arunvelsriram/lazy-connect ~/.lazy-connect
+}
+
 setup_bash_it
 brew_packages
 
@@ -130,6 +134,7 @@ install_cargo
 install_cargo_packages
 install_kube_fzf
 install_kube_ps1
+install_lazy_connect
 setup_neovim
 
 echo
