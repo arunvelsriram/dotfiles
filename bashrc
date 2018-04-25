@@ -24,11 +24,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # node
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 
-# kube-ps1
-export KUBE_PS1_PREFIX='['
-export KUBE_PS1_SUFFIX=']'
-source ~/.kube-ps1/kube-ps1.sh
-PROMPT=$PROMPT'$(kube_ps1) '
-
 # lazy-connect
 [ -f ~/.lazy-connect/lazy-connect.sh ] && source ~/.lazy-connect/lazy-connect.sh
