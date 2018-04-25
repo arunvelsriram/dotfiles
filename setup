@@ -112,10 +112,6 @@ install_kube_fzf() {
   clone_or_pull https://github.com/arunvelsriram/kube-fzf ~/.kube-fzf
 }
 
-install_kube_ps1() {
-  clone_or_pull https://github.com/jonmosco/kube-ps1.git ~/.kube-ps1
-}
-
 setup_bash_it() {
   bash_it_dir=~/.bash_it
   if [ -d $bash_it_dir ]; then
@@ -151,7 +147,6 @@ spectacle_shortcuts
 install_cargo
 install_cargo_packages
 install_kube_fzf
-install_kube_ps1
 install_lazy_connect
 setup_dot_tmux
 setup_neovim
