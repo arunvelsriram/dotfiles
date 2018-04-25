@@ -9,7 +9,12 @@ export BASH_IT="/Users/arunvelsriram/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='purity-custom'
+export BASH_IT_THEME='powerline-naked'
+
+# Powerline theme overrides
+export POWERLINE_PROMPT_CHAR="❯"
+export POWERLINE_LEFT_SEPARATOR="❯"
+export POWERLINE_PROMPT="wd scm"
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
