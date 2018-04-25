@@ -130,6 +130,14 @@ install_lazy_connect() {
   clone_or_pull https://github.com/arunvelsriram/lazy-connect ~/.lazy-connect
 }
 
+setup_dot_tmux() {
+  clone_or_pull https://github.com/gpakosz/.tmux ~/.tmux
+  pushd ~/
+  ln -s -f .tmux/.tmux.conf
+  cp .tmux/.tmux.conf.local .
+  popd
+}
+
 setup_bash_it
 brew_packages
 
@@ -145,6 +153,7 @@ install_cargo_packages
 install_kube_fzf
 install_kube_ps1
 install_lazy_connect
+setup_dot_tmux
 setup_neovim
 
 echo
