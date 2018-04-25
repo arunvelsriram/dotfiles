@@ -2,7 +2,7 @@
 
 set -e
 
-DIRS_AND_FILES=(bashrc bash_profile profile gitconfig gemrc tool-versions bash_it/custom/themes bash_it/custom/aliases)
+DIRS_AND_FILES=(bashrc bash_profile profile inputrc gitconfig gemrc tool-versions bash_it/custom/aliases)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
@@ -88,6 +88,10 @@ pre_brew_packages() {
 
 post_brew_packages() {
   /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
+
+  # Enable bash 4+
+  grep -q -F '/usr/local/bin/bash' /etc/shells || sudo sh -c 'echo "/usr/local/bin/bash" >> /etc/shells'
+  chsh -s /usr/local/bin/bash
 }
 
 brew_packages() {

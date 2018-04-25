@@ -34,6 +34,7 @@ brew "cmake"
 brew "python3"
 brew "htop"
 brew "awscli"
+brew "bash"
 
 cask "firefox"
 cask "iterm2"
