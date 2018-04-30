@@ -2,14 +2,14 @@
 
 set -e
 
-DIRS_AND_FILES=(bashrc bash_profile profile inputrc gitconfig gemrc tool-versions bash_it/custom/aliases)
+DIRS_AND_FILES=(bashrc bash_profile profile inputrc gitconfig gemrc tool-versions bash_it/custom/aliases config/nvim/custom.vim config/nvim/local_bundles.vim)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
   mkdir -p $BACKUP_DIR
   mkdir -p $BACKUP_DIR/oh-my-zsh/custom
   mkdir -p $BACKUP_DIR/bash_it/custom
-  mkdir -p $BACKUP_DIR/bash_it/aliases
+  mkdir -p $BACKUP_DIR/config/nvim
 }
 
 backup_existing_dotfiles() {
@@ -137,6 +137,8 @@ setup_dot_tmux() {
 setup_bash_it
 brew_packages
 
+setup_neovim
+
 create_directories
 backup_existing_dotfiles
 setup_dotfiles
@@ -149,7 +151,6 @@ install_cargo_packages
 install_kube_fzf
 install_lazy_connect
 setup_dot_tmux
-setup_neovim
 
 echo
 echo "Done. Restart terminal to see the changes."
