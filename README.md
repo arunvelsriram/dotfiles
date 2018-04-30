@@ -16,10 +16,4 @@ Review the code and remove things that are not necessary to you before setting t
 A backup of the existing dotfiles will be placed inside `dotfiles.backup.{date}` during the setup. Use this to restore your old dotfiles in case you mess up.
 
 ## TODO ##
-- [x] Support scripts for installing necessary softwares
-- [x] Include spectacle configuration
-- [x] Include iTerm configuration
-- [ ] Fix fzf brew errors
-- [ ] Make setup fail if a commands exits with a non-zero status
 - [ ] Include VS Code preferences
-- [ ] Possible refactoring in iterm, spectacle setup
