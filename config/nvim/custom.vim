@@ -1,1 +1,1 @@
-silent! colorscheme forgotten-dark
+silent! colorscheme OceanicNext
