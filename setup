@@ -2,7 +2,7 @@
 
 set -e
 
-DIRS_AND_FILES=(bashrc bash_profile profile inputrc gitconfig gemrc tool-versions bash_it/custom/aliases config/nvim/custom.vim config/nvim/local_bundles.vim)
+DIRS_AND_FILES=(bashrc bash_profile profile inputrc gitconfig gemrc tool-versions bash_it/custom/aliases config/nvim/custom.vim config/nvim/local_bundles.vim config/alacritty/alacritty.yml)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
@@ -10,6 +10,7 @@ create_directories() {
   mkdir -p $BACKUP_DIR/oh-my-zsh/custom
   mkdir -p $BACKUP_DIR/bash_it/custom
   mkdir -p $BACKUP_DIR/config/nvim
+  mkdir -p $BACKUP_DIR/config/alacritty
 }
 
 backup_existing_dotfiles() {
