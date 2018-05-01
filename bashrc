@@ -5,10 +5,6 @@ source /usr/local/opt/asdf/asdf.sh
 export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest"
 export PATH=$PATH:$POSTGRES_PATH/bin
 
-# Golang
-export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$GOPATH/bin
-
 # Java
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
