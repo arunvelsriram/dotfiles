@@ -224,6 +224,8 @@ shell:
   program: /usr/local/bin/bash
   args:
     - --login
+    - -c
+    - tmux attach
 
 # Key bindings
 #
