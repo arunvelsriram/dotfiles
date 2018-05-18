@@ -10,15 +10,13 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
 # Android
 export ANDROID_HOME="/usr/local/share/android-sdk"
+export PATH=$ANDROID_HOME/tools:$PATH
 
 # kube-fzf
 [ -f ~/.kube-fzf/kube-fzf.sh ] && source ~/.kube-fzf/kube-fzf.sh
 
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# node
-export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 # lazy-connect
 [ -f ~/.lazy-connect/lazy-connect.sh ] && source ~/.lazy-connect/lazy-connect.sh
