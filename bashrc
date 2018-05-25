@@ -20,3 +20,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # lazy-connect
 [ -f ~/.lazy-connect/lazy-connect.sh ] && source ~/.lazy-connect/lazy-connect.sh
+
+# Kubectl shell completion
+source '/Users/arunvelsriram/.kube/completion.bash.inc'

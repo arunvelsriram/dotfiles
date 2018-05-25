@@ -35,6 +35,8 @@ brew "python3"
 brew "htop"
 brew "awscli"
 brew "bash"
+brew "heroku"
+brew "bash-completion"
 
 cask "firefox"
 cask "iterm2"
