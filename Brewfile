@@ -37,6 +37,7 @@ brew "awscli"
 brew "bash"
 brew "heroku"
 brew "bash-completion"
+brew "telnet"
 
 cask "firefox"
 cask "iterm2"
