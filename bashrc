@@ -23,3 +23,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Kubectl shell completion
 source '/Users/arunvelsriram/.kube/completion.bash.inc'
+
+# Locales
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
