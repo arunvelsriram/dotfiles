@@ -39,6 +39,7 @@ brew "heroku"
 brew "bash-completion"
 brew "telnet"
 brew "fswatch"
+brew "tldr"
 
 cask "firefox"
 cask "iterm2"
