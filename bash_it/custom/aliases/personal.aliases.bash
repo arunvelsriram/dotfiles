@@ -4,6 +4,9 @@ about-alias 'my personal aliases'
 # Vim
 alias vimr='vimr -s'
 
+# Git
+alias g='git'
+
 # Tig
 alias t='tig'
 
