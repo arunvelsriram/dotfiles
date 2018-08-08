@@ -1,1 +1,1 @@
-silent! colorscheme gruvbox
+silent! colorscheme OceanicNext
