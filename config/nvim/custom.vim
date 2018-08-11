@@ -1,1 +1,1 @@
-silent! colorscheme OceanicNext
+silent! colorscheme hybrid
