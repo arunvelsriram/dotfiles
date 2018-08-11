@@ -140,3 +140,6 @@ PROMPT=$PROMPT'$(kube_ps1) '
 
 # lazy-connect
 [ -f ~/.lazy-connect/lazy-connect.sh ] && source ~/.lazy-connect/lazy-connect.sh
+
+# added by travis gem
+[ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh

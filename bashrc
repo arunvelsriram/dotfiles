@@ -27,3 +27,6 @@ source '/Users/arunvelsriram/.kube/completion.bash.inc'
 # Locales
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# added by travis gem
+[ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
