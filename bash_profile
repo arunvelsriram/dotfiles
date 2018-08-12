@@ -9,7 +9,7 @@ export BASH_IT="/Users/arunvelsriram/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME="purity"
+export BASH_IT_THEME="cooperkid-custom"
 
 # Powerline theme overrides
 # export POWERLINE_PROMPT_CHAR="❯"
