@@ -1,1 +1,1 @@
-silent! colorscheme hybrid
+silent! colorscheme gruvbox
