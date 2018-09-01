@@ -131,7 +131,7 @@ setup_dot_tmux() {
   clone_or_pull https://github.com/gpakosz/.tmux ~/.tmux
   pushd ~/
   ln -s -f .tmux/.tmux.conf
-  cp .tmux/.tmux.conf.local .
+  [ -f .tmux/.tmux.conf.local ] || cp .tmux/.tmux.conf.local .
   popd
 }
 
