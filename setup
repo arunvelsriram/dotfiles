@@ -2,13 +2,13 @@
 
 set -e
 
-DIRS_AND_FILES=(bashrc bash_profile profile inputrc gitconfig gemrc tool-versions tmux.conf.local bash_it/custom/aliases bash_it/custom/plugins bash_it/custom/themes config/nvim/custom.vim config/nvim/local_bundles.vim config/alacritty/alacritty.yml)
+DIRS_AND_FILES=(bashrc bash_profile profile inputrc gitconfig gemrc tool-versions tmux.conf.local bash_it_custom/aliases bash_it_custom/plugins bash_it_custom/themes config/nvim/custom.vim config/nvim/local_bundles.vim config/alacritty/alacritty.yml)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
   mkdir -p $BACKUP_DIR
   mkdir -p $BACKUP_DIR/oh-my-zsh/custom
-  mkdir -p $BACKUP_DIR/bash_it/custom
+  mkdir -p $BACKUP_DIR/bash_it_custom
   mkdir -p $BACKUP_DIR/config/nvim
   mkdir -p $BACKUP_DIR/config/alacritty
 }
