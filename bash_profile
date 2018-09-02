@@ -7,6 +7,9 @@
 # Path to the bash it configuration
 export BASH_IT="/Users/arunvelsriram/.bash_it"
 
+# Path to bash-it custom scripts
+export BASH_IT_CUSTOM="/Users/arunvelsriram/.bash_it_custom"
+
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
 export BASH_IT_THEME="cooperkid-custom"
