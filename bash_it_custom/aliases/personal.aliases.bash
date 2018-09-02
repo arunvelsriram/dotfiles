@@ -23,3 +23,12 @@ alias sl=ls
 alias la='ls -AF'       # Compact view, show hidden
 alias ll='ls -al'
 alias l='ls -a'
+
+## cat
+alias cat="bat"
+
+## ping
+alias ping="prettyping --nolegend"
+
+## top
+alias top="htop"
