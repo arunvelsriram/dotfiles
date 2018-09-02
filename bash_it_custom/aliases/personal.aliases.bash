@@ -1,19 +1,16 @@
 cite 'about-alias'
 about-alias 'my personal aliases'
 
-# Vim
+## vimr
 alias vimr='vimr -s'
 
-# Git
+## git
 alias g='git'
 
-# Tig
+## tig
 alias t='tig'
 
-# highlight
-alias hcat='highlight -O ansi --force'
-
-# ls
+## ls
 if ls --color -d . &> /dev/null
 then
   alias ls="ls --color=auto"
