@@ -5,12 +5,12 @@
 
 [user]
   name = Arunvel Sriram
+  email = arunvelsriram@gmail.com
 
-# Set the git config email to client given email when the git repo is
-# inside ~/TW-Client/ directory
-
-[includeIf "gitdir:~/TW-Client/"]
-  path = .gitconfig-tw-client
+# work specific gitconfig for all
+# projects inside ~/work/ directory
+[includeIf "gitdir:~/work/"]
+  path = .gitconfig-work
 
 [core]
   editor = nvim
