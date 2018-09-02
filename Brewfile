@@ -46,6 +46,8 @@ brew "tokei"
 brew "bat"
 brew "prettyping"
 brew "diff-so-fancy"
+brew "exa"
+brew "ngrep"
 
 cask "firefox"
 cask "iterm2"
