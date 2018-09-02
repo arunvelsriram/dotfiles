@@ -14,11 +14,6 @@ export BASH_IT_CUSTOM="/Users/arunvelsriram/.bash_it_custom"
 # location /.bash_it/themes/
 export BASH_IT_THEME="cooperkid-custom"
 
-# Powerline theme overrides
-# export POWERLINE_PROMPT_CHAR="❯"
-# export POWERLINE_LEFT_SEPARATOR="❯"
-# export POWERLINE_PROMPT="wd scm"
-
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
 # export BASH_IT_REMOTE='bash-it'
