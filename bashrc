@@ -30,3 +30,5 @@ export LANG=en_US.UTF-8
 
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
+
+complete -C /usr/local/Cellar/terraform/0.11.8/bin/terraform terraform
