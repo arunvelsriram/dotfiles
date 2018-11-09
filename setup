@@ -61,12 +61,7 @@ setup_neovim() {
   clone_or_pull https://github.com/arunvelsriram/neovim-dotfiles.git $nvim_dir
 
   # neovim plugin installation
-  nvim +PlugInstall +qall
-
-  # youcompleteme
-  pushd $nvim_dir/plugged/youcompleteme
-  ./install.py --clang-completer --go-completer --js-completer
-  popd
+  nvim +PlugInstall +PlugUpdate +qall
 }
 
 iterm_preferences() {
