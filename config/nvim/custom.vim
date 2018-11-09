@@ -1,1 +1,2 @@
-silent! colorscheme gruvbox
+colorscheme hybrid
+set background=dark
