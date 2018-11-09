@@ -109,10 +109,6 @@ install_cargo_packages() {
  type click || cargo install click
 }
 
-install_kube_fzf() {
-  clone_or_pull https://github.com/arunvelsriram/kube-fzf ~/.kube-fzf
-}
-
 setup_bash_it() {
   bash_it_dir=~/.bash_it
   if [ -d $bash_it_dir ]; then
@@ -121,10 +117,6 @@ setup_bash_it() {
   clone_or_pull https://github.com/Bash-it/bash-it.git $bash_it_dir
   [ "$installed" = true ] || $bash_it_dir/install.sh --no-modify-config
   # bash-it enable plugin alias-completion base direnv fzf rbenv z
-}
-
-install_lazy_connect() {
-  clone_or_pull https://github.com/arunvelsriram/lazy-connect ~/.lazy-connect
 }
 
 setup_dot_tmux() {
@@ -149,8 +141,6 @@ spectacle_shortcuts
 
 install_cargo
 install_cargo_packages
-install_kube_fzf
-install_lazy_connect
 setup_dot_tmux
 
 echo

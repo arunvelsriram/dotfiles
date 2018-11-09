@@ -1,5 +1,6 @@
 tap "caskroom/cask"
 tap "caskroom/fonts"
+tap "arunvelsriram/stable"
 
 brew "antigen"
 brew "neovim"
@@ -48,6 +49,8 @@ brew "prettyping"
 brew "diff-so-fancy"
 brew "exa"
 brew "ngrep"
+brew "kube-fzf"
+brew "lazy-connect"
 
 cask "firefox"
 cask "iterm2"
