@@ -1,4 +1,4 @@
- # Load the default .profile
+# Load the default .profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 # Load .bashrc
