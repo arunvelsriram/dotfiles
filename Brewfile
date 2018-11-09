@@ -50,6 +50,7 @@ brew "exa"
 brew "ngrep"
 brew "kube-fzf"
 brew "lazy-connect"
+brew "jid"
 
 cask "firefox"
 cask "iterm2"
