@@ -107,6 +107,7 @@ cask "google-backup-and-sync"
 cask "keybase"
 cask "keycastr"
 cask "bitwarden"
+cask "alacritty"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
