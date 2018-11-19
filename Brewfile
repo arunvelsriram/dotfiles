@@ -1,8 +1,5 @@
-tap "caskroom/cask"
-tap "caskroom/fonts"
-tap "arunvelsriram/stable"
-
 brew "antigen"
+
 brew "neovim"
 brew "ansible"
 brew "direnv"
@@ -48,9 +45,18 @@ brew "prettyping"
 brew "diff-so-fancy"
 brew "exa"
 brew "ngrep"
-brew "kube-fzf"
-brew "lazy-connect"
 brew "jid"
+
+tap "arunvelsriram/stable"
+
+brew "lazy-connect"
+brew "kube-fzf"
+
+tap "thecasualcoder/stable"
+
+brew "tztail"
+
+tap "caskroom/cask"
 
 cask "firefox"
 cask "iterm2"
@@ -74,7 +80,6 @@ cask "postman"
 cask "etcher"
 cask "minikube"
 cask "vimr"
-cask "font-fira-code"
 cask "adobe-acrobat-reader"
 cask "docker"
 cask "grammarly"
@@ -102,3 +107,6 @@ cask "google-backup-and-sync"
 cask "keybase"
 cask "keycastr"
 cask "bitwarden"
+
+tap "caskroom/fonts"
+cask "font-fira-code"
