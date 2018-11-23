@@ -56,6 +56,9 @@ tap "thecasualcoder/stable"
 
 brew "tztail"
 
+tap "goreleaser/tap"
+brew "goreleaser"
+
 tap "caskroom/cask"
 
 cask "firefox"
