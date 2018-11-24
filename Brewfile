@@ -46,6 +46,7 @@ brew "diff-so-fancy"
 brew "exa"
 brew "ngrep"
 brew "jid"
+brew "gpg"
 
 tap "arunvelsriram/stable"
 
