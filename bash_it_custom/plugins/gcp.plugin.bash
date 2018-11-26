@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# about-plugin open gcp project in browser
+about-plugin 'open gcp project in browser'
 
 opengcp () {
   project=$(gcloud projects list \
