@@ -60,6 +60,9 @@ brew "tztail"
 tap "goreleaser/tap"
 brew "goreleaser"
 
+tap "wagoodman/dive"
+brew "dive"
+
 tap "caskroom/cask"
 
 cask "firefox"
