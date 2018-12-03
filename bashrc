@@ -22,6 +22,10 @@ source '/Users/arunvelsriram/.kube/completion.bash.inc'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Increase bash history
+export HISTSIZE=-1
+export HISTFILESIZE=-1
+
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
 
