@@ -115,6 +115,7 @@ cask "keybase"
 cask "keycastr"
 cask "bitwarden"
 cask "alacritty"
+cask "brave-browser"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
