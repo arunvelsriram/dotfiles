@@ -265,7 +265,7 @@ solarized_dark: &solarized_dark
     white:   '0xfdf6e3'
 
 # Colors
-colors: *dracula
+colors: *solarized_dark
 
 # Visual Bell
 #
