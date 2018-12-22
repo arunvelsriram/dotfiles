@@ -1,3 +1,4 @@
+let ayucolor="mirage"
 colorscheme ayu
 set background=dark
 
