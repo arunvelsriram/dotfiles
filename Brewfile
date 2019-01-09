@@ -63,6 +63,10 @@ brew "goreleaser"
 tap "wagoodman/dive"
 brew "dive"
 
+tap "reactiveops/tap"
+
+brew "rbac-lookup"
+
 tap "caskroom/cask"
 
 cask "firefox"
