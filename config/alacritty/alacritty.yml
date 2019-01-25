@@ -87,24 +87,24 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Menlo
+    family: Fira Code
     # The `style` can be specified to pick a specific face.
     style: Regular
 
   # Bold font face
   bold:
-    family: Menlo
+    family: Fira Code
     # The `style` can be specified to pick a specific face.
-    style: Bold
+    style: Regular
 
   # Italic font face
   italic:
-    family: Menlo
+    family: Fira Code
     # The `style` can be specified to pick a specific face.
-    style: Italic
+    style: Regular
 
   # Point size
-  size: 14.0
+  size: 15.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -335,7 +335,7 @@ ayu_dark: &ayu_dark
     white: '0xFFFFFF'
 
 # Colors
-colors: *ayu_dark
+colors: *gruvbox_dark
 
 # Visual Bell
 #
