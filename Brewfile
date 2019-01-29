@@ -47,6 +47,8 @@ brew "exa"
 brew "ngrep"
 brew "jid"
 brew "gpg"
+brew "dep"
+brew "websocketd"
 
 tap "arunvelsriram/stable"
 
