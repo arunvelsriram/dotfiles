@@ -117,6 +117,7 @@ cask "bitwarden"
 cask "alacritty"
 cask "brave-browser"
 cask "notion"
+cask "google-chat"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
