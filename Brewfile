@@ -53,11 +53,12 @@ brew "websocketd"
 tap "arunvelsriram/stable"
 
 brew "lazy-connect"
-brew "kube-fzf"
 
 tap "thecasualcoder/stable"
 
 brew "tztail"
+brew "kube-fzf"
+brew "kube-tmuxp"
 
 tap "goreleaser/tap"
 brew "goreleaser"
@@ -118,6 +119,7 @@ cask "alacritty"
 cask "brave-browser"
 cask "notion"
 cask "google-chat"
+cask "sloth"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
