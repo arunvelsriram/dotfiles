@@ -50,15 +50,12 @@ brew "gpg"
 brew "dep"
 brew "websocketd"
 
-tap "arunvelsriram/stable"
-
-brew "lazy-connect"
-
 tap "thecasualcoder/stable"
 
 brew "tztail"
 brew "kube-fzf"
 brew "kube-tmuxp"
+brew "lazy-connect"
 
 tap "goreleaser/tap"
 brew "goreleaser"
