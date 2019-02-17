@@ -49,6 +49,8 @@ brew "jid"
 brew "gpg"
 brew "dep"
 brew "websocketd"
+brew "unrar"
+brew "speedtest-cli"
 
 tap "thecasualcoder/stable"
 
