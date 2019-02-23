@@ -119,6 +119,7 @@ cask "brave-browser"
 cask "notion"
 cask "google-chat"
 cask "sloth"
+cask "netspot"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
