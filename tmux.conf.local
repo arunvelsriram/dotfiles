@@ -158,7 +158,7 @@ tmux_conf_theme_right_separator_sub='|'
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=' ❐ #S '
-tmux_conf_theme_status_right='↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}'
+tmux_conf_theme_status_right='#{prefix} ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}'
 
 # status left style
 tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
