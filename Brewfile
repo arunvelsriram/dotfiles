@@ -51,6 +51,7 @@ brew "dep"
 brew "websocketd"
 brew "unrar"
 brew "speedtest-cli"
+brew "bats"
 
 tap "thecasualcoder/stable"
 
