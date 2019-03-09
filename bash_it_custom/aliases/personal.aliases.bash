@@ -4,12 +4,6 @@ about-alias 'my personal aliases'
 ## vimr
 alias vimr='vimr -s'
 
-## git
-alias g='git'
-
-## tig
-alias t='tig'
-
 ## ls
 if ls --color -d . &> /dev/null
 then
