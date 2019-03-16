@@ -2,7 +2,7 @@
 
 set -e
 
-DIRS_AND_FILES=(bashrc bash_profile profile inputrc gitconfig gemrc tool-versions tmux.conf.local bash_it_custom/aliases bash_it_custom/plugins bash_it_custom/themes config/nvim/custom.vim config/nvim/local_bundles.vim config/alacritty/alacritty.yml)
+DIRS_AND_FILES=(bashrc bash_profile profile gitconfig gemrc tool-versions tmux.conf.local bash_it_custom/aliases bash_it_custom/plugins bash_it_custom/themes config/nvim/init.vim config/alacritty/alacritty.yml)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
@@ -48,20 +48,6 @@ clone_or_pull() {
   else
     git clone $git_repo_url $local_path
   fi
-}
-
-setup_neovim() {
-  # vim-plug installation
-  vim_plug_url="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-  vim_plug_installation=~/.local/share/nvim/site/autoload/plug.vim
-  [ -f $vim_plug_installation ] || curl -fLo $vim_plug_installation --create-dirs $vim_plug_url
-
-  # neovim config
-  nvim_dir=~/.config/nvim
-  clone_or_pull https://github.com/arunvelsriram/neovim-dotfiles.git $nvim_dir
-
-  # neovim plugin installation
-  nvim +PlugInstall +PlugUpdate +qall
 }
 
 iterm_preferences() {
@@ -116,8 +102,6 @@ setup_dot_tmux() {
 
 setup_bash_it
 brew_packages
-
-setup_neovim
 
 create_directories
 backup_existing_dotfiles
