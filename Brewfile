@@ -70,6 +70,11 @@ tap "reactiveops/tap"
 
 brew "rbac-lookup"
 
+tap koekeishiya/formulae
+
+brew "chunkwm"
+brew "skhd"
+
 tap "caskroom/cask"
 
 cask "firefox"
