@@ -96,14 +96,6 @@ brew_packages() {
   post_brew_packages
 }
 
-install_cargo() {
-  type cargo || curl -sSf https://static.rust-lang.org/rustup.sh | sh
-}
-
-install_cargo_packages() {
- type click || cargo install click
-}
-
 setup_bash_it() {
   bash_it_dir=~/.bash_it
   if [ -d $bash_it_dir ]; then
@@ -134,8 +126,6 @@ setup_dotfiles
 iterm_preferences
 spectacle_shortcuts
 
-install_cargo
-install_cargo_packages
 setup_dot_tmux
 
 echo
