@@ -15,12 +15,6 @@ export PATH=$ANDROID_HOME/tools:$PATH
 # golang
 export PATH=$(go env GOPATH)/bin:$PATH
 
-# cargo
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Kubectl shell completion
-source '/Users/arunvelsriram/.kube/completion.bash.inc'
-
 # Locales
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -32,4 +26,5 @@ export HISTFILESIZE=-1
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
 
-complete -C /usr/local/Cellar/terraform/0.11.8/bin/terraform terraform
+export BASH_COMPLETION_COMPAT_DIR=/usr/local/etc/bash_completion.d
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
