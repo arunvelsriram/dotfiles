@@ -23,6 +23,7 @@ export HISTFILESIZE=-1
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
 
+# bash completion
 export BASH_COMPLETION_COMPAT_DIR=/usr/local/etc/bash_completion.d
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
