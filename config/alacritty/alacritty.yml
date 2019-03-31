@@ -18,7 +18,7 @@ window:
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
   dimensions:
-    columns: 250
+    columns: 120
     lines: 80
 
   # Window padding (changes require restart)
@@ -48,7 +48,7 @@ window:
   #     - none: Neither borders nor title bar
   #     - buttonless: Title bar, transparent background and title bar buttons
   #     - transparent: Title bar, transparent background, but no title bar buttons
-  decorations: none
+  decorations: full
 
   # When true, alacritty starts maximized.
   start_maximized: false
@@ -101,10 +101,10 @@ font:
   italic:
     family: Fira Code
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Italic
 
   # Point size
-  size: 16.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
