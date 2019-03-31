@@ -1,6 +1,3 @@
-# asdf
-source /usr/local/opt/asdf/asdf.sh
-
 # Postgres
 export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest"
 export PATH=$PATH:$POSTGRES_PATH/bin
