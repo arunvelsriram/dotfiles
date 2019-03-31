@@ -3,7 +3,7 @@ export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest"
 export PATH=$PATH:$POSTGRES_PATH/bin
 
 # Java
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # Android
 export ANDROID_HOME="/usr/local/share/android-sdk"
