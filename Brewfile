@@ -69,7 +69,7 @@ tap "reactiveops/tap"
 
 brew "rbac-lookup"
 
-tap koekeishiya/formulae
+tap "koekeishiya/formulae"
 
 brew "chunkwm"
 brew "skhd"
