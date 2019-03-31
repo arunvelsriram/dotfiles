@@ -33,6 +33,7 @@ setup_dotfiles() {
     full_path=~/.$dir_or_file
     [ -f $full_path ] && rm $full_path
     [ -d $full_path ] && rm -rf $full_path
+    mkdir -p $(dirname $full_path)
     ln -sv ~/dotfiles/$dir_or_file $full_path
   done
 }
