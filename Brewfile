@@ -51,6 +51,7 @@ brew "unrar"
 brew "speedtest-cli"
 brew "bats"
 brew "rust"
+brew "terraform"
 
 tap "thecasualcoder/stable"
 
