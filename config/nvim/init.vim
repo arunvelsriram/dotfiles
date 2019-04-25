@@ -112,7 +112,7 @@ set number
 set relativenumber
 
 if !exists('g:not_finish_vimplug')
-  colorscheme dracula
+  colorscheme molokai
 endif
 
 
