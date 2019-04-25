@@ -121,6 +121,7 @@ cask "notion"
 cask "sloth"
 cask "netspot"
 cask "station"
+cask "adoptopenjdk8"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
