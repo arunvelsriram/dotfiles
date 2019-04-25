@@ -122,6 +122,7 @@ cask "sloth"
 cask "netspot"
 cask "station"
 cask "adoptopenjdk8"
+cask "android-studio"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
