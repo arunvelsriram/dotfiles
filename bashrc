@@ -5,10 +5,6 @@ export PATH=$PATH:$POSTGRES_PATH/bin
 # Java
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
-# Android
-export ANDROID_HOME="/usr/local/share/android-sdk"
-export PATH=$ANDROID_HOME/tools:$PATH
-
 # golang
 export PATH=$(go env GOPATH)/bin:$PATH
 
