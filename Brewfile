@@ -70,10 +70,6 @@ tap "reactiveops/tap"
 
 brew "rbac-lookup"
 
-tap "koekeishiya/formulae"
-
-brew "skhd"
-
 tap "caskroom/cask"
 
 cask "firefox"
@@ -122,6 +118,7 @@ cask "netspot"
 cask "station"
 cask "adoptopenjdk8"
 cask "android-studio"
+cask "karabiner-elements"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
