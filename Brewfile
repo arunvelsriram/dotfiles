@@ -52,6 +52,7 @@ brew "speedtest-cli"
 brew "bats"
 brew "rust"
 brew "terraform"
+brew "apktool"
 
 tap "thecasualcoder/stable"
 
@@ -119,6 +120,7 @@ cask "station"
 cask "adoptopenjdk8"
 cask "android-studio"
 cask "karabiner-elements"
+cask "amazon-music"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
