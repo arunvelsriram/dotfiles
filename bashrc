@@ -29,3 +29,6 @@ export BASH_COMPLETION_COMPAT_DIR=/usr/local/etc/bash_completion.d
 export TALISMAN_HOME=/Users/arunvelsriram/.talisman/bin
 alias talisman=$TALISMAN_HOME/talisman_darwin_amd64
 # <<< talisman <<<
+
+# rbenv
+eval "$(rbenv init -)"
