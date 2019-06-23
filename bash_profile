@@ -12,7 +12,7 @@ export BASH_IT_CUSTOM="/Users/arunvelsriram/.bash_it_custom"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME="minimal-custom"
+export BASH_IT_THEME="minimal"
 SCM_GIT_SHOW_MINIMAL_INFO="true"
 
 # (Advanced): Change this to the name of your remote repo if you
