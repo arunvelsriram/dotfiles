@@ -26,3 +26,6 @@ alias ping="prettyping --nolegend"
 
 ## top
 alias top="htop"
+
+## nvim
+alias vim="nvim"
