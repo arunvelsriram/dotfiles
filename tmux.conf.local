@@ -263,6 +263,10 @@ set -g mode-keys vi
 # set -g prefix C-a
 # bind C-a send-prefix
 
+# disable C-a prefix
+set -gu prefix2
+unbind C-a
+
 # move status line to top
 #set -g status-position top
 
