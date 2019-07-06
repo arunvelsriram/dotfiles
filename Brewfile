@@ -54,6 +54,7 @@ brew "rust"
 brew "terraform"
 brew "apktool"
 brew "kotlin"
+brew "jenv"
 
 tap "thecasualcoder/stable"
 
@@ -69,7 +70,7 @@ brew "goreleaser"
 tap "wagoodman/dive"
 brew "dive"
 
-tap "reactiveops/tap"
+tap "reactiveops/tap
 
 brew "rbac-lookup"
 
@@ -109,7 +110,6 @@ cask "tipp10"
 cask "rowanj-gitx"
 cask "balenaetcher"
 cask "licecap"
-cask "java"
 cask "google-backup-and-sync"
 cask "keybase"
 cask "keycastr"
@@ -118,12 +118,11 @@ cask "alacritty"
 cask "notion"
 cask "sloth"
 cask "netspot"
-cask "station"
-cask "adoptopenjdk"
 cask "android-studio"
 cask "karabiner-elements"
 cask "amazon-music"
 cask "mjml"
+cask "google-chat"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
