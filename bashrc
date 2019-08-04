@@ -2,9 +2,6 @@
 export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest"
 export PATH=$PATH:$POSTGRES_PATH/bin
 
-# Java
-export JAVA_HOME="$(/usr/libexec/java_home)"
-
 # golang
 export PATH=$(go env GOPATH)/bin:$PATH
 
@@ -32,3 +29,27 @@ alias talisman=$TALISMAN_HOME/talisman_darwin_amd64
 
 # rbenv
 eval "$(rbenv init -)"
+
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# node
+export PATH="/usr/local/opt/node@10/bin:$PATH"
+
+#AWSume alias to source the AWSume script
+alias awsume=". awsume"
+
+#Auto-Complete function for AWSume
+
+_awsume() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(awsumepy --rolesusers)
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+}
+complete -F _awsume awsume
+
