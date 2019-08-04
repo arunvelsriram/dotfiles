@@ -69,8 +69,6 @@ tap "reactiveops/tap"
 brew "rbac-lookup"
 
 tap "homebrew/cask-versions"
-cask "background-music-pre"
-
 tap "caskroom/cask"
 cask "firefox"
 cask "iterm2"
@@ -116,6 +114,8 @@ cask "mjml"
 cask "google-chat"
 cask "sublime-text"
 cask "postgres"
+cask "background-music-pre"
+cask "eqmac"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
