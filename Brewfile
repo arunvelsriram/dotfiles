@@ -68,6 +68,9 @@ brew "dive"
 tap "reactiveops/tap"
 brew "rbac-lookup"
 
+tap "homebrew/cask-versions"
+cask "background-music-pre"
+
 tap "caskroom/cask"
 cask "firefox"
 cask "iterm2"
