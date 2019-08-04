@@ -33,7 +33,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 
 Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'Yggdroot/indentLine'
+Plug 'thaerkh/vim-indentguides'
 Plug 'schickling/vim-bufonly'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
