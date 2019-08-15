@@ -37,6 +37,9 @@ eval "$(jenv init -)"
 # node
 export PATH="/usr/local/opt/node@10/bin:$PATH"
 
+#flutter
+export PATH="$PATH:$HOME/flutter/bin"
+
 #AWSume alias to source the AWSume script
 alias awsume=". awsume"
 
