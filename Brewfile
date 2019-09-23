@@ -118,6 +118,7 @@ cask "postgres"
 cask "background-music-pre"
 cask "eqmac"
 cask "ccmenu"
+cask "gimp"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
