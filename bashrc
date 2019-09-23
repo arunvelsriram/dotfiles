@@ -37,22 +37,10 @@ eval "$(jenv init -)"
 # node
 export PATH="/usr/local/opt/node@10/bin:$PATH"
 
-#flutter
+# flutter
 export PATH="$PATH:$HOME/flutter/bin"
 
-#AWSume alias to source the AWSume script
-alias awsume=". awsume"
-
-#Auto-Complete function for AWSume
-
-_awsume() {
-    local cur prev opts
-    COMPREPLY=()
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts=$(awsumepy --rolesusers)
-    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-    return 0
-}
-complete -F _awsume awsume
+# Android
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH
 
