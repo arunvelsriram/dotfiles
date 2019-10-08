@@ -38,6 +38,7 @@ Plug 'schickling/vim-bufonly'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
 Plug 'godlygeek/csapprox'
+Plug 'sheerun/vim-polyglot'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -113,7 +114,7 @@ set number
 set relativenumber
 
 if !exists('g:not_finish_vimplug')
-  colorscheme new-moon
+  colorscheme molokai
 endif
 
 
