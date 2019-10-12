@@ -29,3 +29,6 @@ alias top="htop"
 
 ## nvim
 alias vim="nvim"
+
+# github dir
+alias github='cd $(fd --max-depth 1 . ~/github/*/ | fzf)'
