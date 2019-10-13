@@ -31,4 +31,4 @@ alias top="htop"
 alias vim="nvim"
 
 # github dir
-alias github='cd $(fd --max-depth 1 . ~/github/*/ | fzf)'
+alias github='cd $(fd --max-depth 2 . ~/github/ | fzf)'
