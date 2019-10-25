@@ -48,8 +48,7 @@ endif
 
 "" Color
 Plug 'tomasr/molokai'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'taniarascia/new-moon.vim'
+Plug 'morhetz/gruvbox'
 
 "" Include user's extra bundle
 if filereadable(expand("~/.config/nvim/local_bundles.vim"))
@@ -114,7 +113,7 @@ set number
 set relativenumber
 
 if !exists('g:not_finish_vimplug')
-  colorscheme molokai
+  colorscheme gruvbox
 endif
 
 
