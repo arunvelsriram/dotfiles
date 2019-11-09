@@ -51,6 +51,8 @@ brew "tfenv"
 brew "tree"
 brew "git-plus"
 brew "git-crypt"
+brew "scrcpy"
+brew "thefuck"
 
 tap "thecasualcoder/stable"
 brew "tztail"
