@@ -1,5 +1,5 @@
 fileignoreconfig:
-- filename: iterm/com.googlecode.iterm2.plist
-  checksum: b86a8641049f9c1b70693bef0b0cd28ea06ba122d14cbe4f6e680f876129d99c
+- filename: bashrc
+  checksum: dc275739c489c9d52ef253b9c07c13508ec4bb69bcdb1de8197491b3ba4078aa
   ignore_detectors: []
 scopeconfig: []
