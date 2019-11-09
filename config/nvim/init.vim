@@ -148,6 +148,10 @@ if executable('rg')
   command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!{.git,vendor,node_modules}/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 endif
 
+" go
+let g:go_fmt_command = "goimports"  " Run goimports along gofmt on each save
+let g:go_auto_type_info = 1  " Automatically get signature/type info for object under cursor
+
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
