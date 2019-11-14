@@ -120,6 +120,8 @@ cask "background-music-pre"
 cask "eqmac"
 cask "ccmenu"
 cask "gimp"
+cask "itsycal"
+cask "dozer"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
