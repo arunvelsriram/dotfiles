@@ -1,5 +1,8 @@
 fileignoreconfig:
+- filename: bash_profile
+  checksum: bc3de8b08f5cd6774c52bb12626424e88e9ae156ba388630bc8492412d5701f7
+  ignore_detectors: []
 - filename: bashrc
-  checksum: dc275739c489c9d52ef253b9c07c13508ec4bb69bcdb1de8197491b3ba4078aa
+  checksum: b737271a86ec4018036b1c96e9d0a030f3d2bee3e52a933cc5a6297dd485cd64
   ignore_detectors: []
 scopeconfig: []
