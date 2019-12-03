@@ -5,13 +5,9 @@ export PATH=$PATH:$POSTGRES_PATH/bin
 # golang
 export PATH=$(go env GOPATH)/bin:$PATH
 
-# Locales
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
 # Increase bash history
-export HISTSIZE=-1
-export HISTFILESIZE=-1
+export HISTSIZE=
+export HISTFILESIZE=
 
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
@@ -39,10 +35,6 @@ export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 # flutter
 export PATH="$PATH:$HOME/flutter/bin"
-
-# Android
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH
 
 # thefuck
 eval $(thefuck --alias)
