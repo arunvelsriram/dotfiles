@@ -68,3 +68,4 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
