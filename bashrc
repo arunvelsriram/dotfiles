@@ -12,11 +12,11 @@ export HISTFILESIZE=
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
 
-# bash completion
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
 # git completion
 source ~/.git-completion.bash
+
+# bash completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # >>> talisman >>>
