@@ -58,13 +58,6 @@ iterm_preferences() {
   defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForFile_selection -int 0
 }
 
-spectacle_shortcuts() {
-  open /Applications/Spectacle.app
-  sleep 5
-  rm ~/Library/Application\ Support/Spectacle/Shortcuts.json
-  ln -sv ~/dotfiles/spectacle/Shortcuts.json ~/Library/Application\ Support/Spectacle/Shortcuts.json
-}
-
 pre_brew_packages() {
   type brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 }
@@ -109,7 +102,6 @@ backup_existing_dotfiles
 setup_dotfiles
 
 iterm_preferences
-spectacle_shortcuts
 
 setup_dot_tmux
 
