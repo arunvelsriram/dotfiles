@@ -133,3 +133,6 @@ cask "xca"
 
 tap "caskroom/fonts"
 cask "font-fira-code"
+cask "font-hack"
+cask "font-iosevka"
+cask "font-iosevka-slab"
