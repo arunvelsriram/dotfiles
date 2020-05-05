@@ -17,3 +17,4 @@ A backup of the existing dotfiles will be placed inside `dotfiles.backup.{date}`
 
 ## TODO ##
 - [ ] Include VS Code preferences
+- [ ] Include Sublime Text preferences
