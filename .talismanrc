@@ -1,6 +1,5 @@
 fileignoreconfig:
+- filename: Brewfile.lock.json
+  checksum: 81561a232a005e4d38da006aa580061bb9800670766b9e7771afc96a1231cd67
 - filename: bashrc
   checksum: 4f232b8faa34a490fccaf0a868c6ad35fb1e46e39e643f0dca5ffb545b4f238b
-  ignore_detectors: []
-scopeconfig: []
-

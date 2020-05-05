@@ -410,22 +410,22 @@
       "golang": null,
       "gpg": null,
       "graphviz": {
-        "version": "2.42.3",
+        "version": "2.44.0",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/graphviz-2.42.3.catalina.bottle.tar.gz",
-              "sha256": "ad22bb28b684c6fb9c51e32000ada1df8cc2f6f2711f8e85c4599fbb5e213e7e"
+              "url": "https://homebrew.bintray.com/bottles/graphviz-2.44.0.catalina.bottle.tar.gz",
+              "sha256": "b7622910804f75702b6124ed0a376f7d4f1c8aaa8dde38601549bb4c9a84589b"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/graphviz-2.42.3.mojave.bottle.tar.gz",
-              "sha256": "7f11871b1618a4e005a38462522b251bda2c97701aaa944b77a82e212d928ba7"
+              "url": "https://homebrew.bintray.com/bottles/graphviz-2.44.0.mojave.bottle.tar.gz",
+              "sha256": "cadbefa8657abfbc63d66827ca1492226d10fc6fdba9276f41e62be3b9434ba2"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/graphviz-2.42.3.high_sierra.bottle.tar.gz",
-              "sha256": "9b7c8b58ae0ab87ab5af31f6d72c61e9840f3fbb24029156a937bb1d3d75310b"
+              "url": "https://homebrew.bintray.com/bottles/graphviz-2.44.0.high_sierra.bottle.tar.gz",
+              "sha256": "c3b0269db2fb418c0e1b7413f10e0bec2d4f69485cfda484e8acf99cb1b86a54"
             }
           }
         }
@@ -1229,6 +1229,27 @@
       "rbac-lookup": {
         "version": "0.5.0",
         "bottle": false
+      },
+      "rclone": {
+        "version": "1.51.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/rclone-1.51.0.catalina.bottle.tar.gz",
+              "sha256": "7b56453fcde4d2d35cf467afd37d5798d332c3b666d74d7945c9b8df6e059893"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/rclone-1.51.0.mojave.bottle.tar.gz",
+              "sha256": "947a6aa9692f716501316c370eef83e0d87042edf86d4d1c99ac7b99e27b27ff"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/rclone-1.51.0.high_sierra.bottle.tar.gz",
+              "sha256": "cec3a23f8fdca70160d15ef04eee1126ab208553c548fbfe7fe3f9d127711046"
+            }
+          }
+        }
       }
     },
     "tap": {
@@ -1245,10 +1266,10 @@
         "revision": "4a88e2bcc0d303ac75a5d92a7bb29c123d4e7d88"
       },
       "homebrew/cask-versions": {
-        "revision": "6b0ce7e112e65188ec0c234c46a9f8b49a6a6510"
+        "revision": "7557a605b9881a26b24506b053e94ecc6281a565"
       },
       "caskroom/cask": {
-        "revision": "4e445f4df4a7f9f7f7585b462140304bfecf577e"
+        "revision": "a1b80793ccecd3fa9716ac03125210679930a8b9"
       },
       "caskroom/fonts": {
         "revision": "f8551cec9eca212d72c0b5f559c0ae0365a9729f"
@@ -1274,7 +1295,7 @@
         }
       },
       "balenaetcher": {
-        "version": "1.5.82",
+        "version": "1.5.83",
         "options": {
           "full_name": "balenaetcher"
         }
@@ -1526,7 +1547,7 @@
         }
       },
       "xca": {
-        "version": "2.2.1",
+        "version": "2.3.0",
         "options": {
           "full_name": "xca"
         }
@@ -1536,15 +1557,33 @@
         "options": {
           "full_name": "font-fira-code"
         }
+      },
+      "font-hack": {
+        "version": "3.003",
+        "options": {
+          "full_name": "font-hack"
+        }
+      },
+      "font-iosevka": {
+        "version": "2.3.3",
+        "options": {
+          "full_name": "font-iosevka"
+        }
+      },
+      "font-iosevka-slab": {
+        "version": "2.3.3",
+        "options": {
+          "full_name": "font-iosevka-slab"
+        }
       }
     }
   },
   "system": {
     "macos": {
       "mojave": {
-        "HOMEBREW_VERSION": "2.2.14-24-g3e20393",
+        "HOMEBREW_VERSION": "2.2.14-38-g7f69550",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "40c227a5885561519827edecffd959f6316163d8",
+        "Homebrew/homebrew-core": "dc1144c154ea60207d7448c6a8e1f3cf93d06d8d",
         "CLT": "10.3.0.0.1.1562985497",
         "Xcode": "10.3",
         "macOS": "10.14.6"
