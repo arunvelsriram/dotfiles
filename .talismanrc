@@ -1,5 +1,7 @@
 fileignoreconfig:
 - filename: Brewfile.lock.json
-  checksum: 81561a232a005e4d38da006aa580061bb9800670766b9e7771afc96a1231cd67
+  checksum: 2bb71086b676802d14d7dc570c8fbd1f3b9f44abe5f9da867317719b738f17da
+- filename: bash_profile
+  checksum: 3366fec6818defdd9244f6fdd9591bad8a5c435a16925c35b05cd92c86984589
 - filename: bashrc
   checksum: 4f232b8faa34a490fccaf0a868c6ad35fb1e46e39e643f0dca5ffb545b4f238b
