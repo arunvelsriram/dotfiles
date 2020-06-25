@@ -33,12 +33,12 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 
 Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'thaerkh/vim-indentguides'
 Plug 'schickling/vim-bufonly'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
 Plug 'godlygeek/csapprox'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -165,3 +165,14 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
+
+" vim-go detect file containing gohtmltmpl
+function DetectGoHtmlTmpl()
+  if expand('%:e') == "html" && search("{{") != 0
+    set filetype=gohtmltmpl
+  endif
+endfunction
+
+augroup filetypedetect
+  au! BufRead,BufNewFile * call DetectGoHtmlTmpl()
+augroup END
