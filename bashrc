@@ -38,5 +38,3 @@ export PATH="/usr/local/opt/node@10/bin:$PATH"
 # flutter
 export PATH="$PATH:$HOME/flutter/bin"
 
-# thefuck
-eval $(thefuck --alias)
