@@ -252,7 +252,7 @@ shell:
   args:
     - --login
     - -c
-    - tmux -u attach
+    - tmux new-session -A -s main
 
 # Startup directory
 #
