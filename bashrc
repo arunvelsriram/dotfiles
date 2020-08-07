@@ -38,3 +38,6 @@ export PATH="/usr/local/opt/node@10/bin:$PATH"
 # flutter
 export PATH="$PATH:$HOME/flutter/bin"
 
+# golang
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
