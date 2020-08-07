@@ -35,3 +35,4 @@ alias gh='cd $(fd --max-depth 2 . ~/github/ | fzf)'
 
 alias nvimconf="nvim $HOME/.config/nvim/init.vim"
 alias alacrittyconf="nvim $HOME/.config/alacritty/alacritty.yml"
+alias tmuxconf="nvim $HOME/.tmux.conf.local"
