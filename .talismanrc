@@ -1,9 +1,3 @@
 fileignoreconfig:
-- filename: Brewfile.lock.json
-  checksum: 2bb71086b676802d14d7dc570c8fbd1f3b9f44abe5f9da867317719b738f17da
-- filename: bash_profile
-  checksum: 3366fec6818defdd9244f6fdd9591bad8a5c435a16925c35b05cd92c86984589
 - filename: bashrc
-  checksum: 4f232b8faa34a490fccaf0a868c6ad35fb1e46e39e643f0dca5ffb545b4f238b
-- filename: iterm/com.googlecode.iterm2.plist
-  checksum: f099b77f8990fb961452dcbbd53c2234e84bd7342233e472400c9bc52da8d08b
+  checksum: 7b14b27e870074c0afcc0869c167dd4256b4b275014de75ddbae0c9c9d35e583
