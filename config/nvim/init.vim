@@ -66,6 +66,7 @@ Plug 'honza/vim-snippets'
 
 "" Color
 Plug 'tomasr/molokai'
+Plug 'mhartington/oceanic-next'
 
 "*****************************************************************************
 "" Custom bundles
@@ -135,14 +136,20 @@ let g:session_command_aliases = 1
 syntax on
 set ruler
 set number
+set relativenumber
 
 let no_buffers_menu=1
-silent! colorscheme molokai
+syntax enable
+silent! colorscheme OceanicNext
 
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
+
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
@@ -160,8 +167,6 @@ else
 
   
 endif
-
-
 
 "" Disable the blinking cursor.
 set gcr=a:blinkon0
@@ -223,8 +228,23 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 35
 let NERDTreeQuitOnOpen = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-nnoremap <silent> <C-\> :NERDTreeToggle<CR>
+
 nnoremap <silent> <F2> :NERDTreeFind<CR>
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
+
+" Toggle/Find in NERDTree
+function! OpenNerdTree()
+  if &modifiable && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+  else
+    NERDTreeToggle
+  endif
+endfunction
+nnoremap <silent> <C-\> :call OpenNerdTree()<CR>
+
+" prevent files from opening inside NERDTree
+nnoremap <silent> <expr> <leader>b (expand('%') =~ 'NERD_tree' ? "\<C-W>\<C-W>" : '').":Buffers<CR>"
+nnoremap <silent> <expr> <leader>e (expand('%') =~ 'NERD_tree' ? "\<C-W>\<C-W>" : '').":FZF -m<CR>"
 
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
