@@ -29,6 +29,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 "*****************************************************************************
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -66,7 +67,14 @@ Plug 'honza/vim-snippets'
 
 "" Color
 Plug 'tomasr/molokai'
-Plug 'mhartington/oceanic-next'
+
+" GoLang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+let g:go_highlight_structs = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 "*****************************************************************************
 "" Custom bundles
@@ -140,7 +148,7 @@ set relativenumber
 
 let no_buffers_menu=1
 syntax enable
-silent! colorscheme OceanicNext
+silent! colorscheme molokai
 
 set mousemodel=popup
 set t_Co=256
