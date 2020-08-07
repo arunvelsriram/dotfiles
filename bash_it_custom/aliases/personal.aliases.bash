@@ -32,3 +32,6 @@ alias vim="nvim"
 
 # github dir
 alias gh='cd $(fd --max-depth 2 . ~/github/ | fzf)'
+
+alias nvimconf="nvim $HOME/.config/nvim/init.vim"
+alias alacrittyconf="nvim $HOME/.config/alacritty/alacritty.yml"
