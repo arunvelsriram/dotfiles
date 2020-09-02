@@ -1,14 +1,13 @@
-#!/usr/bin/env bash
+### kubectl helpers
 
-cite about-plugin
-about-plugin 'kubectl helper funtions'
+## Functions
 
 # get node internal ip
-function node-iip {
+node-iip() {
   kubectl get node -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.addresses[?(@.type=="InternalIP")].address}{"\n"}{end}'
 }
 
 # get node external ip
-function node-eip {
+node-eip() {
   kubectl get node -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.addresses[?(@.type=="ExternalIP")].address}{"\n"}{end}'
 }
