@@ -1,7 +1,8 @@
-#!/usr/bin/env bash
+### GCP and gcloud CLI functions
 
-about-plugin 'GCP and gcloud CLI functions'
+## Functions
 
+# open GCP project console in browser
 opengcp () {
   project=$(gcloud projects list \
     | rg -v PROJECT_ID \
@@ -12,6 +13,7 @@ opengcp () {
 }
 
 
+# print IP CIDR for all clusters
 cluster_ip_cidr() {
   gcloud projects list \
     | tail -n +2 \

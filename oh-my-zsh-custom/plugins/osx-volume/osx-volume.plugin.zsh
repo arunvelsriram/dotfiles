@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
+### OS X volume manipulation
 
+## Functions
 
-cite about-plugin
-about-plugin 'OS X volume manipulation functions'
-
-function increment_volume() {
+# increase volume by 5
+increment_volume() {
   local current
   local new
 
@@ -13,7 +12,8 @@ function increment_volume() {
   osascript -e "set volume output volume $new"
 }
 
-function decrement_volume() {
+# decrease volume by 5
+decrement_volume() {
   local current
   local new
 
@@ -22,7 +22,8 @@ function decrement_volume() {
   osascript -e "set volume output volume $new"
 }
 
-function toggle_mute() {
+# toggle mute on/off
+toggle_mute() {
   local current
   local new
 

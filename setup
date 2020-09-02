@@ -2,13 +2,12 @@
 
 set -e
 
-DIRS_AND_FILES=(bashrc bash_profile profile gitconfig gemrc tool-versions tmux.conf.local bash_it_custom/aliases bash_it_custom/plugins bash_it_custom/themes config/nvim/init.vim config/alacritty/alacritty.yml)
+DIRS_AND_FILES=(zshrc bashrc bash_profile profile gitconfig gemrc tool-versions tmux.conf.local oh-my-zsh-custom/plugins oh-my-zsh-custom/themes config/nvim/init.vim config/alacritty/alacritty.yml)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
   mkdir -p $BACKUP_DIR
-  mkdir -p $BACKUP_DIR/oh-my-zsh/custom
-  mkdir -p $BACKUP_DIR/bash_it_custom
+  mkdir -p $BACKUP_DIR/oh-my-zsh-custom
   mkdir -p $BACKUP_DIR/config/nvim
   mkdir -p $BACKUP_DIR/config/alacritty
 }
@@ -79,14 +78,14 @@ brew_packages() {
   post_brew_packages
 }
 
-setup_bash_it() {
-  bash_it_dir=~/.bash_it
-  if [ -d $bash_it_dir ]; then
+setup_zsh() {
+  brew install zsh
+
+  oh_my_zsh_dir=~/.oh-my-zsh
+  if [ -d $oh_my_zsh_dir ]; then
     installed=true
   fi
-  clone_or_pull https://github.com/Bash-it/bash-it.git $bash_it_dir
-  [ "$installed" = true ] || $bash_it_dir/install.sh --no-modify-config
-  # bash-it enable plugin alias-completion base direnv fzf rbenv z
+  [ "$installed" = true ] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
 setup_dot_tmux() {
@@ -97,16 +96,22 @@ setup_dot_tmux() {
   popd
 }
 
-setup_bash_it
+install_node_packages() {
+  echo "Installing node packages"
+  npm install -g alacritty-themes
+}
+
+setup_zsh
 brew_packages
 
 create_directories
 backup_existing_dotfiles
 setup_dotfiles
 
-iterm_preferences
-
 setup_dot_tmux
+
+iterm_preferences
+install_node_packages
 
 echo
 echo "Done. Restart terminal to see the changes."

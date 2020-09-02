@@ -1,3 +1,5 @@
+
 fileignoreconfig:
-- filename: bashrc
-  checksum: 7b14b27e870074c0afcc0869c167dd4256b4b275014de75ddbae0c9c9d35e583
+- filename: zshrc
+  checksum: 221a8655c21399a4d6cc027eac9d2e1387015491aa260018fcb3a3e6c877cd46
+
