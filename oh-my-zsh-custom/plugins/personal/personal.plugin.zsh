@@ -24,10 +24,10 @@ cloneg() {
 ## Aliases
 
 # edit config
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias alacrittyconfig="nvim ~/.config/alacritty/alacritty.yml"
+alias zshconf="nvim ~/.zshrc"
+alias alacrittyconf="nvim ~/.config/alacritty/alacritty.yml"
 alias tmuxconf="nvim $HOME/.tmux.conf.local"
+alias nvimconf="nvim $HOME/.config/nvim/init.vim"
 
 # cat
 alias cat="bat"
