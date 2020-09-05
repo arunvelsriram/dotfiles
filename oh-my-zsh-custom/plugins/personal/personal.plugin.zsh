@@ -8,6 +8,19 @@ lwhich() {
   ls -l $(which $1)
 }
 
+# git clone in to user-or-org/repo
+cloneg() {
+    repo_url=${@:$#}
+    project=$(basename $repo_url)
+    project=$(echo $project | sed 's/.git//')
+    group=$(echo $(dirname $repo_url) | sed -E 's/(.*)(:|\/)(.*)/\3/g')
+
+    echo "Group: $group"
+    echo "Project: $project"
+
+    git clone "$@" $group/$project
+}
+
 ## Aliases
 
 # edit config
