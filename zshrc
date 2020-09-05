@@ -104,3 +104,6 @@ export PATH="$PATH:$HOME/flutter/bin"
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
+# syntax highlighting
+## needs to be at the end
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -1,5 +1,3 @@
-
 fileignoreconfig:
 - filename: zshrc
-  checksum: 221a8655c21399a4d6cc027eac9d2e1387015491aa260018fcb3a3e6c877cd46
-
+  checksum: acb2e082a54c4c108533cd5fa974e33e137ed8fa9085cc04d014264bf97ced6f
