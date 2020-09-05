@@ -67,6 +67,7 @@ Plug 'honza/vim-snippets'
 
 "" Color
 Plug 'tomasr/molokai'
+Plug 'sickill/vim-monokai'
 
 " GoLang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -149,7 +150,7 @@ set relativenumber
 
 let no_buffers_menu=1
 syntax enable
-silent! colorscheme molokai
+silent! colorscheme monokai
 
 set mousemodel=popup
 set t_Co=256
