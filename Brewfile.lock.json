@@ -1636,13 +1636,13 @@
         }
       },
       "font-iosevka": {
-        "version": "3.4.7",
+        "version": "3.5.0",
         "options": {
           "full_name": "font-iosevka"
         }
       },
       "font-iosevka-slab": {
-        "version": "3.4.7",
+        "version": "3.5.0",
         "options": {
           "full_name": "font-iosevka-slab"
         }
@@ -1651,6 +1651,12 @@
         "version": "4.7.12",
         "options": {
           "full_name": "miniconda"
+        }
+      },
+      "font-jetbrains-mono": {
+        "version": "2.002",
+        "options": {
+          "full_name": "font-jetbrains-mono"
         }
       }
     }
