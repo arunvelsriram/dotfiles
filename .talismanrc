@@ -1,5 +1,5 @@
 fileignoreconfig:
 - filename: Brewfile.lock.json
-  checksum: 779ebda472bb1430c099c6d2cc318702fc0c795bcb2129dfce18afc45a7f165a
+  checksum: c899f4f3c56c5f741597c2e07a6e90110778f0e4484b649f37370aebf5410413
 - filename: zshrc
   checksum: e2c6f12331942d6fded6e3dcef14ca528a2c83307aee7e45b995fd6be6fd4202
