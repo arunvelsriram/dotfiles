@@ -1,5 +1,7 @@
 fileignoreconfig:
 - filename: Brewfile.lock.json
   checksum: c899f4f3c56c5f741597c2e07a6e90110778f0e4484b649f37370aebf5410413
+- filename: iterm/com.googlecode.iterm2.plist
+  checksum: c6b9aef41ae2d8932826808d8da5788ac89076692386504069fc05f307386947
 - filename: zshrc
   checksum: e2c6f12331942d6fded6e3dcef14ca528a2c83307aee7e45b995fd6be6fd4202
