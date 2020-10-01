@@ -105,6 +105,12 @@ export PATH="$PATH:$HOME/flutter/bin"
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
+# gnu-getopt
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+
 # syntax highlighting
 ## needs to be at the end
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
