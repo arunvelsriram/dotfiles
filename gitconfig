@@ -6,6 +6,7 @@
 [user]
   name = Arunvel Sriram
   email = arunvelsriram@gmail.com
+  signingkey = 603A233BFD616CF49B190768BAAEF633460D68C2
 
 # work specific gitconfig for all
 # projects inside ~/work/ directory
