@@ -149,37 +149,32 @@ font:
 draw_bold_text_with_bright_colors: true
 
 colors:
-  # Default colors
+  name: Monokai (dark)
+  author: Chris Kempson
   primary:
-    background: '#002b36' # base03
-    foreground: '#839496' # base0
-
-  # Cursor colors
+    background: "#272822"
+    foreground: "#f8f8f2"
   cursor:
-    text: '#002b36' # base03
-    cursor: '#839496' # base0
-
-  # Normal colors
+    text: "#272822"
+    cursor: "#f8f8f2"
   normal:
-    black: '#073642' # base02
-    red: '#dc322f' # red
-    green: '#859900' # green
-    yellow: '#b58900' # yellow
-    blue: '#268bd2' # blue
-    magenta: '#d33682' # magenta
-    cyan: '#2aa198' # cyan
-    white: '#eee8d5' # base2
-
-  # Bright colors
+    black: "#272822"
+    red: "#f92672"
+    green: "#a6e22e"
+    yellow: "#f4bf75"
+    blue: "#66d9ef"
+    magenta: "#ae81ff"
+    cyan: "#a1efe4"
+    white: "#f8f8f2"
   bright:
-    black: '#002b36' # base03
-    red: '#cb4b16' # orange
-    green: '#586e75' # base01
-    yellow: '#657b83' # base00
-    blue: '#839496' # base0
-    magenta: '#6c71c4' # violet
-    cyan: '#93a1a1' # base1
-    white: '#fdf6e3' # base3
+    black: "#75715e"
+    red: "#f92672"
+    green: "#a6e22e"
+    yellow: "#f4bf75"
+    blue: "#66d9ef"
+    magenta: "#ae81ff"
+    cyan: "#a1efe4"
+    white: "#f9f8f5"
 
 # Visual Bell
 #
