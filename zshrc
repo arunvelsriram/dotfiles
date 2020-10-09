@@ -89,13 +89,6 @@ export PATH=$PATH:$POSTGRES_PATH/bin
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
 
-# >>> talisman >>>
-export TALISMAN_INTERACTIVE=true
-# Below environment variables should not be modified unless you know what you are doing
-export TALISMAN_HOME=/Users/arunvelsriram/.talisman/bin
-alias talisman=$TALISMAN_HOME/talisman_darwin_amd64
-# <<< talisman <<<
-
 # rbenv
 eval "$(rbenv init -)"
 
