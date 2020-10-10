@@ -132,6 +132,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 cask "xca"
+cask "zettlr"
 
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
