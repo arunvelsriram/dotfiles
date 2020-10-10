@@ -136,6 +136,7 @@ cask "kap"
 cask "mattermost"
 cask "miniconda"
 cask "stretchly"
+cask "mark-text"
 
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
