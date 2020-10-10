@@ -136,6 +136,7 @@ cask "mattermost"
 cask "miniconda"
 cask "stretchly"
 cask "mark-text"
+cask "joplin"
 
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
