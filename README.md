@@ -18,3 +18,17 @@ A backup of the existing dotfiles will be placed inside `dotfiles.backup.{date}`
 ## TODO ##
 - [ ] Include VS Code preferences
 - [ ] Include Sublime Text preferences
+
+## Notes
+
+### neovim
+
+```
+pip install pynvim
+pip3 install pynvim
+
+rbenv global <version>
+gem install neovim
+
+npm install -g neovim
+```
