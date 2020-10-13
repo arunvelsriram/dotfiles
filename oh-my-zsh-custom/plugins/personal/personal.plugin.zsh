@@ -21,6 +21,12 @@ cloneg() {
     git clone "$@" $group/$project
 }
 
+# open in alacritty neovim
+anvim() {
+  target=$(realpath $1)
+  alacritty --config-file ~/.config/alacritty/nvim-alacritty.yml -e $SHELL -lc "nvim ${target}"
+}
+
 ## Aliases
 
 # edit config
