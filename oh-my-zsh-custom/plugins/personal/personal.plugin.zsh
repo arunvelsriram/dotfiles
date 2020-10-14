@@ -23,8 +23,11 @@ cloneg() {
 
 # open in alacritty neovim
 anvim() {
-  target=$(realpath $1)
-  alacritty --config-file ~/.config/alacritty/nvim-alacritty.yml -t "nvim - ${target}" -e $SHELL -lc "nvim ${target}"
+  if [ -n "${1}" ]; then
+    target=$(realpath $1)
+  fi
+
+  nohup alacritty --config-file ~/.config/alacritty/nvim-alacritty.yml -t "nvim - ${target}" -e $SHELL -lc "nvim ${target}" >/dev/null &
 }
 
 ## Aliases
