@@ -2,7 +2,7 @@
 
 set -e
 
-DIRS_AND_FILES=(zshrc bashrc bash_profile profile gitconfig gemrc tool-versions tmux.conf.local condarc p10k.zsh oh-my-zsh-custom/plugins oh-my-zsh-custom/themes config/nvim/init.vim config/alacritty/alacritty.yml config/alacritty/nvim-alacritty.yml)
+DIRS_AND_FILES=(zshrc bashrc bash_profile profile gitconfig gemrc tool-versions tmux.conf.local condarc p10k.zsh oh-my-zsh-custom/plugins oh-my-zsh-custom/themes config/nvim/init.vim config/alacritty/alacritty.yml config/alacritty/anvim.yml)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
