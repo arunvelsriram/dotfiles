@@ -21,7 +21,7 @@ cloneg() {
     git clone "$@" $group/$project
 }
 
-# open in alacritty neovim
+# alacritty neovim
 anvim() {
   if [ -n "${1}" ]; then
     local target=$(realpath $1)
