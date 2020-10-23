@@ -98,17 +98,24 @@ install_node_packages() {
   npm install -g alacritty-themes
 }
 
-setup_zsh
-brew_packages
+option=${1}
+if [ -z "${option}" ]; then
+  setup_zsh
+  brew_packages
 
-create_directories
-backup_existing_dotfiles
-setup_dotfiles
+  create_directories
+  backup_existing_dotfiles
+  setup_dotfiles
 
-setup_dot_tmux
+  setup_dot_tmux
 
-iterm_preferences
-install_node_packages
+  iterm_preferences
+  install_node_packages
+elif [ "${option}" = "dotfiles" ]; then
+  create_directories
+  backup_existing_dotfiles
+  setup_dotfiles
+fi
 
 echo
 echo "Done. Restart terminal to see the changes."
