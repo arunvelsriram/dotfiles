@@ -4,25 +4,27 @@
 # committing with wrong email addresses to a certain extent.
 
 [user]
-  name = Arunvel Sriram
-  email = arunvelsriram@gmail.com
-  signingkey = 603A233BFD616CF49B190768BAAEF633460D68C2
+	name = Arunvel Sriram
+  	email = arunvelsriram@gmail.com
+  	signingkey = 603A233BFD616CF49B190768BAAEF633460D68C2
 
 # work specific gitconfig for all
 # projects inside ~/work/ directory
 [includeIf "gitdir:~/work/"]
-  path = .gitconfig-work
+	path = .gitconfig-work
 
 [core]
-  editor = nvim
-  whitespace = trailing-space,space-before-tab
+	editor = nvim
+	whitespace = trailing-space,space-before-tab
 [color]
 	  ui = auto
 [apply]
-  whitespace = fix
+	whitespace = fix
 
 [pager]
-  diff = diff-so-fancy | less --tabs=1,5 -RFX
-  show = diff-so-fancy | less --tabs=1,5 -RFX
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
 [init]
 	templatedir = /Users/arunvelsriram/.git-template
+[commit]
+	gpgsign = true
