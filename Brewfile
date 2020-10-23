@@ -66,7 +66,6 @@ brew "websocketd"
 brew "wget"
 brew "yq"
 brew "openjdk@11"
-brew "gitui"
 brew "sysdig"
 
 tap "thecasualcoder/stable"
