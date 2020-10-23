@@ -51,6 +51,7 @@ Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'schickling/vim-bufonly'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'pangloss/vim-javascript'
 
 if isdirectory('/usr/local/opt/fzf')
