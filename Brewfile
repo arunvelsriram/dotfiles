@@ -136,6 +136,7 @@ cask "miniconda"
 cask "stretchly"
 cask "mark-text"
 cask "joplin"
+cask "kindle"
 
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
