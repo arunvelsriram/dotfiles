@@ -454,8 +454,8 @@ key_bindings:
   # (macOS only)
   - { key: Key0, mods: Command, action: ResetFontSize }
   - { key: Equals, mods: Command, action: IncreaseFontSize }
-  - { key: Add, mods: Command, action: IncreaseFontSize }
-  - { key: Minus, mods: Command, action: DecreaseFontSize }
+  - { key: NumpadAdd, mods: Command, action: IncreaseFontSize }
+  - { key: NumpadSubtract, mods: Command, action: DecreaseFontSize }
   - { key: K, mods: Command, action: ClearHistory }
   - { key: K, mods: Command, chars: "\f" }
   - { key: V, mods: Command, action: Paste }
