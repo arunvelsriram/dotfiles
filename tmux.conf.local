@@ -345,7 +345,7 @@ set -g mode-keys vi
 # bind C-a send-prefix
 
 # move status line to top
-#set -g status-position top
+set -g status-position top
 
 # Fix color issue with neovim inside tmux
 # refer: https://jdhao.github.io/2018/10/19/tmux_nvim_true_color/
