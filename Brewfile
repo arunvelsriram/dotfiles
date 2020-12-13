@@ -86,6 +86,10 @@ brew "dive"
 tap "reactiveops/tap"
 brew "rbac-lookup"
 
+tap "koekeishiya/formulae"
+brew "yabai"
+brew "skhd"
+
 cask "alacritty"
 cask "amazon-music"
 cask "android-file-transfer"
