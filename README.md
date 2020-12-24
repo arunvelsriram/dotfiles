@@ -47,3 +47,7 @@ npm install -g neovim
 ln -s $PWD/yabai-utils /usr/local/bin/yabai-utils
 ```
 
+#### Disable space switch animation
+
+System Preferences -> Accessibility -> Display -> Check "Reduce Motion"
+
