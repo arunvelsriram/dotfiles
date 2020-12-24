@@ -26,28 +26,28 @@ hyper - f : yabai -m window --toggle zoom-parent
 hyper - 0 : yabai -m space --balance
 
 # Move window to space and focus the space
-shift + alt - m : yabai -m window --space last && yabai-utils focus last
-shift + alt - p : yabai -m window --space prev && yabai-utils focus prev
-shift + alt - n : yabai -m window --space next && yabai-utils focus next
-shift + alt - 1 : yabai -m window --space 1 && yabai-utils focus 1
-shift + alt - 2 : yabai -m window --space 2 && yabai-utils focus 2
-shift + alt - 3 : yabai -m window --space 3 && yabai-utils focus 3
-shift + alt - 4 : yabai -m window --space 4 && yabai-utils focus 4
-shift + alt - 5 : yabai -m window --space 5 && yabai-utils focus 5
-shift + alt - 6 : yabai -m window --space 6 && yabai-utils focus 6
-shift + alt - 7 : yabai -m window --space 7 && yabai-utils focus 7
+hyper - m : yabai -m window --space last && yabai-utils focus last
+hyper - p : yabai -m window --space prev && yabai-utils focus prev
+hyper - n : yabai -m window --space next && yabai-utils focus next
+hyper - 1 : yabai -m window --space 1 && yabai-utils focus 1
+hyper - 2 : yabai -m window --space 2 && yabai-utils focus 2
+hyper - 3 : yabai -m window --space 3 && yabai-utils focus 3
+hyper - 4 : yabai -m window --space 4 && yabai-utils focus 4
+hyper - 5 : yabai -m window --space 5 && yabai-utils focus 5
+hyper - 6 : yabai -m window --space 6 && yabai-utils focus 6
+hyper - 7 : yabai -m window --space 7 && yabai-utils focus 7
 
 # Move window to space
-hyper - m : yabai -m window --space last
-hyper - p : yabai -m window --space prev
-hyper - n : yabai -m window --space next
-hyper - 1 : yabai -m window --space 1
-hyper - 2 : yabai -m window --space 2
-hyper - 3 : yabai -m window --space 3
-hyper - 4 : yabai -m window --space 4
-hyper - 5 : yabai -m window --space 5
-hyper - 6 : yabai -m window --space 6
-hyper - 7 : yabai -m window --space 7
+shift + alt  - m : yabai -m window --space last
+shift + alt  - p : yabai -m window --space prev
+shift + alt  - n : yabai -m window --space next
+shift + alt  - 1 : yabai -m window --space 1
+shift + alt  - 2 : yabai -m window --space 2
+shift + alt  - 3 : yabai -m window --space 3
+shift + alt  - 4 : yabai -m window --space 4
+shift + alt  - 5 : yabai -m window --space 5
+shift + alt  - 6 : yabai -m window --space 6
+shift + alt  - 7 : yabai -m window --space 7
 
 # Resize windows
 lctrl + alt - h : \
