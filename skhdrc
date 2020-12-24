@@ -1,5 +1,5 @@
 # Open Alacritty
-hyper - return : alacritty
+hyper - return : open /Applications/Alacritty.app
 
 # Open Browser
 hyper - b :  yabai-utils open-firefox
