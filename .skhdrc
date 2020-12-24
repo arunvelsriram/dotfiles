@@ -1,0 +1,117 @@
+# Open Alacritty
+hyper - return : alacritty
+
+# Open Browser
+hyper - b :  yabai-utils open-firefox
+
+# Focus window
+hyper - k : yabai -m window --focus north
+hyper - j : yabai -m window --focus south
+hyper - h : yabai -m window --focus west
+hyper - l : yabai -m window --focus east
+
+# Swap managed window
+shift + alt - k : yabai -m window --swap north
+shift + alt - j : yabai -m window --swap south
+shift + alt - h : yabai -m window --swap east
+shift + alt - l : yabai -m window --swap west
+
+# Toggle window split type
+hyper - space : yabai -m window --toggle split
+
+# Toggle window zoom
+hyper - f : yabai -m window --toggle zoom-fullscreen
+
+# Balance size of windows
+hyper - 0 : yabai -m space --balance
+
+# Move window to space and focus the space
+shift + alt - m : yabai -m window --space last && yabai-utils focus last
+shift + alt - p : yabai -m window --space prev && yabai-utils focus prev
+shift + alt - n : yabai -m window --space next && yabai-utils focus next
+shift + alt - 1 : yabai -m window --space 1 && yabai-utils focus 1
+shift + alt - 2 : yabai -m window --space 2 && yabai-utils focus 2
+shift + alt - 3 : yabai -m window --space 3 && yabai-utils focus 3
+shift + alt - 4 : yabai -m window --space 4 && yabai-utils focus 4
+shift + alt - 5 : yabai -m window --space 5 && yabai-utils focus 5
+shift + alt - 6 : yabai -m window --space 6 && yabai-utils focus 6
+shift + alt - 7 : yabai -m window --space 7 && yabai-utils focus 7
+
+# Move window to space
+hyper - m : yabai -m window --space last
+hyper - p : yabai -m window --space prev
+hyper - n : yabai -m window --space next
+hyper - 1 : yabai -m window --space 1
+hyper - 2 : yabai -m window --space 2
+hyper - 3 : yabai -m window --space 3
+hyper - 4 : yabai -m window --space 4
+hyper - 5 : yabai -m window --space 5
+hyper - 6 : yabai -m window --space 6
+hyper - 7 : yabai -m window --space 7
+
+# Resize windows
+lctrl + alt - h : \
+    yabai -m window --resize left:-20:0 ; \
+    yabai -m window --resize right:-20:0
+
+lctrl + alt - j : \
+    yabai -m window --resize bottom:0:20 ; \
+    yabai -m window --resize top:0:20
+
+lctrl + alt - k : \
+    yabai -m window --resize top:0:-20 ; \
+    yabai -m window --resize bottom:0:-20
+
+lctrl + alt - l : \
+    yabai -m window --resize right:20:0 ; \
+    yabai -m window --resize left:20:0
+
+
+
+
+
+# make floating window fill screen
+# shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+
+# make floating window fill left-half of screen
+# shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+
+# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
+# shift + cmd - n : yabai -m space --create && \
+#                   index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+#                   yabai -m window --space "${index}" && \
+#                   yabai -m space --focus "${index}"
+
+# fast focus desktop
+# cmd + alt - x : yabai -m space --focus recent
+# cmd + alt - 1 : yabai -m space --focus 1
+
+# send window to desktop and follow focus
+# shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
+# shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
+
+# focus monitor
+# ctrl + alt - z  : yabai -m display --focus prev
+# ctrl + alt - 3  : yabai -m display --focus 3
+
+# send window to monitor and follow focus
+# ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
+# ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
+
+# move floating window
+# shift + ctrl - a : yabai -m window --move rel:-20:0
+# shift + ctrl - s : yabai -m window --move rel:0:20
+
+
+# set insertion point in focused container
+# ctrl + alt - h : yabai -m window --insert west
+
+
+# float / unfloat window and center on screen
+# alt - t : yabai -m window --toggle float;\
+#           yabai -m window --grid 4:4:1:1:2:2
+
+# toggle sticky(+float), topmost, picture-in-picture
+# alt - p : yabai -m window --toggle sticky;\
+#           yabai -m window --toggle topmost;\
+#           yabai -m window --toggle pip
