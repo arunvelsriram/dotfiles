@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# set dock autohide delay to 10s (permanently hide it!)
+defaults write com.apple.dock autohide-delay -float 10
+
+killall Dock
