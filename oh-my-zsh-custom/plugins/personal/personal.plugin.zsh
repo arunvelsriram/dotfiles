@@ -30,6 +30,12 @@ anvim() {
   nohup alacritty --config-file ~/.config/alacritty/anvim.yml -t "nvim - ${target}" -e $SHELL -lc "nvim ${target}" >/dev/null &
 }
 
+# remove quarantine xattr from app
+unquarantine() {
+  [ -z "$1" ] && echo "Path to Application is required" && return 1
+  xattr -d com.apple.quarantine $1
+}
+
 ## Aliases
 
 # edit config
