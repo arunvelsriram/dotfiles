@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -eo pipefail
+
+# Refer: https://github.com/koekeishiya/yabai/issues/205#issuecomment-520027557
+# Enable Ctrl + ->, Ctrl + <-, Ctrl + 1, Ctrl + 2 .. in Mission Control Keyboard shorcuts
+# Usage: yabai-extras focus <first|last|next|1|2..>
+focus() {
+    index=$1
+    if [ "$1" == "last" ] || [ "$1" == "prev" ] || [ "$1" == "next" ]; then
+        index=$(yabai -m query --spaces --space $1 | jq -r '.index')
+    fi
+    eval "$(yabai -m query --spaces | jq --argjson index "${index}" -r '(.[] | select(.index == $index).windows[0]) as $wid | if $wid then "yabai -m window --focus \"" + ($wid | tostring) + "\"" else "skhd --key \"ctrl - " + (map(select(."native-fullscreen" == 0)) | index(map(select(.index == $index))) + 1 % 10 | tostring) + "\"" end')"
+}
+
+# Alt key press signals firefox open in safe mode
+# MOZ_DISABLE_SAFE_MODE_KEY=1 diables the safe mode signal
+# Refer: https://stackoverflow.com/a/47252708
+open_firefox() {
+    MOZ_DISABLE_SAFE_MODE_KEY=1 open "/Applications/Firefox Developer Edition.app"
+}
+
+case $1 in
+    open-firefox)
+        open_firefox
+        ;;
+    focus)
+        focus $2
+        ;;
+    *)
+        echo "unknown action: $1"
+        exit 1
+        ;;
+esac
+
