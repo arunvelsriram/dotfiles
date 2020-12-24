@@ -32,3 +32,18 @@ gem install neovim
 
 npm install -g neovim
 ```
+
+### Override OS X Defaults
+
+```
+./osx-overrides
+```
+
+### yabai and skhd
+
+#### Install yabai-utils
+
+``
+ln -s $PWD/yabai-utils /usr/local/bin/yabai-utils
+```
+
