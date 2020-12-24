@@ -13,14 +13,14 @@ hyper - l : yabai -m window --focus east
 # Swap managed window
 shift + alt - k : yabai -m window --swap north
 shift + alt - j : yabai -m window --swap south
-shift + alt - h : yabai -m window --swap east
-shift + alt - l : yabai -m window --swap west
+shift + alt - h : yabai -m window --swap west
+shift + alt - l : yabai -m window --swap east
 
 # Toggle window split type
 hyper - space : yabai -m window --toggle split
 
 # Toggle window zoom
-hyper - f : yabai -m window --toggle zoom-fullscreen
+hyper - f : yabai -m window --toggle zoom-parent
 
 # Balance size of windows
 hyper - 0 : yabai -m space --balance
