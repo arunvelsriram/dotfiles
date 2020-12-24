@@ -43,7 +43,7 @@ npm install -g neovim
 
 #### Install yabai-utils
 
-``
+```
 ln -s $PWD/yabai-utils /usr/local/bin/yabai-utils
 ```
 
