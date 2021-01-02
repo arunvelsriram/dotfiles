@@ -1,7 +1,6 @@
 # Launch : Terminal
 hyper - return : open /Applications/Alacritty.app
 # Launch : Browser
-#hyper - b : yabai-utils open-firefox
 hyper - b : export MOZ_DISABLE_SAFE_MODE_KEY=1; open "/Applications/Firefox Developer Edition.app"
 # Launch : Help
 hyper - f1 : yabai -m rule --add app="^yabai-help-overlay$" sticky=on layer=above manage=off && open /Applications/yabai-help-overlay.app
