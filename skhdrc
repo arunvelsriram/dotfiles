@@ -1,64 +1,72 @@
 # Launch : Terminal
 hyper - return : open /Applications/Alacritty.app
 # Launch : Browser
-hyper - b : yabai-utils open-firefox
+#hyper - b : yabai-utils open-firefox
+hyper - b : export MOZ_DISABLE_SAFE_MODE_KEY=1; open "/Applications/Firefox Developer Edition.app"
 # Launch : Help
 hyper - f1 : yabai -m rule --add app="^yabai-help-overlay$" sticky=on layer=above manage=off && open /Applications/yabai-help-overlay.app
 
-# Focus Window : Focus top
+# Focus : Focus top window
 hyper - k : yabai -m window --focus north
-# Focus Window : Focus bottom
+# Focus : Focus bottom window
 hyper - j : yabai -m window --focus south
-# Focus Window : Focus left
+# Focus : Focus left window
 hyper - h : yabai -m window --focus west
-# Focus Window : Focus right
+# Focus : Focus right window
 hyper - l : yabai -m window --focus east
 
-# Warp Window : Warp to top
+# Warp : Warp window to top
 shift + alt - k : yabai -m window --warp north
-# Warp Window : Warp to botttom
+# Warp : Warp window to botttom
 shift + alt - j : yabai -m window --warp south
-# Warp Window : Warp to left
+# Warp : Warp window to left
 shift + alt - h : yabai -m window --warp west
-# Warp Window : Warp to right
+# Warp : Warp window to right
 shift + alt - l : yabai -m window --warp east
 
-# Resize Window : Resize top
+# Resize : Resize window top
 ctrl + alt - k : \
     yabai -m window --resize top:0:-20 ; \
     yabai -m window --resize bottom:0:-20
-# Resize Window :Resize bottom
+# Resize : Resize window bottom
 ctrl + alt - j : \
     yabai -m window --resize bottom:0:20 ; \
     yabai -m window --resize top:0:20
-# Resize Window :Resize left
+# Resize : Resize window left
 ctrl + alt - h : \
     yabai -m window --resize left:-20:0 ; \
     yabai -m window --resize right:-20:0
-# Resize Window :Resize right
+# Resize : Resize window right
 ctrl + alt - l : \
     yabai -m window --resize right:20:0 ; \
     yabai -m window --resize left:20:0
+# Resize : Toggle window fullscreen
+hyper - f : yabai -m window --toggle zoom-fullscreen
+# Resize : Toggle window zoom
+hyper - z : yabai -m window --toggle zoom-parent
+# Resize : Balance size of windows
+hyper - 0 : yabai -m space --balance
 
-# Spaces : Move window to last space and focus
+
+# Spaces : Move window to last space & focus
 hyper - m : yabai -m window --space last && yabai-utils focus last
-# Spaces : Move window to previous space and focus
+# Spaces : Move window to previous space & focus
 hyper - p : yabai -m window --space prev && yabai-utils focus prev
-# Spaces : Move window to next space and focus
+# Spaces : Move window to next space & focus
 hyper - n : yabai -m window --space next && yabai-utils focus next
-# Spaces : Move window to space 1 and focus
+# Spaces : Move window to space 1 & focus
 hyper - 1 : yabai -m window --space 1 && yabai-utils focus 1
-# Spaces : Move window to space 2 and focus
+# Spaces : Move window to space 2 & focus
 hyper - 2 : yabai -m window --space 2 && yabai-utils focus 2
-# Spaces : Move window to space 3 and focus
+# Spaces : Move window to space 3 & focus
 hyper - 3 : yabai -m window --space 3 && yabai-utils focus 3
-# Spaces : Move window to space 4 and focus
+# Spaces : Move window to space 4 & focus
 hyper - 4 : yabai -m window --space 4 && yabai-utils focus 4
-# Spaces : Move window to space 5 and focus
+# Spaces : Move window to space 5 & focus
 hyper - 5 : yabai -m window --space 5 && yabai-utils focus 5
-# Spaces : Move window to space 6 and focus
+# Spaces : Move window to space 6 & focus
 hyper - 6 : yabai -m window --space 6 && yabai-utils focus 6
-# Spaces : Move window to space 7 and focus
+# Spaces : Move window to space 7 & focus
 hyper - 7 : yabai -m window --space 7 && yabai-utils focus 7
 
 # Spaces : Move window to last space
@@ -82,12 +90,9 @@ shift + alt - 6 : yabai -m window --space 6
 # Spaces : Move window to space 7
 shift + alt - 7 : yabai -m window --space 7
 
-# Misc : Toggle window split type
+# Misc : Toggle window split
 hyper - space : yabai -m window --toggle split
-# Misc : Toggle window fullscreen
-hyper - f : yabai -m window --toggle zoom-fullscreen
-# Misc : Toggle window zoom
-hyper - z : yabai -m window --toggle zoom-parent
-# Misc : Balance size of windows
-hyper - 0 : yabai -m space --balance
+# Misc : Toggle float & center window
+hyper - t : yabai -m window --toggle float; \
+    yabai -m window --grid 4:4:1:1:2:2
 
