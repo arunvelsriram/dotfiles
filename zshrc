@@ -136,3 +136,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# homebrew's sbin
+export PATH="/usr/local/sbin:$PATH"

@@ -21,15 +21,6 @@ cloneg() {
     git clone "$@" $group/$project
 }
 
-# alacritty neovim
-anvim() {
-  if [ -n "${1}" ]; then
-    local target=$(realpath $1)
-  fi
-
-  nohup alacritty --config-file ~/.config/alacritty/anvim.yml -t "nvim - ${target}" -e $SHELL -lc "nvim ${target}" >/dev/null &
-}
-
 # remove quarantine xattr from app
 unquarantine() {
   [ -z "$1" ] && echo "Path to Application is required" && return 1
@@ -39,10 +30,10 @@ unquarantine() {
 ## Aliases
 
 # edit config
-alias zshconf="nvim ~/.zshrc"
-alias alacrittyconf="nvim ~/.config/alacritty/alacritty.yml"
-alias tmuxconf="nvim $HOME/.tmux.conf.local"
-alias nvimconf="nvim $HOME/.config/nvim/init.vim"
+alias zshconf="vim ~/.zshrc"
+alias alacrittyconf="vim ~/.config/alacritty/alacritty.yml"
+alias tmuxconf="vim $HOME/.tmux.conf.local"
+alias vimconf="vim $HOME/.vimrc"
 
 # cat
 alias cat="bat"
@@ -52,9 +43,6 @@ alias ping="prettyping --nolegend"
 
 # top
 alias top="htop"
-
-# nvim
-alias vim="nvim"
 
 # github dir
 alias gh='cd $(fd --max-depth 2 . ~/github/ | fzf)'

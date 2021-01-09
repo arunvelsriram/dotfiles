@@ -1,34 +1,35 @@
-" vim-bootstrap 
+" vim-bootstrap 2021-01-09 11:14:12
 
 "*****************************************************************************
-"" Vim-PLug core
+"" Vim-Plug core
 "*****************************************************************************
-let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
+let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+if has('win32')&&!has('win64')
+  let curl_exists=expand('C:\Windows\Sysnative\curl.exe')
+else
+  let curl_exists=expand('curl')
+endif
 
-let g:vim_bootstrap_langs = ""
-let g:vim_bootstrap_editor = "nvim"				" nvim or vim
+let g:vim_bootstrap_langs = "go,html,javascript,python"
+let g:vim_bootstrap_editor = "vim"				" nvim or vim
+let g:vim_bootstrap_theme = "molokai"
+let g:vim_bootstrap_frams = ""
 
 if !filereadable(vimplug_exists)
-  if !executable("curl")
+  if !executable(curl_exists)
     echoerr "You have to install curl or first install vim-plug yourself!"
     execute "q!"
   endif
   echo "Installing Vim-Plug..."
   echo ""
-  silent exec "!\curl -fLo " . vimplug_exists . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+  silent exec "!"curl_exists" -fLo " . shellescape(vimplug_exists) . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
   let g:not_finish_vimplug = "yes"
 
   autocmd VimEnter * PlugInstall
 endif
 
-"*****************************************************************************
-"" point to correct python
-"*****************************************************************************
-let g:python_host_prog  = '/usr/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
-
 " Required:
-call plug#begin(expand('~/.config/nvim/plugged'))
+call plug#begin(expand('~/.vim/plugged'))
 
 "*****************************************************************************
 "" Plug install packages
@@ -45,15 +46,13 @@ Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
-Plug 'avelino/vim-bootstrap-updater'
-Plug 'sheerun/vim-polyglot'
+Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+Plug 'tomasr/molokai'
 Plug 'schickling/vim-bufonly'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'pangloss/vim-javascript'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -75,29 +74,40 @@ Plug 'xolox/vim-session'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-"" Color
-Plug 'tomasr/molokai'
-Plug 'sickill/vim-monokai'
-
-" GoLang
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-let g:go_highlight_structs = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_metalinter_enabled = ['vet', 'errcheck']
-
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
+
+" go
+"" Go Lang Bundle
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+
+
+" html
+"" HTML Bundle
+Plug 'hail2u/vim-css3-syntax'
+Plug 'gko/vim-coloresque'
+Plug 'tpope/vim-haml'
+Plug 'mattn/emmet-vim'
+
+
+" javascript
+"" Javascript Bundle
+Plug 'jelera/vim-javascript-syntax'
+
+
+" python
+"" Python Bundle
+Plug 'davidhalter/jedi-vim'
+Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+
 
 "*****************************************************************************
 "*****************************************************************************
 
 "" Include user's extra bundle
-if filereadable(expand("~/.config/nvim/local_bundles.vim"))
-  source ~/.config/nvim/local_bundles.vim
+if filereadable(expand("~/.vimrc.local.bundles"))
+  source ~/.vimrc.local.bundles
 endif
 
 call plug#end()
@@ -113,7 +123,7 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
-
+set ttyfast
 
 "" Fix backspace indent
 set backspace=indent,eol,start
@@ -145,7 +155,7 @@ else
 endif
 
 " session management
-let g:session_directory = "~/.config/nvim/session"
+let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
@@ -156,23 +166,20 @@ let g:session_command_aliases = 1
 syntax on
 set ruler
 set number
-set relativenumber
 
 let no_buffers_menu=1
-syntax enable
-silent! colorscheme monokai
+colorscheme molokai
+
 
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
+set gfn=JetBrainsMonoNL-Regular:h14
 
-if (has("termguicolors"))
- set termguicolors
-endif
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=Hack:h15
+    set guifont=JetBrainsMonoNL-Regular:h14
     set transparency=7
   endif
 else
@@ -185,11 +192,27 @@ else
   let g:indentLine_faster = 1
 
   
+  if $COLORTERM == 'gnome-terminal'
+    set term=gnome-256color
+  else
+    if $TERM == 'xterm'
+      set term=xterm-256color
+    endif
+  endif
+  
 endif
+
+
+if &term =~ '256color'
+  set t_ut=
+endif
+
 
 "" Disable the blinking cursor.
 set gcr=a:blinkon0
+
 set scrolloff=3
+
 
 "" Status bar
 set laststatus=2
@@ -238,7 +261,6 @@ cnoreabbrev Qall qall
 
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
-let g:NERDTreeShowHidden=1
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=0
@@ -247,7 +269,6 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 35
 let NERDTreeQuitOnOpen = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
@@ -260,10 +281,6 @@ function! OpenNerdTree()
   endif
 endfunction
 nnoremap <silent> <C-\> :call OpenNerdTree()<CR>
-
-" prevent files from opening inside NERDTree
-nnoremap <silent> <expr> <leader>b (expand('%') =~ 'NERD_tree' ? "\<C-W>\<C-W>" : '').":Buffers<CR>"
-nnoremap <silent> <expr> <leader>e (expand('%') =~ 'NERD_tree' ? "\<C-W>\<C-W>" : '').":FZF -m<CR>"
 
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
@@ -451,13 +468,127 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "" Custom configs
 "*****************************************************************************
 
+" go
+" vim-go
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
+
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_space_tab_error = 0
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_extra_types = 1
+
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+augroup completion_preview_close
+  autocmd!
+  if v:version > 703 || v:version == 703 && has('patch598')
+    autocmd CompleteDone * if !&previewwindow && &completeopt =~ 'preview' | silent! pclose | endif
+  endif
+augroup END
+
+augroup go
+
+  au!
+  au Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+  au Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+  au Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+  au Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+  au FileType go nmap <Leader>dd <Plug>(go-def-vertical)
+  au FileType go nmap <Leader>dv <Plug>(go-doc-vertical)
+  au FileType go nmap <Leader>db <Plug>(go-doc-browser)
+
+  au FileType go nmap <leader>r  <Plug>(go-run)
+  au FileType go nmap <leader>t  <Plug>(go-test)
+  au FileType go nmap <Leader>gt <Plug>(go-coverage-toggle)
+  au FileType go nmap <Leader>i <Plug>(go-info)
+  au FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
+  au FileType go nmap <C-g> :GoDecls<cr>
+  au FileType go nmap <leader>dr :GoDeclsDir<cr>
+  au FileType go imap <C-g> <esc>:<C-u>GoDecls<cr>
+  au FileType go imap <leader>dr <esc>:<C-u>GoDeclsDir<cr>
+  au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
+
+augroup END
+
+" ale
+:call extend(g:ale_linters, {
+    \"go": ['golint', 'go vet'], })
+
+
+" html
+" for html files, 2 spaces
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+
+
+" javascript
+let g:javascript_enable_domhtmlcss = 1
+
+" vim-javascript
+augroup vimrc-javascript
+  autocmd!
+  autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
+augroup END
+
+
+" python
+" vim-python
+augroup vimrc-python
+  autocmd!
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+      \ formatoptions+=croq softtabstop=4
+      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+augroup END
+
+" jedi-vim
+let g:jedi#popup_on_dot = 0
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>d"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#rename_command = "<leader>r"
+let g:jedi#show_call_signatures = "0"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#smart_auto_mappings = 0
+
+" ale
+:call extend(g:ale_linters, {
+    \'python': ['flake8'], })
+
+" vim-airline
+let g:airline#extensions#virtualenv#enabled = 1
+
+" Syntax highlight
+let python_highlight_all = 1
+
+
 
 "*****************************************************************************
 "*****************************************************************************
 
 "" Include user's local vim config
-if filereadable(expand("~/.config/nvim/local_init.vim"))
-  source ~/.config/nvim/local_init.vim
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
 endif
 
 "*****************************************************************************
@@ -499,4 +630,3 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
-
