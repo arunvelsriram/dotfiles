@@ -53,6 +53,7 @@ Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tomasr/molokai'
 Plug 'schickling/vim-bufonly'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'Valloric/YouCompleteMe'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -166,6 +167,7 @@ let g:session_command_aliases = 1
 syntax on
 set ruler
 set number
+set relativenumber
 
 let no_buffers_menu=1
 colorscheme molokai
