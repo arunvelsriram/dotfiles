@@ -349,8 +349,8 @@ set -g mode-keys vi
 
 # Fix color issue with neovim inside tmux
 # refer: https://jdhao.github.io/2018/10/19/tmux_nvim_true_color/
-#set -g default-terminal "screen-256color"
-#set -ga terminal-overrides ",xterm-256color*:Tc"
+set -g default-terminal "screen-256color"
+set -ga terminal-overrides ",xterm-256color*:Tc"
 
 # -- custom variables ----------------------------------------------------------
 # to define a custom #{foo} variable, define a POSIX shell function between the
