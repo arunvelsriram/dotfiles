@@ -59,6 +59,9 @@ Plug 'tomasr/molokai'
 " golang support
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" code completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
