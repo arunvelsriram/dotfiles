@@ -139,3 +139,4 @@ unset __conda_setup
 
 # homebrew's sbin
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/go@1.14/bin:$PATH"
