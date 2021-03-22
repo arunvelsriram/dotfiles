@@ -29,14 +29,11 @@ unquarantine() {
 
 ## Aliases
 
-# vim to nvim
-alias vim='nvim'
-
 # edit config
-alias zshconf="nvim ~/.zshrc"
-alias alacrittyconf="nvim ~/.config/alacritty/alacritty.yml"
-alias tmuxconf="nvim $HOME/.tmux.conf.local"
-alias nvimconf="nvim $HOME/.config/nvim/init.vim"
+alias zshconf="vim ~/.zshrc"
+alias alacrittyconf="vim ~/.config/alacritty/alacritty.yml"
+alias tmuxconf="vim $HOME/.tmux.conf.local"
+alias vimconf="vim $HOME/.vimrc"
 
 # cat
 alias cat="bat"
