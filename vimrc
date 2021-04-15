@@ -253,6 +253,18 @@ function! OpenNerdTree()
   endif
 endfunction
 
+" Prevent FZF commands from opening in none modifiable buffers
+function! FZFOpen(cmd)
+  " If more than 1 window, and buffer is not modifiable or file type is
+  " NERD tree or Quickfix type
+  if winnr('$') > 1 && (!&modifiable || &ft == 'nerdtree' || &ft == 'qf')
+      " Move one window to the right, then up
+      wincmd l
+      wincmd k
+  endif
+  exe a:cmd
+endfunction
+
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
@@ -333,9 +345,11 @@ nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
 " fzf - open buffers
-nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>b :call FZFOpen(":Buffers")<CR>
 " fzf - all files
-nnoremap <silent> <leader>e :FZF -m<CR>
+nnoremap <silent> <leader>e :call FZFOpen(":Files")<CR>
+" fzf - files in home dir
+nnoremap <silent> <leader>~ :call FZFOpen(":Files ~")<CR>
 " fzf - command history
 nmap <leader>y :History:<CR>
 
