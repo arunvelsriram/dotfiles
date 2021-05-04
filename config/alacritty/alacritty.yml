@@ -149,32 +149,32 @@ font:
 draw_bold_text_with_bright_colors: true
 
 colors:
-  name: Monokai.dark
-  author: Chris Kempson
+  # Default colors
   primary:
-    background: "#272822"
-    foreground: "#f8f8f2"
-  cursor:
-    text: "#272822"
-    cursor: "#f8f8f2"
+    background: '#000000'
+    foreground: '#eaeaea'
+
+  # Normal colors
   normal:
-    black: "#272822"
-    red: "#f92672"
-    green: "#a6e22e"
-    yellow: "#f4bf75"
-    blue: "#66d9ef"
-    magenta: "#ae81ff"
-    cyan: "#a1efe4"
-    white: "#f8f8f2"
+    black: '#000000'
+    red: '#d54e53'
+    green: '#b9ca4a'
+    yellow: '#e6c547'
+    blue: '#7aa6da'
+    magenta: '#c397d8'
+    cyan: '#70c0ba'
+    white: '#424242'
+
+  # Bright colors
   bright:
-    black: "#75715e"
-    red: "#f92672"
-    green: "#a6e22e"
-    yellow: "#f4bf75"
-    blue: "#66d9ef"
-    magenta: "#ae81ff"
-    cyan: "#a1efe4"
-    white: "#f9f8f5"
+    black: '#666666'
+    red: '#ff3334'
+    green: '#9ec400'
+    yellow: '#e7c547'
+    blue: '#7aa6da'
+    magenta: '#b77ee0'
+    cyan: '#54ced6'
+    white: '#2a2a2a'
 
 # Visual Bell
 #
@@ -456,8 +456,16 @@ key_bindings:
   # (macOS only)
   - { key: Key0, mods: Command, action: ResetFontSize }
   - { key: Equals, mods: Command, action: IncreaseFontSize }
-  - { key: NumpadAdd, mods: Command, action: IncreaseFontSize }
-  - { key: NumpadSubtract, mods: Command, action: DecreaseFontSize }
+  - {
+      key: NumpadAdd,
+      mods: Command,
+      action: IncreaseFontSize
+    }
+  - {
+      key: NumpadSubtract,
+      mods: Command,
+      action: DecreaseFontSize
+    }
   - { key: K, mods: Command, action: ClearHistory }
   - { key: K, mods: Command, chars: "\f" }
   - { key: V, mods: Command, action: Paste }
