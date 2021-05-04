@@ -65,8 +65,14 @@ endif
 " Delete all buffers except the current one
 Plug 'schickling/vim-bufonly'
 
-"" Color
+" Color
 Plug 'tomasr/molokai'
+
+" Local file change history
+Plug 'mbbill/undotree'
+
+" GoLang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
@@ -98,6 +104,20 @@ if executable('rg')
   let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
   set grepprg=rg\ --vimgrep
   command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+endif
+
+" undotree
+if has("persistent_undo")
+  let target_path = expand('~/.vim/undodir')
+
+  " create the directory and any parent directories
+  " if the location does not exist.
+  if !isdirectory(target_path)
+      call mkdir(target_path, "p", 0700)
+  endif
+
+  let &undodir=target_path
+  set undofile
 endif
 
 "*****************************************************************************
