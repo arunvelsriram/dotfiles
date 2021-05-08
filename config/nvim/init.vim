@@ -180,7 +180,10 @@ set t_Co=256
 set guioptions=egmrti
 
 if has("gui_running")
-  set guifont=JetBrains\ Mono\ NL:h14
+  if has("gui_mac") || has("gui_macvim")
+    set guifont=JetBrains\ Mono\ NL:h14
+    set transparency=7
+  endif
 else
   let g:CSApprox_loaded = 1
 
