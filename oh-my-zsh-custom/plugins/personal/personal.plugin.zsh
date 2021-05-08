@@ -36,7 +36,7 @@ alias vim="nvim"
 alias zshconf="vim ~/.zshrc"
 alias alacrittyconf="vim ~/.config/alacritty/alacritty.yml"
 alias tmuxconf="vim $HOME/.tmux.conf.local"
-alias vimconf="vim $HOME/config/nvim/init.vim"
+alias vimconf="vim $HOME/.config/nvim/init.vim"
 
 # cat
 alias cat="bat"
