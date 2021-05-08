@@ -178,13 +178,9 @@ colorscheme dracula
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
-set gfn=JetBrains\ Mono\ NL:h14
 
 if has("gui_running")
-  if has("gui_mac") || has("gui_macvim")
-    set guifont=JetBrains\ Mono\ NL:h14
-    set transparency=7
-  endif
+  set guifont=JetBrains\ Mono\ NL:h14
 else
   let g:CSApprox_loaded = 1
 
