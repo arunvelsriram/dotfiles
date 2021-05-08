@@ -61,7 +61,6 @@ Plug 'Yggdroot/indentLine'
 
 " colorschemes
 Plug 'tomasr/molokai'
-Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Local file change history
 Plug 'mbbill/undotree'
@@ -173,7 +172,7 @@ set number
 set relativenumber
 
 let no_buffers_menu=1
-colorscheme dracula
+colorscheme molokai
 
 set mousemodel=popup
 set t_Co=256
