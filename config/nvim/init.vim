@@ -61,6 +61,10 @@ Plug 'Yggdroot/indentLine'
 
 " colorschemes
 Plug 'tomasr/molokai'
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+" Local file change history
+Plug 'mbbill/undotree'
 
 " golang support
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -106,6 +110,20 @@ if executable('rg')
   let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
   set grepprg=rg\ --vimgrep
   command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+endif
+
+" undotree
+if has("persistent_undo")
+  let target_path = expand('~/.vim/undodir')
+
+  " create the directory and any parent directories
+  " if the location does not exist.
+  if !isdirectory(target_path)
+      call mkdir(target_path, "p", 0700)
+  endif
+
+  let &undodir=target_path
+  set undofile
 endif
 
 "*****************************************************************************
@@ -155,14 +173,18 @@ set number
 set relativenumber
 
 let no_buffers_menu=1
-colorscheme molokai
+colorscheme dracula
 
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
+set gfn=JetBrains\ Mono\ NL:h14
 
 if has("gui_running")
-
+  if has("gui_mac") || has("gui_macvim")
+    set guifont=JetBrains\ Mono\ NL:h14
+    set transparency=7
+  endif
 else
   let g:CSApprox_loaded = 1
 
@@ -218,6 +240,7 @@ command! FixWhitespace :%s/\s\+$//e
 "*****************************************************************************
 "" Functions
 "*****************************************************************************
+
 if !exists('*s:setupWrapping')
   function s:setupWrapping()
     set wrap
@@ -233,6 +256,18 @@ function! OpenNerdTree()
   else
     NERDTreeToggle
   endif
+endfunction
+
+" Prevent FZF commands from opening in none modifiable buffers
+function! FZFOpen(cmd)
+  " If more than 1 window, and buffer is not modifiable or file type is
+  " NERD tree or Quickfix type
+  if winnr('$') > 1 && (!&modifiable || &ft == 'nerdtree' || &ft == 'qf')
+      " Move one window to the right, then up
+      wincmd l
+      wincmd k
+  endif
+  exe a:cmd
 endfunction
 
 "*****************************************************************************
@@ -298,30 +333,22 @@ nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
-" FZF open buffers
-nnoremap <silent> <leader>b :Buffers<CR>
-
-" FZF all files
-nnoremap <silent> <leader>e :FZF -m<CR>
-
-" FZF command history
+" fzf - open buffers
+nnoremap <silent> <leader>b :call FZFOpen(":Buffers")<CR>
+" fzf - all files
+nnoremap <silent> <leader>e :call FZFOpen(":Files")<CR>
+" fzf - files in home dir
+nnoremap <silent> <leader>~ :call FZFOpen(":Files ~")<CR>
+" fzf - command history
 nmap <leader>y :History:<CR>
-
-" Disable visualbell
-set noerrorbells visualbell t_vb=
-if has('autocmd')
-  autocmd GUIEnter * set visualbell t_vb=
-endif
 
 "" Copy/Paste/Cut
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
-
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
-
 if has('macunix')
   " pbcopy for OSX copy/paste
   vmap <C-x> :!pbcopy<CR>
