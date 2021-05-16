@@ -78,6 +78,9 @@ else
   Plug 'junegunn/fzf.vim'
 endif
 
+" Quick delete all buffers except currrent
+Plug 'schickling/vim-bufonly'
+
 call plug#end()
 
 " Required:
