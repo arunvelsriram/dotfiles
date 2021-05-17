@@ -87,6 +87,9 @@ Plug 'schickling/vim-bufonly'
 " peek lines
 Plug '/Users/arunvelsriram/github/nacro90/numb.nvim'
 
+" highlight usages of word under cursor
+Plug 'RRethy/vim-illuminate'
+
 call plug#end()
 
 " Required:
