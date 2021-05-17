@@ -84,6 +84,9 @@ endif
 " Quick delete all buffers except currrent
 Plug 'schickling/vim-bufonly'
 
+" peek lines
+Plug '/Users/arunvelsriram/github/nacro90/numb.nvim'
+
 call plug#end()
 
 " Required:
@@ -130,6 +133,9 @@ if has("persistent_undo")
   let &undodir=target_path
   set undofile
 endif
+
+" numb.nvim
+autocmd VimEnter * :lua require('numb').setup()
 
 "*****************************************************************************
 "" Basic Setup
