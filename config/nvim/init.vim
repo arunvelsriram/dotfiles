@@ -61,6 +61,8 @@ Plug 'Yggdroot/indentLine'
 
 " colorschemes
 Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 
 " Local file change history
 Plug 'mbbill/undotree'
@@ -70,9 +72,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-"
-Plug 'altercation/vim-colors-solarized'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -187,8 +186,10 @@ set number
 set relativenumber
 
 let no_buffers_menu=1
-set background=dark
-colorscheme solarized
+set termguicolors
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark="medium"
+colorscheme gruvbox
 
 set mousemodel=popup
 set t_Co=256
