@@ -159,3 +159,5 @@ cask "font-jetbrains-mono"
 tap "homebrew/cask-versions"
 cask "firefox-developer-edition"
 
+tap "homebrew/cask-drivers"
+cask "obinskit"
