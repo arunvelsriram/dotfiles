@@ -72,6 +72,7 @@ brew "tinyproxy"
 brew "squid"
 brew "maven"
 brew "neovim"
+brew "qrcp"
 
 tap "thecasualcoder/stable"
 brew "kube-fzf"
