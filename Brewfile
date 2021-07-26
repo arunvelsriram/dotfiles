@@ -94,6 +94,9 @@ tap "koekeishiya/formulae"
 brew "yabai"
 brew "skhd"
 
+tap "yqrashawn/goku"
+brew "goku"
+
 cask "alacritty"
 cask "amazon-music"
 cask "android-file-transfer"
@@ -149,6 +152,7 @@ cask "intellij-idea-ce"
 cask "whichspace"
 cask "bitbar"
 cask "vimr"
+cask "xdm"
 
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
