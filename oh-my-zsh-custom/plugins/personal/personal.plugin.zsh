@@ -30,7 +30,7 @@ unquarantine() {
 # join zoom meeting
 zoom-join() {
   name=$(cat $HOME/.zoom-ids.json | jq -r ".[] | .name" | fzf --height=10 --ansi --reverse)
-  qparams=$(cat .zoom-ids.json | jq -r ".[] | select(.name == \"$name\") | \"confno=\" + .id + \"&pwd=\" + .pwd ")
+  qparams=$(cat $HOME/.zoom-ids.json | jq -r ".[] | select(.name == \"$name\") | \"confno=\" + .id + \"&pwd=\" + .pwd ")
   open "zoommtg://zoom.us/join?$qparams"
 }
 
