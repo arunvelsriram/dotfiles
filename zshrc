@@ -82,10 +82,6 @@ source $ZSH/oh-my-zsh.sh
 
 ## User configuration
 
-# Postgres
-export POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest"
-export PATH=$PATH:$POSTGRES_PATH/bin
-
 # added by travis gem
 [ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
 
