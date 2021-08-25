@@ -89,6 +89,16 @@ Plug 'nacro90/numb.nvim'
 " highlight usages of word under cursor
 Plug 'RRethy/vim-illuminate'
 
+" conda environment
+Plug 'cjrh/vim-conda'
+
+" treesitter
+function! TreeSitterPostInstall(info)
+    TSUpdate
+    TSInstall bash python go
+endfunction
+Plug 'nvim-treesitter/nvim-treesitter', {'do': function('TreeSitterPostInstall')}
+
 call plug#end()
 
 " Required:
@@ -138,6 +148,19 @@ endif
 
 " numb.nvim
 autocmd VimEnter * :lua require('numb').setup()
+
+" nvim-treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  ignore_install = {  },
+  highlight = {
+    enable = true,
+    disable = { },
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
 
 "*****************************************************************************
 "" Basic Setup
