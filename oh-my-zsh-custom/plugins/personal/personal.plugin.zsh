@@ -36,10 +36,6 @@ zoom-join() {
 
 # alacritty neovim
 anvim() {
-  ANVIM_DEBUG=${ANVIM_DEBUG:=0}
-
-  [ "${ANVIM_DEBUG}" = "1" ] && echo "Will be printing DEBUG messages"
-
   local target="${PWD}"
   if [ -n "${1}" ]; then
     target=$(realpath "$1")
@@ -50,9 +46,6 @@ anvim() {
     wdir=$(dirname "${target}")
   fi
 
-  [ "${ANVIM_DEBUG}" = "1" ] && echo "target: ${target}, wdir: ${wdir}"
-
-  which nohup
   nohup alacritty --config-file ~/.config/alacritty/anvim.yml \
     --working-directory "${wdir}" \
     -t "nvim - ${target}" \
