@@ -5,6 +5,7 @@ Repo to hold my Mac OS X configurations. Helps to setup my Mac easily in case of
 
 ```
 xcode-select --install
+git clone --recurse-submodules git@github.com:arunvelsriram/dotfiles.git
 ./setup
 ```
 
