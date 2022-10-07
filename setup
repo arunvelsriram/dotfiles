@@ -2,7 +2,7 @@
 
 set -e
 
-DIRS_AND_FILES=(zshrc bashrc bash_profile profile gitconfig gemrc tool-versions tmux.conf.local condarc p10k.zsh oh-my-zsh-custom/plugins oh-my-zsh-custom/themes config/nvim/init.vim config/alacritty/anvim.yml config/alacritty/alacritty.yml gnupg/gpg-agent.conf yabairc skhdrc vimrc)
+DIRS_AND_FILES=(zshrc zprofile bashrc bash_profile profile gitconfig gemrc tool-versions tmux.conf.local condarc p10k.zsh oh-my-zsh-custom/plugins oh-my-zsh-custom/themes config/nvim/init.vim config/alacritty/anvim.yml config/alacritty/alacritty.yml gnupg/gpg-agent.conf yabairc skhdrc vimrc)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
@@ -53,21 +53,17 @@ clone_or_pull() {
 
 iterm_preferences() {
   defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-  defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm"
-  defaults write com.googlecode.iterm2.plist NSNavLastRootDirectory -string "/iterm"
+  defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+  defaults write com.googlecode.iterm2.plist NSNavLastRootDirectory -string "/iterm2"
   defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForFile_selection -int 0
 }
 
 pre_brew_packages() {
-  type brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  type brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
 post_brew_packages() {
-  /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
-
-  # Enable bash 4+
-  grep -q -F '/usr/local/bin/bash' /etc/shells || sudo sh -c 'echo "/usr/local/bin/bash" >> /etc/shells'
-  chsh -s /usr/local/bin/bash
+  /opt/homebrew/opt/fzf/install --key-bindings --completion --no-update-rc
 }
 
 brew_packages() {
@@ -94,15 +90,11 @@ setup_dot_tmux() {
   popd
 }
 
-install_node_packages() {
-  echo "Installing node packages"
-  npm install -g alacritty-themes
-}
-
 option=${1}
 if [ -z "${option}" ]; then
-  setup_zsh
   brew_packages
+  
+  setup_zsh
 
   create_directories
   backup_existing_dotfiles
@@ -111,7 +103,6 @@ if [ -z "${option}" ]; then
   setup_dot_tmux
 
   iterm_preferences
-  install_node_packages
 elif [ "${option}" = "dotfiles" ]; then
   create_directories
   backup_existing_dotfiles

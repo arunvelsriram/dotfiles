@@ -102,15 +102,9 @@ export PATH="$PATH:$GOPATH/bin"
 # gnu-getopt
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
-# START: Added by Airflow Breeze autocomplete setup
-autoload compinit && compinit
-autoload bashcompinit && bashcompinit
-source ~/.bash_completion.d/breeze-complete
-# END: Added by Airflow Breeze autocomplete setup
-
 # syntax highlighting
 ## needs to be at the end
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
