@@ -133,3 +133,7 @@ unset __conda_setup
 # homebrew's sbin
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/go@1.14/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/arunvelsriram/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
