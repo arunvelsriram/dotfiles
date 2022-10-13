@@ -56,6 +56,8 @@ cask "spotify"
 cask "zoom"
 cask "microsoft-teams"
 cask "notion"
+cask "stats"
+cask "miniforge"
 
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
