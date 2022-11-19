@@ -54,14 +54,11 @@ anvim() {
 
 ## Aliases
 
-# vim
-alias vim="nvim"
-
 # edit config
 alias zshconf="vim ~/.zshrc"
 alias alacrittyconf="vim ~/.config/alacritty/alacritty.yml"
 alias tmuxconf="vim $HOME/.tmux.conf.local"
-alias vimconf="vim $HOME/.config/nvim/init.vim"
+alias vimconf="vim $HOME/.vimrc"
 
 # cat
 alias cat="bat"
@@ -74,4 +71,3 @@ alias top="htop"
 
 # github dir
 alias gh='cd $(fd --max-depth 2 . ~/github/ | fzf)'
-

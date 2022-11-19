@@ -178,11 +178,11 @@ silent! colorscheme molokai
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
-set gfn=JetBrains\ Mono\ NL:h14
+set gfn=JetBrains\ Mono\ NL:h15
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=JetBrains\ Mono\ NL:h14
+    set guifont=JetBrains\ Mono\ NL:h15
     set transparency=7
   endif
 else
@@ -190,7 +190,7 @@ else
 
   " IndentLine
   let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
+  let g:indentLine_concealcursor = ''
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
