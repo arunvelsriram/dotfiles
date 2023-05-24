@@ -102,6 +102,8 @@ export PATH="$PATH:$GOPATH/bin"
 # gnu-getopt
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
+export PATH="/Users/arunvelsriram/.local/bin:$PATH"
+
 # syntax highlighting
 ## needs to be at the end
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
