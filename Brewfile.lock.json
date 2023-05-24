@@ -1651,7 +1651,7 @@
     },
     "cask": {
       "bitwarden": {
-        "version": "2022.10.1",
+        "version": "2022.11.0",
         "options": {
           "full_name": "bitwarden"
         }
@@ -1675,7 +1675,7 @@
         }
       },
       "google-chrome": {
-        "version": "107.0.5304.110",
+        "version": "108.0.5359.71",
         "options": {
           "full_name": "google-chrome"
         }
@@ -1717,13 +1717,13 @@
         }
       },
       "vlc": {
-        "version": "3.0.17.3",
+        "version": "3.0.18",
         "options": {
           "full_name": "vlc"
         }
       },
       "whatsapp": {
-        "version": "2.2242.6",
+        "version": "2.2245.9",
         "options": {
           "full_name": "whatsapp"
         }
@@ -1747,7 +1747,7 @@
         }
       },
       "firefox": {
-        "version": "107.0",
+        "version": "107.0.1",
         "options": {
           "full_name": "firefox"
         }
@@ -1765,13 +1765,13 @@
         }
       },
       "font-iosevka": {
-        "version": "16.3.6",
+        "version": "16.5.0",
         "options": {
           "full_name": "font-iosevka"
         }
       },
       "font-iosevka-slab": {
-        "version": "16.3.6",
+        "version": "16.5.0",
         "options": {
           "full_name": "font-iosevka-slab"
         }
@@ -1795,7 +1795,7 @@
         }
       },
       "zoom": {
-        "version": "5.12.8.12565",
+        "version": "5.12.9.13190",
         "options": {
           "full_name": "zoom"
         }
@@ -1813,7 +1813,7 @@
         }
       },
       "stats": {
-        "version": "2.7.44",
+        "version": "2.7.46",
         "options": {
           "full_name": "stats"
         }
@@ -1825,7 +1825,7 @@
         }
       },
       "qbittorrent": {
-        "version": "4.4.5",
+        "version": "4.5.0",
         "options": {
           "full_name": "qbittorrent"
         }
@@ -1841,23 +1841,29 @@
         "options": {
           "full_name": "handbrake"
         }
+      },
+      "intellij-idea-ce": {
+        "version": "2022.2.4,222.4459.24",
+        "options": {
+          "full_name": "intellij-idea-ce"
+        }
       }
     },
     "tap": {
       "homebrew/cask-fonts": {
-        "revision": "21c50e8fd9c5efa49ce7cba9cfdae201eb250b79"
+        "revision": "d13469e12823232c5ee8293552068ddfd83da707"
       },
       "homebrew/cask-drivers": {
-        "revision": "acac6565dcdf0ae5c75af88e10827cbe2c6f634d"
+        "revision": "8e5372c1f11eb705527ef28a3e516d0bca47712d"
       }
     }
   },
   "system": {
     "macos": {
       "monterey": {
-        "HOMEBREW_VERSION": "3.6.11",
+        "HOMEBREW_VERSION": "3.6.13",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "2ba93d9ed28d08f9078df2540cf8245e1c215a86",
+        "Homebrew/homebrew-core": "c458d590fffc0ee72651734dbcd66c5a2fb73b83",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.6"
