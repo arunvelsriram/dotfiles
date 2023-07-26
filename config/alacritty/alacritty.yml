@@ -402,7 +402,6 @@ key_bindings:
   - { key: C, mods: Command, action: Copy }
   - { key: H, mods: Command, action: Hide }
   - { key: Q, mods: Command, action: Quit }
-  - { key: W, mods: Command, action: Quit }
   - {
       key: F,
       mods: Command|Control,
@@ -530,3 +529,10 @@ key_bindings:
   - { key: F11, mods: Super, chars: "\e[23;3~" }
   - { key: F12, mods: Super, chars: "\e[24;3~" }
   - { key: NumpadEnter, chars: "\n" }
+  - { key: NumpadEnter, chars: "\n" }
+
+  # iTerm Shortcuts
+  - { key: D, mods: Command, chars: "\x02\x25" }
+  - { key: D, mods: Command|Shift, chars: "\x02\x22" }
+  - { key: T, mods: Command, chars: "\x02\x63" }
+  - { key: W, mods: Command, chars: "\x02\x78" }
