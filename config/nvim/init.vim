@@ -133,17 +133,17 @@ endif
 autocmd VimEnter * :lua require('numb').setup()
 
 " nvim-treesitter
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
-  ignore_install = {  },
-  highlight = {
-    enable = true,
-    disable = { },
-    additional_vim_regex_highlighting = false,
-  },
-}
-EOF
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+"   ensure_installed = "maintained",
+"   ignore_install = {  },
+"   highlight = {
+"     enable = true,
+"     disable = { },
+"     additional_vim_regex_highlighting = false,
+"   },
+" }
+" EOF
 
 "*****************************************************************************
 "" Basic Setup
@@ -211,9 +211,11 @@ else
 
   " IndentLine
   let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
+  let g:indentLine_concealcursor = ''
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
+
+
 endif
 
 "" Disable the blinking cursor.
