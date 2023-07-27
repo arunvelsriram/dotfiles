@@ -36,6 +36,7 @@ brew "openjdk@11"
 brew "ncdu"
 brew "ffmpeg"
 brew "youtube-dl"
+brew "neovim"
 
 cask "1password"
 cask "keepingyouawake"
@@ -62,6 +63,7 @@ cask "qbittorrent"
 cask "steam"
 cask "handbrake"
 cask "rancher"
+cask "vimr"
 
 
 tap "homebrew/cask-fonts"
