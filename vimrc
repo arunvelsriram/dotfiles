@@ -51,9 +51,6 @@ Plug 'vim-scripts/CSApprox'
 " Auto close quotes, brackets
 Plug 'Raimondi/delimitMate'
 
-" Indentation marker
-Plug 'Yggdroot/indentLine'
-
 " fzf
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -187,13 +184,6 @@ if has("gui_running")
   endif
 else
   let g:CSApprox_loaded = 1
-
-  " IndentLine
-  let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = ''
-  let g:indentLine_char = '┆'
-  let g:indentLine_faster = 1
-
   
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
