@@ -59,9 +59,10 @@ alias zshconf="vim ~/.zshrc"
 alias alacrittyconf="vim ~/.config/alacritty/alacritty.yml"
 alias tmuxconf="vim $HOME/.tmux.conf.local"
 alias vimconf="vim $HOME/.vimrc"
+alias nvimconf="vim $HOME/.config/nvim/init.vim"
 
-# cat
-alias cat="bat"
+# vim
+alias vim=nvim
 
 # ping
 alias ping="prettyping --nolegend"
