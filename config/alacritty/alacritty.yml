@@ -17,8 +17,8 @@ window:
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
   dimensions:
-    columns: 120
-    lines: 80
+    columns: 0
+    lines: 0
 
   # Window position (changes require restart)
   #
@@ -36,7 +36,7 @@ window:
     y: 2
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -165,16 +165,11 @@ selection:
   save_to_clipboard: true
 
 cursor:
-  # Cursor style
-  #
-  # Values for `style`:
-  #   - ▇ Block
-  #   - _ Underline
-  #   - | Beam
-  style: Block
-
-  # If this is `true`, the cursor will be rendered as a hollow box when the
-  # window is not focused.
+  style:
+    shape: Block
+    blinking: Always
+  blink_interval: 500
+  blink_timeout: 0
   unfocused_hollow: true
 
 # Live config reload (changes require restart)
@@ -201,17 +196,6 @@ shell:
 # Directory the shell is started in. If this is unset, or `None`, the working
 # directory of the parent process will be used.
 working_directory: None
-
-# Windows 10 ConPTY backend (Windows only)
-#
-# This will enable better color support and may resolve other issues,
-# however this API and its implementation is still young and so is
-# disabled by default, as stability may not be as good as the winpty
-# backend.
-#
-# Alacritty will fall back to the WinPTY automatically if the ConPTY
-# backend cannot be initialized.
-enable_experimental_conpty_backend: false
 
 # Theme
 import:
