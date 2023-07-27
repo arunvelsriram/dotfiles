@@ -347,6 +347,9 @@ set -g mode-keys vi
 # move status line to top
 #set -g status-position top
 
+# kill pane without confirmation
+bind-key x kill-pane
+
 # Fix color issue with neovim inside tmux
 # refer: https://jdhao.github.io/2018/10/19/tmux_nvim_true_color/
 set -g default-terminal "screen-256color"
