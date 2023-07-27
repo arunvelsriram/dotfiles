@@ -534,5 +534,12 @@ key_bindings:
   # iTerm Shortcuts
   - { key: D, mods: Command, chars: "\x02\x25" }
   - { key: D, mods: Command|Shift, chars: "\x02\x22" }
-  - { key: T, mods: Command, chars: "\x02\x63" }
+  - { key: Return, mods: Command|Shift, chars: "\x02\x7a" }
+  - { key: Left, mods: Command|Alt, chars: "\x02\x68" }
+  - { key: Right, mods: Command|Alt, chars: "\x02\x6c" }
+  - { key: Up, mods: Command|Alt, chars: "\x02\x6b" }
+  - { key: Down, mods: Command|Alt, chars: "\x02\x6a" }
   - { key: W, mods: Command, chars: "\x02\x78" }
+  - { key: T, mods: Command, chars: "\x02\x63" }
+  - { key: Left, mods: Command, chars: "\x02\x08" }
+  - { key: Right, mods: Command, chars: "\x02\x0c" }
