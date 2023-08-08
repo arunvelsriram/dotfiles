@@ -74,7 +74,7 @@ scrolling:
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  multiplier: 3
+  multiplier: 2
 
 # Font configuration (changes require restart)
 font:
@@ -434,12 +434,10 @@ key_bindings:
   - { key: Delete, chars: "\e[3~" }
   - { key: Left, mods: Shift, chars: "\e[1;2D" }
   - { key: Left, mods: Control, chars: "\e[1;5D" }
-  - { key: Left, mods: Alt, chars: "\e[1;3D" }
   - { key: Left, chars: "\e[D", mode: ~AppCursor }
   - { key: Left, chars: "\eOD", mode: AppCursor }
   - { key: Right, mods: Shift, chars: "\e[1;2C" }
   - { key: Right, mods: Control, chars: "\e[1;5C" }
-  - { key: Right, mods: Alt, chars: "\e[1;3C" }
   - { key: Right, chars: "\e[C", mode: ~AppCursor }
   - { key: Right, chars: "\eOC", mode: AppCursor }
   - { key: Up, mods: Shift, chars: "\e[1;2A" }
@@ -516,14 +514,18 @@ key_bindings:
   - { key: NumpadEnter, chars: "\n" }
 
   # iTerm Shortcuts
-  - { key: D, mods: Command, chars: "\x02\x25" }
-  - { key: D, mods: Command|Shift, chars: "\x02\x22" }
-  - { key: Return, mods: Command|Shift, chars: "\x02\x7a" }
-  - { key: Left, mods: Command|Alt, chars: "\x02\x68" }
-  - { key: Right, mods: Command|Alt, chars: "\x02\x6c" }
-  - { key: Up, mods: Command|Alt, chars: "\x02\x6b" }
-  - { key: Down, mods: Command|Alt, chars: "\x02\x6a" }
-  - { key: W, mods: Command, chars: "\x02\x78" }
-  - { key: T, mods: Command, chars: "\x02\x63" }
-  - { key: Left, mods: Command, chars: "\x02\x08" }
-  - { key: Right, mods: Command, chars: "\x02\x0c" }
+  - { key: D, mods: Command, chars: "\x02\x25" } # Split vertically
+  - { key: D, mods: Command|Shift, chars: "\x02\x22" } # Split horizontally
+  - { key: Return, mods: Command|Shift, chars: "\x02\x7a" } # Zoom current split
+  - { key: Left, mods: Command|Alt, chars: "\x02\x68" } # Go to left pane
+  - { key: Right, mods: Command|Alt, chars: "\x02\x6c" } # Go to right pane
+  - { key: Up, mods: Command|Alt, chars: "\x02\x6b" } # Go to upper pane
+  - { key: Down, mods: Command|Alt, chars: "\x02\x6a" } # Go to lower pane
+  - { key: W, mods: Command, chars: "\x02\x78" } # Close cureent pane/tab/window
+  - { key: T, mods: Command, chars: "\x02\x63" } # New tab
+  - { key: Left, mods: Command, chars: "\x02\x08" } # Go to left tab
+  - { key: Right, mods: Command, chars: "\x02\x0c" } # Go to right tab
+
+  # Navigation
+  - { key: Left,     mods: Alt,     chars: "\x1bb" } # Skip word left
+  - { key: Right,    mods: Alt,     chars: "\x1bf" } # Skip word right
