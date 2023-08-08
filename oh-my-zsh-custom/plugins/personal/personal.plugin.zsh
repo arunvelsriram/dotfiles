@@ -63,6 +63,7 @@ alias nvimconf="vim $HOME/.config/nvim/init.vim"
 
 # vim
 alias vim=nvim
+alias vi=nvim
 
 # ping
 alias ping="prettyping --nolegend"
