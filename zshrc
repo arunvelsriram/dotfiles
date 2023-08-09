@@ -145,3 +145,6 @@ eval "$(pyenv init -)"
 
 # gpg
 export GPG_TTY=$(tty)
+
+# ssh add identities
+ssh-add -q --apple-use-keychain $(rg -l PRIVATE ~/.ssh | xargs)
