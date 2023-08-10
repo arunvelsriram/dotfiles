@@ -82,49 +82,12 @@ source $ZSH/oh-my-zsh.sh
 
 ## User configuration
 
-# added by travis gem
-[ -f /Users/arunvelsriram/.travis/travis.sh ] && source /Users/arunvelsriram/.travis/travis.sh
-
-# rbenv
-eval "$(rbenv init -)"
-
-# jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-# flutter
-export PATH="$PATH:$HOME/flutter/bin"
-
 # golang
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
-# gnu-getopt
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
-
+# add poetry bin to PATH
 export PATH="/Users/arunvelsriram/.local/bin:$PATH"
-
-# syntax highlighting
-## needs to be at the end
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # homebrew's sbin
 export PATH="/usr/local/sbin:$PATH"
@@ -143,8 +106,19 @@ eval "$(pyenv init -)"
 # kubectl autocompletion
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-# gpg
-export GPG_TTY=$(tty)
-
 # ssh add identities
 ssh-add -q --apple-use-keychain $(rg -l PRIVATE ~/.ssh | xargs)
+
+# suppress direnv output
+export DIRENV_LOG_FORMAT=
+
+# gcloud
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
+# syntax highlighting
+## needs to be at the end
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
