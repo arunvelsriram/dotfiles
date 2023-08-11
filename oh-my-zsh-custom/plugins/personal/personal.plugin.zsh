@@ -74,8 +74,9 @@ alias top="htop"
 # github dir
 alias gh='cd $(fd --max-depth 2 . ~/github/ | fzf --height=20 --ansi --reverse)'
 
-# fzf secret files and sops decrypt
-alias sopsdecrypt='sops -d $(fd "secrets.yaml|terraform-sa.json" | fzf --height=20 --ansi --reverse)'
+# go to root dir of git repo
+alias rdir='cd $(dirname $(git rev-parse --git-dir))'
+
 
 # yes/no prompt
 yesno() {
