@@ -392,6 +392,9 @@ noremap <C-h> <C-w>h
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+"" autocomplete on enter key
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 "*****************************************************************************
 "" Language Configs
 "*****************************************************************************
