@@ -44,6 +44,8 @@ brew "kind"
 brew "helm"
 brew "parallel"
 brew "httpstat"
+brew "lefthook"
+brew "gitleaks"
 
 cask "1password"
 cask "1password-cli"
