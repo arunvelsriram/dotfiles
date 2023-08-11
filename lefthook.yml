@@ -1,0 +1,12 @@
+pre-commit:
+  parallel: true
+  commands:
+    detect-hardcoded-secrets:
+      run: gitleaks protect --staged --log-opts="--pretty --all" --verbose 
+      fail_text: "Found hardcoded secrets in code, please remove it"
+pre-push:
+  parallel: true
+  commands:
+    detect-hardcoded-secrets:
+      run: gitleaks detect --log-opts="--pretty --all" --verbose 
+      fail_text: "Found hardcoded secrets in code, please remove it"
