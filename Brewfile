@@ -46,6 +46,11 @@ brew "parallel"
 brew "httpstat"
 brew "lefthook"
 brew "gitleaks"
+brew "kubectx"
+brew "docker-buildx"
+
+tap "guumaster/homebrew-tap"
+brew "hostctl"
 
 cask "1password"
 cask "1password-cli"
@@ -74,6 +79,9 @@ cask "stats"
 cask "qbittorrent"
 cask "handbrake"
 cask "vimr"
+cask "hiddenbar"
+cask "slack"
+cask "wireshark"
 
 
 tap "homebrew/cask-fonts"
@@ -85,4 +93,5 @@ cask "font-jetbrains-mono"
 
 tap "homebrew/cask-drivers"
 cask "obinskit"
+
 
