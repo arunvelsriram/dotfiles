@@ -103,18 +103,22 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# kubectl autocompletion
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
-
 # ssh add identities
 ssh-add -q --apple-use-keychain $(rg -l PRIVATE ~/.ssh | xargs)
 
 # suppress direnv output
 export DIRENV_LOG_FORMAT=
 
-# gcloud
+# autocompletions
+## gcloud
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+## kubectl
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+## helm
+source <(helm completion zsh)
+## hostctl
+source <(hostctl completion zsh)
 
 # syntax highlighting
 ## needs to be at the end
