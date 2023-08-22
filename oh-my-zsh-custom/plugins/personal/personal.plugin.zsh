@@ -75,8 +75,15 @@ alias top="htop"
 alias gh='cd $(fd --max-depth 2 . ~/github/ | fzf --height=20 --ansi --reverse)'
 
 # go to root dir of git repo
-alias rdir='cd $(dirname $(git rev-parse --git-dir))'
+alias groot='cd $(dirname $(git rev-parse --git-dir))'
 
+# tools
+alias tg='terragrunt'
+alias tf='terraform'
+alias m='make'
+
+# fit output to current window size (to use this, pipe your output to fit)
+alias fit='cut -c -$(tput cols)'
 
 # yes/no prompt
 yesno() {
