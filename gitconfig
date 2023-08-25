@@ -1,0 +1,27 @@
+[user]
+	name = Arunvel Sriram
+  	email = arunvelsriram@gmail.com
+	signingkey = B08AA61366ECC47F
+
+# work specific gitconfig for all
+# projects inside ~/work/ directory
+[includeIf "gitdir:~/work/"]
+	path = .gitconfig-work
+
+[core]
+	editor = vim
+	whitespace = trailing-space,space-before-tab
+[color]
+	  ui = auto
+[apply]
+	whitespace = fix
+
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
+[init]
+	templatedir = /Users/arunvelsriram/.git-template
+	defaultBranch = main
+[commit]
+	gpgsign = true
+
