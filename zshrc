@@ -104,7 +104,7 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # ssh add identities
-ssh-add -q --apple-use-keychain $(rg -l PRIVATE ~/.ssh | xargs)
+ssh-add -L &>/dev/null || ssh-add -q --apple-use-keychain $(rg -l PRIVATE ~/.ssh | xargs)
 
 # suppress direnv output
 export DIRENV_LOG_FORMAT=
