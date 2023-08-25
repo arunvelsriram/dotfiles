@@ -97,12 +97,6 @@ export PATH="/usr/local/opt/go@1.14/bin:$PATH"
 export PATH="/Users/arunvelsriram/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
-# Load pyenv automatically by appendingthe following to your shell's login startup file (for login shells)
-# and your shell's interactive startup file (for interactive shells) :
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 # ssh add identities
 ssh-add -L &>/dev/null || ssh-add -q --apple-use-keychain $(rg -l PRIVATE ~/.ssh | xargs)
 
