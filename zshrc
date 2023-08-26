@@ -82,10 +82,6 @@ source $ZSH/oh-my-zsh.sh
 
 ## User configuration
 
-# golang
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
-
 # add poetry bin to PATH
 export PATH="/Users/arunvelsriram/.local/bin:$PATH"
 
