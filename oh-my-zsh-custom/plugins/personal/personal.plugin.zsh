@@ -78,8 +78,6 @@ alias gh='cd $(fd --max-depth 2 . ~/github/ | fzf --height=20 --ansi --reverse)'
 alias groot='cd $(dirname $(git rev-parse --git-dir))'
 
 # tools
-alias tg='terragrunt'
-alias tf='terraform'
 alias m='make'
 
 # fit output to current window size (to use this, pipe your output to fit)
@@ -91,24 +89,4 @@ yesno() {
     read "response?$message [y/n] "
     response=${response:l}
     echo $response
-}
-
-# find and clean .terragrunt-cache directories
-tgcacheclean() {
-    local files=$(fd -HI .terragrunt-cache)
-    local response
-    [ -z "$files" ] && echo "Nothing to clean" && return
-    echo $files
-    response=$(yesno "Delete All ?")
-    [ $response = "y" ] && rm -rfv $(echo $files | xargs)
-}
-
-# find and clean local tfstate files
-tfstateclean() {
-    local files=$(fd -HI terraform.tfstate)
-    local response
-    [ -z "$files" ] && echo "Nothing to clean" && return
-    echo $files
-    response=$(yesno "Delete All ?")
-    [ $response = "y" ] && rm -rfv $(echo $files | xargs)
 }
