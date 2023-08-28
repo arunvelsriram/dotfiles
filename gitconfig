@@ -11,14 +11,12 @@
 [core]
 	editor = vim
 	whitespace = trailing-space,space-before-tab
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
-	  ui = auto
+	ui = true
 [apply]
 	whitespace = fix
 
-[pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RFX
-	show = diff-so-fancy | less --tabs=1,5 -RFX
 [init]
 	templatedir = /Users/arunvelsriram/.git-template
 	defaultBranch = main
@@ -26,3 +24,18 @@
 	gpgsign = true
 [push]
     autoSetupRemote = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
