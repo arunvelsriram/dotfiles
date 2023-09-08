@@ -30,4 +30,4 @@ alias grbi='git rebase --interactive'
 
 alias gstash='git stash'
 alias gstashs='git stash --staged'
-alias gstashu='git stash -u'
+alias gstashu='git stash -k -u'
