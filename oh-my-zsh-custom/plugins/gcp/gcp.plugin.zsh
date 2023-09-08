@@ -20,3 +20,5 @@ cluster_ip_cidr() {
     | awk -v q=\' '{ printf "gcloud --project %s container clusters list --format json | jq -rc %s.[] | \"\\(.name + \"\t\" + .clusterIpv4Cidr)\"%s\n", $1, q, q }' \
     | bash
 }
+
+alias gcpproject='gcloud config set project $(gcloud projects list --format json | jq -r ".[] | .projectId" | fzf)'
