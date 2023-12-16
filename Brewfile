@@ -86,7 +86,6 @@ cask "hiddenbar"
 cask "slack"
 cask "wireshark"
 
-
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
 cask "font-hack"
