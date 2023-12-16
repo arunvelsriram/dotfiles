@@ -89,9 +89,15 @@ export PATH="/Users/arunvelsriram/.local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/go@1.14/bin:$PATH"
 
+# go bins
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/arunvelsriram/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# goland
+export PATH="/Applications/GoLand.app/Contents/MacOS:$PATH"
 
 # ssh add identities
 ssh-add -L &>/dev/null || ssh-add -q --apple-use-keychain $(rg -l PRIVATE ~/.ssh | xargs)
@@ -116,6 +122,9 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # gpg passphrase
 export GPG_TTY=$(tty)
+
+# docker build progress
+export BUILDKIT_PROGRESS=plain
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
