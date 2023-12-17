@@ -90,6 +90,10 @@ setup_dot_tmux() {
   popd
 }
 
+cargo_packages() {
+    cargo install urlencode
+}
+
 option=${1}
 if [ -z "${option}" ]; then
   brew_packages
@@ -103,6 +107,7 @@ if [ -z "${option}" ]; then
   setup_dot_tmux
 
   iterm_preferences
+  cargo_packages
 elif [ "${option}" = "dotfiles" ]; then
   create_directories
   backup_existing_dotfiles
