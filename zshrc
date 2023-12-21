@@ -102,6 +102,9 @@ export PATH="/Applications/GoLand.app/Contents/MacOS:$PATH"
 # cargo bins
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# docker host
+export DOCKER_URL='unix:///Users/arunvelsriram/.colima/default/docker.sock'
+
 # ssh add identities
 ssh-add -L &>/dev/null || ssh-add -q --apple-use-keychain $(rg -l PRIVATE ~/.ssh | xargs)
 
