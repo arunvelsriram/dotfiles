@@ -83,6 +83,10 @@ alias m='make'
 # fit output to current window size (to use this, pipe your output to fit)
 alias fit='cut -c -$(tput cols)'
 
+# replace newlines with literal \n
+# used for converting public/private key to one line string
+alias str1n='awk '\''{printf "%s\\n", $0}'\'''
+
 # yes/no prompt
 yesno() {
     message=${1:="Do you want to continue ?"}
