@@ -94,6 +94,11 @@ cargo_packages() {
     cargo install urlencode
 }
 
+firefox_autoconfigs() {
+   ln -sf ~/dotfiles/firefox/autoconfig.js /Applications/Firefox.app/Contents/Resources/defaults/pref/autoconfig.js
+   ln -sf ~/dotfiles/firefox/autoconfig.cfg /Applications/Firefox.app/Contents/Resources/autoconfig.cfg
+}
+
 option=${1}
 if [ -z "${option}" ]; then
   brew_packages
@@ -108,6 +113,7 @@ if [ -z "${option}" ]; then
 
   iterm_preferences
   cargo_packages
+  firefox_autoconfigs
 elif [ "${option}" = "dotfiles" ]; then
   create_directories
   backup_existing_dotfiles
