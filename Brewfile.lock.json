@@ -2543,6 +2543,12 @@
         "options": {
           "full_name": "dbgate"
         }
+      },
+      "firefox-developer-edition": {
+        "version": "latest",
+        "options": {
+          "full_name": "firefox-developer-edition"
+        }
       }
     },
     "tap": {
@@ -2557,6 +2563,9 @@
       },
       "guumaster/tap": {
         "revision": "68233f5f0df52ee568074ac31fca690717c22d20"
+      },
+      "homebrew/cask-versions": {
+        "revision": "6d062d60aaf06b003a625dc0d09641624016176d"
       }
     }
   },

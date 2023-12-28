@@ -95,8 +95,8 @@ cargo_packages() {
 }
 
 firefox_autoconfigs() {
-   ln -sf ~/dotfiles/firefox/autoconfig.js /Applications/Firefox.app/Contents/Resources/defaults/pref/autoconfig.js
-   ln -sf ~/dotfiles/firefox/autoconfig.cfg /Applications/Firefox.app/Contents/Resources/autoconfig.cfg
+   ln -sf ~/dotfiles/firefox/autoconfig.js '/Applications/Firefox Developer Edition.app/Contents/Resources/defaults/pref/autoconfig.js'
+   ln -sf ~/dotfiles/firefox/autoconfig.cfg '/Applications/Firefox Developer Edition.app/Contents/Resources/autoconfig.cfg'
 }
 
 option=${1}
