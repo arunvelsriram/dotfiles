@@ -12,7 +12,7 @@ node-eip() {
   kubectl get node -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.addresses[?(@.type=="ExternalIP")].address}{"\n"}{end}'
 }
 
-alias k='kubectl'
+alias k='kubecolor'
 alias ktx='kubectx'
 alias kns='kubens'
 

@@ -117,6 +117,8 @@ source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 ## kubectl
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+compdef kubecolor=kubectl
+
 ## helm
 source <(helm completion zsh)
 ## hostctl
