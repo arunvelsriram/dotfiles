@@ -4,3 +4,6 @@
 [submodule "config/alacritty/themes"]
 	path = config/alacritty/themes
 	url = git@github.com:alacritty/alacritty-theme.git
+[submodule "oh-my-zsh-custom/plugins/git-open"]
+	path = oh-my-zsh-custom/plugins/git-open
+	url = https://github.com/paulirish/git-open.git
