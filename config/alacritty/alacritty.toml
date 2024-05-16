@@ -1,4 +1,4 @@
-# import = ["/Users/arunvelsriram/.config/alacritty/themes/themes/gruvbox_dark.yaml"]
+import = ["/Users/arunvelsriram/.config/alacritty/themes/themes/alacritty_0_12.toml"]
 live_config_reload = true
 working_directory = "None"
 
@@ -26,7 +26,7 @@ print_events = false
 render_timer = false
 
 [font]
-size = 14.0
+size = 15.0
 
 [font.bold]
 family = "MesloLGS NF"
