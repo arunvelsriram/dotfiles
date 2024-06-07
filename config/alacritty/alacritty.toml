@@ -1,4 +1,4 @@
-import = ["/Users/arunvelsriram/.config/alacritty/themes/themes/alacritty_0_12.toml"]
+import = ["/Users/arunvelsriram/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"]
 live_config_reload = true
 working_directory = "None"
 
