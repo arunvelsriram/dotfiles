@@ -92,10 +92,6 @@ export PATH="/usr/local/opt/go@1.14/bin:$PATH"
 # go bins
 export PATH="$PATH:$(go env GOPATH)/bin"
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/arunvelsriram/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 # goland
 export PATH="/Applications/GoLand.app/Contents/MacOS:$PATH"
 
