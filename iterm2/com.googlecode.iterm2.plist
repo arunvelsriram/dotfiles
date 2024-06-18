@@ -4,6 +4,8 @@
 <dict>
 	<key>AutoCommandHistory</key>
 	<false/>
+	<key>ClickToSelectCommand</key>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Dracula</key>
@@ -2989,7 +2991,7 @@
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Mark Indicators</key>
-			<true/>
+			<false/>
 			<key>Show Offscreen Command line</key>
 			<true/>
 			<key>Show Status Bar</key>
