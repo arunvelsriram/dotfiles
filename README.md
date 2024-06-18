@@ -39,16 +39,3 @@ npm install -g neovim
 ```
 ./osx-overrides
 ```
-
-### yabai and skhd
-
-#### Install yabai-utils
-
-```
-ln -s $PWD/yabai-utils /usr/local/bin/yabai-utils
-```
-
-#### Disable space switch animation
-
-System Preferences -> Accessibility -> Display -> Check "Reduce Motion"
-
