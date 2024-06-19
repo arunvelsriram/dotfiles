@@ -43,9 +43,7 @@ clone_or_pull() {
   local_path=$2
 
   if [ -d $local_path ]; then
-    pushd $local_path
-    git pull --rebase
-    popd
+    git -C $local_path pull --rebase
   else
     git clone $git_repo_url $local_path
   fi
