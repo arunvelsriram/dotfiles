@@ -40,3 +40,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[alias]
+	statuses = "!for repo in $(find * -type d -maxdepth 0); do echo \"\\n=========$repo==========\\n\" && git -C $repo status; done"
