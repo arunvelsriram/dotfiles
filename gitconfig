@@ -11,12 +11,13 @@
 [core]
 	editor = vim
 	whitespace = trailing-space,space-before-tab
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
 [color]
 	ui = true
 [apply]
 	whitespace = fix
-
 [init]
 	templatedir = /Users/arunvelsriram/.git-template
 	defaultBranch = main
@@ -25,20 +26,14 @@
 	template = /Users/arunvelsriram/.gitmessage
 [push]
     autoSetupRemote = true
-[interactive]
-	diffFilter = diff-so-fancy --patch
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	func = 146 bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+
+[delta]
+    navigate = true
+    line-numbers = true
+
 [alias]
 	statuses = "!for repo in $(find * -type d -maxdepth 0); do echo \"\\n=========$repo==========\\n\" && git -C $repo status; done"
