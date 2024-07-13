@@ -87,6 +87,7 @@ cask "slack"
 cask "wireshark"
 cask "dbgate"
 cask "zed"
+cask "arc"
 
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
@@ -97,6 +98,3 @@ cask "font-jetbrains-mono"
 
 tap "homebrew/cask-drivers"
 cask "obinskit"
-
-tap "homebrew/cask-versions"
-cask "firefox-developer-edition"
