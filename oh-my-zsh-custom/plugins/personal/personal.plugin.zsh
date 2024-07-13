@@ -54,16 +54,14 @@ anvim() {
 
 ## Aliases
 
-# edit config
-alias zshconf="vim ~/.zshrc"
-alias alacrittyconf="vim ~/.config/alacritty/alacritty.yml"
-alias tmuxconf="vim $HOME/.tmux.conf.local"
-alias vimconf="vim $HOME/.vimrc"
-alias nvimconf="vim $HOME/.config/nvim/init.vim"
-
+## Alternate Tools
 # vim
 alias vim=nvim
 alias vi=nvim
+
+# ls
+alias ls='eza'
+alias cat='bat'
 
 # ping
 alias ping="prettyping --nolegend"
@@ -71,14 +69,19 @@ alias ping="prettyping --nolegend"
 # top
 alias top="htop"
 
+
+# edit config
+alias zshconf="vim ~/.zshrc"
+alias alacrittyconf="vim ~/.config/alacritty/alacritty.yml"
+alias tmuxconf="vim $HOME/.tmux.conf.local"
+alias vimconf="vim $HOME/.vimrc"
+alias nvimconf="vim $HOME/.config/nvim/init.vim"
+
 # github dir
 alias gh='cd $(fd --max-depth 2 . ~/github/ | fzf --height=20 --ansi --reverse)'
 
 # go to root dir of git repo
 alias groot='cd $(dirname $(git rev-parse --git-dir))'
-
-# tools
-alias m='make'
 
 # fit output to current window size (to use this, pipe your output to fit)
 alias fit='cut -c -$(tput cols)'
