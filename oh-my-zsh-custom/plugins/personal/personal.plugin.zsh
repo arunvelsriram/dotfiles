@@ -34,24 +34,6 @@ zoom-join() {
   open "zoommtg://zoom.us/join?$qparams"
 }
 
-# alacritty neovim
-anvim() {
-  local target="${PWD}"
-  if [ -n "${1}" ]; then
-    target=$(realpath "$1")
-  fi
-
-  local wdir="${target}"
-  if [ -f "${target}" ]; then
-    wdir=$(dirname "${target}")
-  fi
-
-  nohup alacritty --config-file ~/.config/alacritty/anvim.yml \
-    --working-directory "${wdir}" \
-    -t "nvim - ${target}" \
-    -e $SHELL -lc "nvim ${target}" >/dev/null &
-}
-
 ## Aliases
 
 ## Alternate Tools
