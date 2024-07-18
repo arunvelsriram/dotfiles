@@ -64,7 +64,7 @@ alias ls='eza'
 alias cat='bat'
 
 # ping
-alias ping="prettyping --nolegend"
+alias ping="prettyping"
 
 # top
 alias top="htop"
