@@ -91,6 +91,7 @@ cask "arc"
 cask "draw.io"
 cask "slack"
 cask "capacities"
+cask "chatgpt"
 
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
