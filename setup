@@ -75,7 +75,7 @@ brew_packages() {
 setup_zsh() {
   brew install zsh
 
-  [ -d ~/.oh-my-zsh ] || sh -c "$(curl -fL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  [ -d ~/.oh-my-zsh ] || sh -c "$(curl -fL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 }
 
 setup_dot_tmux() {
