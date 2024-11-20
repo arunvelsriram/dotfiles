@@ -2265,7 +2265,7 @@
         }
       },
       "firefox": {
-        "version": "121.0",
+        "version": "132.0.2",
         "options": {
           "full_name": "firefox"
         }
