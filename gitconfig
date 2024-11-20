@@ -19,11 +19,11 @@
 [apply]
 	whitespace = fix
 [init]
-	templatedir = /Users/arunvelsriram/.git-template
+	templatedir = ~/.git-template
 	defaultBranch = main
 [commit]
 	gpgsign = true
-	template = /Users/arunvelsriram/.gitmessage
+	template = ~/.gitmessage
 [push]
     autoSetupRemote = true
 [merge]
