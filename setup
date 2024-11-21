@@ -3,7 +3,6 @@
 set -e
 
 export PATH=/opt/homebrew/bin:$PATH
-
 DIRS_AND_FILES=(zshrc zprofile bashrc bash_profile profile gitconfig gitmessage gemrc tool-versions tmux.conf.local condarc p10k.zsh oh-my-zsh-custom/plugins oh-my-zsh-custom/themes config/nvim/init.vim config/alacritty/alacritty.toml config/alacritty/themes gnupg/gpg-agent.conf vimrc)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
@@ -96,8 +95,7 @@ firefox_autoconfigs() {
    ln -sf ~/dotfiles/firefox/autoconfig.cfg '/Applications/Firefox.app/Contents/Resources/autoconfig.cfg'
 }
 
-option=${1}
-if [ -z "${option}" ]; then
+main() {
   brew_packages
   
   setup_zsh
@@ -111,11 +109,9 @@ if [ -z "${option}" ]; then
   iterm_preferences
   cargo_packages
   firefox_autoconfigs
-elif [ "${option}" = "dotfiles" ]; then
-  create_directories
-  backup_existing_dotfiles
-  setup_dotfiles
-fi
 
-echo
-echo "Done. Restart terminal to see the changes."
+  echo
+  echo "Done. Restart terminal to see the changes."
+}
+
+main
