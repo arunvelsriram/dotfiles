@@ -3,8 +3,10 @@ Repo to hold my Mac OS X configurations. Helps to setup my Mac easily in case of
 
 ## Setup
 
+1. Setup SSH access to GitHub
+2. Provide "Full Disk Access" for Terminal/iTerm under Privacy & Security preferences
+3. Clone and run setup:
 ```
-xcode-select --install
 git clone --recurse-submodules git@github.com:arunvelsriram/dotfiles.git
 ./setup
 ```
