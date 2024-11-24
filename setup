@@ -37,6 +37,9 @@ setup_dotfiles() {
     mkdir -p $(dirname $full_path)
     ln -sfv ~/dotfiles/$dir_or_file $full_path
   done
+
+  mkdir -p /Users/arunvelsrirams/dotfiles/oh-my-zsh-custom/plugins/work
+  touch /Users/arunvelsrirams/dotfiles/oh-my-zsh-custom/plugins/work/work.plugin.zsh
 }
 
 clone_or_pull() {
