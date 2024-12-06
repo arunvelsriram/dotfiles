@@ -31,3 +31,10 @@ alias grbi='git rebase --interactive'
 alias gstash='git stash'
 alias gstashs='git stash --staged'
 alias gstashu='git stash -k -u'
+
+pullpr() {
+    pr_id=$1
+    branch=PR-${pr_id}
+    git fetch origin pull/${pr_id}/head:${branch}
+    git switch ${branch}
+}
