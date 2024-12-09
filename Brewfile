@@ -84,6 +84,7 @@ cask "capacities"
 cask "chatgpt"
 cask "raycast"
 cask "rancher"
+cask "discord"
 
 # fonts
 cask "font-fira-code"
