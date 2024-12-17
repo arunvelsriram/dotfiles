@@ -51,6 +51,7 @@ brew "pinentry-mac"
 brew "ipcalc"
 brew "rust"
 brew "eza"
+brew "neofetch"
 
 tap "guumaster/homebrew-tap"
 brew "hostctl"
@@ -85,6 +86,7 @@ cask "chatgpt"
 cask "raycast"
 cask "rancher"
 cask "discord"
+cask "aldente"
 
 # fonts
 cask "font-fira-code"
