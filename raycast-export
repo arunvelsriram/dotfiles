@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+set -e
+
+open  raycast://extensions/raycast/raycast/export-settings-data
+
+osascript <<EOF
+  tell application "System Events"
+    key code 36
+    delay 0.3
+    
+    key code 5 using {command down, shift down}
+    delay 0.3
+    
+    keystroke "~/dotfiles/"
+    delay 0.3
+    
+    key code 36
+    delay 0.3
+
+    key code 36
+    delay 0.5
+
+    key code 53
+  end tell
+EOF
+
+mv ~/dotfiles/Raycast*.rayconfig ~/dotfiles/Raycast.rayconfig
