@@ -25,4 +25,5 @@ osascript <<EOF
   end tell
 EOF
 
+rm ~/dotfiles/Raycast.rayconfig
 mv ~/dotfiles/Raycast*.rayconfig ~/dotfiles/Raycast.rayconfig
