@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+set -e
+
+password=$RAYCAST_SETTINGS_PASSWORD
+open  raycast://extensions/raycast/raycast/import-settings-data
+
+osascript <<EOF
+  tell application "System Events"
+    key code 36
+    delay 0.3
+    
+    key code 5 using {command down, shift down}
+    delay 0.3
+    
+    keystroke "~/dotfiles/Raycast.rayconfig"
+    delay 0.3
+
+    key code 36
+    delay 0.5
+
+    key code 36
+    delay 0.3
+
+    keystroke "$password"
+    key code 36
+    delay 0.3
+
+    key code 36
+    delay 0.3
+
+    key code 36
+    delay 1
+
+    key code 53
+    key code 53
+  end tell
+EOF
