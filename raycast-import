@@ -2,7 +2,9 @@
 
 set -e
 
-password=$RAYCAST_SETTINGS_PASSWORD
+op_account=$(op account list --format json | jq -r '.[] | select(.email == "arunvelsriram@gmail.com") | .account_uuid')
+password=$(op --account ${op_account} read 'op://Private/Raycast Settings/password')
+
 open  raycast://extensions/raycast/raycast/import-settings-data
 
 osascript <<EOF
@@ -22,7 +24,7 @@ osascript <<EOF
     key code 36
     delay 0.3
 
-    keystroke "$password"
+    keystroke "${password}"
     key code 36
     delay 0.3
 
