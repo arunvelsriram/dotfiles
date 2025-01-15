@@ -4,10 +4,27 @@ set -e
 
 open  raycast://extensions/raycast/raycast/export-settings-data
 
+op_account=$(op account list --format json | jq -r '.[] | select(.email == "arunvelsriram@gmail.com") | .account_uuid')
+password=$(op --account ${op_account} read 'op://Private/Raycast Settings/password')
+
 osascript <<EOF
   tell application "System Events"
     key code 36
     delay 0.3
+
+    if (static text "Enter password" of window 1 of application process "Raycast") exists then
+		  keystroke "${password}"
+      delay 0.3
+
+      key code 36
+      delay 0.3
+
+      keystroke "${password}"
+      delay 0.3
+
+      key code 36
+      delay 0.3
+	  end if
     
     key code 5 using {command down, shift down}
     delay 0.3
