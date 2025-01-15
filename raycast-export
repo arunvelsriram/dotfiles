@@ -2,12 +2,12 @@
 
 set -e
 
-open  raycast://extensions/raycast/raycast/export-settings-data
-
 op_account=$(op account list --format json | jq -r '.[] | select(.email == "arunvelsriram@gmail.com") | .account_uuid')
 password=$(op --account ${op_account} read 'op://Private/Raycast Settings/password')
 
 osascript <<EOF
+  do shell script "open  'raycast://extensions/raycast/raycast/export-settings-data'"
+  
   tell application "System Events"
     key code 36
     delay 0.3
