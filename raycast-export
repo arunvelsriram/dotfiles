@@ -24,7 +24,7 @@ osascript <<EOF
 
       key code 36
       delay 0.3
-	  end if
+    end if
     
     key code 5 using {command down, shift down}
     delay 0.3
