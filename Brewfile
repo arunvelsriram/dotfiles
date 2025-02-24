@@ -52,6 +52,8 @@ brew "ipcalc"
 brew "rust"
 brew "eza"
 brew "neofetch"
+brew "sniffnet"
+brew "gradle"
 
 tap "guumaster/homebrew-tap"
 brew "hostctl"
@@ -87,6 +89,9 @@ cask "raycast"
 cask "rancher"
 cask "discord"
 cask "aldente"
+cask "isen-ng/dotnet-sdk-versions/dotnet-sdk6"
+cask "isen-ng/dotnet-sdk-versions/dotnet-sdk8"
+cask "dotnet-sdk"
 
 # fonts
 cask "font-fira-code"
