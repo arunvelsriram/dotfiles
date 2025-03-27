@@ -100,6 +100,7 @@ cask "karabiner-elements"
 cask "keycastr"
 cask "lm-studio"
 cask "rider"
+cask "microsoft-teams"
 
 # fonts
 cask "font-fira-code"
