@@ -102,6 +102,7 @@ cask "keycastr"
 cask "lm-studio"
 cask "rider"
 cask "microsoft-teams"
+cask "bruno"
 
 # fonts
 cask "font-fira-code"
