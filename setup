@@ -40,7 +40,7 @@ setup_dotfiles() {
   done
 
   mkdir -p ~/dotfiles/oh-my-zsh-custom/plugins/work
-  [ ! -f ~/dotfiles/oh-my-zsh-custom/plugins/work/work.plugin.zsh ] && touch ~/dotfiles/oh-my-zsh-custom/plugins/work/work.plugin.zsh
+  touch ~/dotfiles/oh-my-zsh-custom/plugins/work/work.plugin.zsh
 }
 
 clone_or_pull() {
