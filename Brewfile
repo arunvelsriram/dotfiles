@@ -55,7 +55,6 @@ brew "neofetch"
 brew "sniffnet"
 brew "gradle"
 brew "pipx"
-brew "firefoxpwa"
 brew "azure-cli"
 
 tap "guumaster/homebrew-tap"
