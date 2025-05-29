@@ -22,5 +22,5 @@ tfstateclean() {
 }
 
 tgjson() {
-  terragrunt render-json --terragrunt-working-dir=${1:-.} --terragrunt-json-out=/dev/stdout | jq
+  terragrunt render-json --working-dir=${1:-.} --out=/dev/stdout | jq
 }
