@@ -60,6 +60,8 @@ brew "mise"
 brew "act"
 brew "scrcpy"
 brew "git-mob"
+brew "trivy"
+brew "goreleaser"
 
 tap "guumaster/homebrew-tap"
 brew "hostctl"
