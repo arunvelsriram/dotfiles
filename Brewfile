@@ -63,6 +63,10 @@ brew "git-mob"
 brew "trivy"
 brew "goreleaser"
 
+brew "bats-core"
+brew "bats-core/bats-core/bats-support"
+brew "bats-core/bats-core/bats-assert"
+
 tap "guumaster/homebrew-tap"
 brew "hostctl"
 
