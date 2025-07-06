@@ -62,6 +62,8 @@ brew "scrcpy"
 brew "git-mob"
 brew "trivy"
 brew "goreleaser"
+brew "watchman"
+brew "dive"
 
 brew "bats-core"
 brew "bats-core/bats-core/bats-support"
@@ -117,6 +119,7 @@ cask "rider"
 cask "microsoft-teams"
 cask "bruno"
 cask "obs"
+cask "handbrake"
 
 # fonts
 cask "font-fira-code"
