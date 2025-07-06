@@ -79,3 +79,8 @@ yesno() {
     response=${response:l}
     echo $response
 }
+
+# get java home for current java
+java_home() {
+    java -XshowSettings:properties -version 2>&1 > /dev/null | rg 'java.home' | awk '{ print $3 }'
+}
