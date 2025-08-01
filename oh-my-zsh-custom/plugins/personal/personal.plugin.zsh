@@ -60,7 +60,7 @@ alias vimconf="vim $HOME/.vimrc"
 alias nvimconf="vim $HOME/.config/nvim/init.vim"
 
 # github dir
-alias gh='cd $(fd --max-depth 2 . ~/github/ | fzf --height=20 --ansi --reverse)'
+alias ghdir='cd $(fd --max-depth 2 . ~/github/ | fzf --height=20 --ansi --reverse)'
 
 # go to root dir of git repo
 alias groot='cd $(dirname $(git rev-parse --git-dir))'
