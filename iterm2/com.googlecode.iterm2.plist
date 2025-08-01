@@ -9,9 +9,9 @@ The script should do this: \(ai.prompt)</string>
 	<key>AiMaxTokens</key>
 	<integer>128000</integer>
 	<key>AiModel</key>
-	<string>deepseek-coder-v2-lite-instruct-mlx</string>
+	<string></string>
 	<key>AitermURL</key>
-	<string>http://localhost:1234/v1/chat/completions</string>
+	<string>http://127.0.0.1:1234/v1/chat/completions</string>
 	<key>AitermUseLegacyAPI</key>
 	<false/>
 	<key>AutoCommandHistory</key>
