@@ -64,6 +64,7 @@ brew "trivy"
 brew "goreleaser"
 brew "watchman"
 brew "dive"
+brew "gh"
 
 brew "bats-core"
 brew "bats-core/bats-core/bats-support"
@@ -117,6 +118,7 @@ cask "microsoft-teams"
 cask "bruno"
 cask "obs"
 cask "handbrake"
+cask "spotify"
 
 # fonts
 cask "font-fira-code"
