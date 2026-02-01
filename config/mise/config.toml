@@ -2,6 +2,7 @@
 java = "latest"
 node = "latest"
 terraform = "latest"
+python = "latest"
 
 [settings]
 experimental = true
