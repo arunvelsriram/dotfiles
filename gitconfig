@@ -39,3 +39,8 @@
 
 [alias]
 	statuses = "!for repo in $(find * -type d -maxdepth 0); do echo \"\\n=========$repo==========\\n\" && git -C $repo status; done"
+	fetch-pull-requests = fetch origin '+refs/pull/*/head:refs/remotes/origin/pull/*'
+	ahead-of-master = log --oneline origin/master..HEAD
+	roots = log --all --oneline --decorate --max-parents=0
+	unpushed = log @{u}..
+	work-in-progress = rebase -i @{u}
