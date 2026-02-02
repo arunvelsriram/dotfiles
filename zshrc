@@ -1,9 +1,13 @@
+(( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+(( ${+commands[direnv]} )) && emulate zsh -c "$(direnv hook zsh)"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -76,7 +80,7 @@ ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fzf direnv personal tmux colored-man-pages work gcp kubectl terraform git git-open git-extra-commands azure)
+plugins=(fzf personal tmux colored-man-pages work gcp kubectl terraform git git-open git-extra-commands azure)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,9 +107,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # ssh add identities
 ssh-add -L &>/dev/null || ssh-add -q --apple-use-keychain $(rg -l PRIVATE ~/.ssh | xargs)
-
-# suppress direnv output
-export DIRENV_LOG_FORMAT=
 
 # autocompletions
 ## gcloud
