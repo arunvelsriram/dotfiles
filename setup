@@ -3,7 +3,7 @@
 set -eo pipefail
 
 export PATH=/opt/homebrew/bin:$PATH
-DIRS_AND_FILES=(zshrc zprofile bashrc bash_profile profile gitconfig gitmessage gemrc config/mise/config.toml tmux.conf.local condarc p10k.zsh oh-my-zsh-custom/plugins oh-my-zsh-custom/themes config/nvim/init.vim config/alacritty/alacritty.toml config/alacritty/themes config/karabiner/karabiner.json gnupg/gpg-agent.conf vimrc)
+DIRS_AND_FILES=(zshrc zprofile bashrc bash_profile profile gitconfig gitmessage gemrc config/mise/config.toml tmux.conf.local condarc p10k.zsh oh-my-zsh-custom/plugins oh-my-zsh-custom/themes config/nvim/init.vim config/alacritty/alacritty.toml config/alacritty/themes config/karabiner/karabiner.json gnupg/gpg-agent.conf vimrc config/direnv/direnv.toml)
 BACKUP_DIR=~/dotfiles.backup_existing_dotfiles.`date +%-H-%M-%S-%F`
 
 create_directories() {
