@@ -94,12 +94,6 @@ cargo_packages() {
     cargo install urlencode
 }
 
-firefox_autoconfigs() {
-   mkdir -p /Applications/Firefox.app/Contents/Resources/defaults/pref
-   ln -sf ~/dotfiles/firefox/autoconfig.js '/Applications/Firefox.app/Contents/Resources/defaults/pref/autoconfig.js'
-   ln -sf ~/dotfiles/firefox/autoconfig.cfg '/Applications/Firefox.app/Contents/Resources/autoconfig.cfg'
-}
-
 mise_packages() {
   mise ls
   mise install
@@ -119,7 +113,6 @@ main() {
 
   iterm_preferences
   cargo_packages
-  firefox_autoconfigs
   mise_packages
 
   echo
