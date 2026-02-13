@@ -1,8 +1,12 @@
-alias findsubscription='az account list | jq -r ".[] | [.id, .name] | @tsv" | fzf --height=20 --ansi --reverse'
+function findsubscription() {
+  local search_term="$1"
+  az account list | jq -r ".[] | [.id, .name] | @tsv" | fzf --height=20 --ansi --reverse --query="$search_term"
+}
 
 function _azure_select_subscription() {
+  local search_term="$1"
   echo "Select an Azure subscription:" >&2
-  local subscription=$(az account list | jq -r '["ID", "NAME"], (.[] | [.id, .name]) | @tsv' | column -t -s $'\t' | fzf --height=20 --ansi --reverse --prompt="Subscription: " --header-lines=1)
+  local subscription=$(az account list | jq -r '["ID", "NAME"], (.[] | [.id, .name]) | @tsv' | column -t -s $'\t' | fzf --height=20 --ansi --reverse --prompt="Subscription: " --header-lines=1 --query="$search_term")
 
   if [ -z "$subscription" ]; then
     echo "No subscription selected" >&2
@@ -35,13 +39,13 @@ function _azure_select_aks_cluster() {
 }
 
 function findaks() {
-  local subscription_payload=$(_azure_select_subscription) || return 1
+  local subscription_payload=$(_azure_select_subscription "$1")
   local subscription_id=$(echo "$subscription_payload" | awk -F'|' '{print $1}')
   local subscription_name=$(echo "$subscription_payload" | awk -F'|' '{print $2}')
 
   echo "Selected subscription: $subscription_name"
 
-  local cluster_payload=$(_azure_select_aks_cluster "$subscription_id") || return 1
+  local cluster_payload=$(_azure_select_aks_cluster "$subscription_id")
   local cluster_name=$(echo "$cluster_payload" | awk -F'|' '{print $1}')
   local resource_group=$(echo "$cluster_payload" | awk -F'|' '{print $2}')
 
@@ -51,18 +55,34 @@ function findaks() {
     -o table
 }
 
-function findakscred() {
-  local subscription_payload=$(_azure_select_subscription) || return 1
+function aksgetcred() {
+  local subscription_payload=$(_azure_select_subscription "$1")
   local subscription_id=$(echo "$subscription_payload" | awk -F'|' '{print $1}')
   local subscription_name=$(echo "$subscription_payload" | awk -F'|' '{print $2}')
 
   echo "Selected subscription: $subscription_name"
 
-  local cluster_payload=$(_azure_select_aks_cluster "$subscription_id") || return 1
+  local cluster_payload=$(_azure_select_aks_cluster "$subscription_id")
   local cluster_name=$(echo "$cluster_payload" | awk -F'|' '{print $1}')
   local resource_group=$(echo "$cluster_payload" | awk -F'|' '{print $2}')
   local context_name="${subscription_name} -- ${cluster_name}"
 
   echo "\nGetting credentials for $cluster_name..."
-  az aks get-credentials --subscription "$subscription_id" --name "$cluster_name" --resource-group "$resource_group" --context "$context_name"
+  set -x
+  az aks get-credentials --subscription "$subscription_id" --name "$cluster_name" --resource-group "$resource_group" --context "$context_name" --overwrite-existing
+}
+
+function aksbrowse() {
+  local subscription_payload=$(_azure_select_subscription "$1")
+  local subscription_id=$(echo "$subscription_payload" | awk -F'|' '{print $1}')
+  local subscription_name=$(echo "$subscription_payload" | awk -F'|' '{print $2}')
+
+  echo "Selected subscription: $subscription_name"
+
+  local cluster_payload=$(_azure_select_aks_cluster "$subscription_id")
+  local cluster_name=$(echo "$cluster_payload" | awk -F'|' '{print $1}')
+  local resource_group=$(echo "$cluster_payload" | awk -F'|' '{print $2}')
+
+  echo "\nOpening Kubernetes dashboard for $cluster_name..."
+  az aks browse --subscription "$subscription_id" --name "$cluster_name" --resource-group "$resource_group"
 }
