@@ -66,6 +66,7 @@ brew "watchman"
 brew "dive"
 brew "gh"
 brew "zoxide"
+brew "base-14/tap/cicada"
 
 brew "bats-core"
 brew "bats-core/bats-core/bats-support"
