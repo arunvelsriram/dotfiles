@@ -86,3 +86,8 @@ function aksbrowse() {
   echo "\nOpening Kubernetes dashboard for $cluster_name..."
   az aks browse --subscription "$subscription_id" --name "$cluster_name" --resource-group "$resource_group"
 }
+
+function azrelogin() {
+  az logout
+  az login
+}
