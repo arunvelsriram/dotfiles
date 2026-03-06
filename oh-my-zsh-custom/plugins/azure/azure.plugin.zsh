@@ -65,7 +65,7 @@ function aksgetcred() {
   local cluster_payload=$(_azure_select_aks_cluster "$subscription_id")
   local cluster_name=$(echo "$cluster_payload" | awk -F'|' '{print $1}')
   local resource_group=$(echo "$cluster_payload" | awk -F'|' '{print $2}')
-  local context_name="${subscription_name} -- ${cluster_name}"
+  local context_name="${subscription_name}/${resource_group}/${cluster_name}"
 
   echo "\nGetting credentials for $cluster_name..."
   set -x
