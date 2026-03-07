@@ -44,3 +44,4 @@
 	roots = log --all --oneline --decorate --max-parents=0
 	unpushed = log @{u}..
 	work-in-progress = rebase -i @{u}
+	open-pr = "!gh pr view --web $(git rev-parse --abbrev-ref HEAD)"
