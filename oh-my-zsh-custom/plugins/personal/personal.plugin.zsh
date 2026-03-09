@@ -43,7 +43,7 @@ alias vi=nvim
 
 # ls
 alias ls='eza'
-alias cat='bat'
+alias cat='bat -P'
 
 # ping
 alias ping="prettyping"
